@@ -8,6 +8,7 @@
 //________________________________________________________________________________________
 // Require once
 require_once 'Controleur/Controleur.php';
+require_once 'Vue/Vue.php';
 
 class ControleurAccueil implements Controleur
 {
@@ -20,6 +21,6 @@ class ControleurAccueil implements Controleur
     public function getHTML()
     {
         $vue = new Vue("Accueil");
-        $vue = generer(array());
+        $vue->generer(array());
     }
 }
