@@ -5,7 +5,7 @@
  * User: Nicolas Sobczak & Vincent Reynaert
  * Date: 30/10/2016
  */
-class Modele
+abstract class Modele
 {
 
 }
