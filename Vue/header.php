@@ -1,5 +1,5 @@
 <header>
-    <a href="index.php?action=accueil"> <h1 id="titreSite">CotcotRecuite.com</h1> </a>
+    <a href="index.php?action=accueil"><h1 id="titreSite">CotcotRecuite.com</h1></a>
     <!--
     <ul>
         <li><a href="Routeur.php?action=recherche">Recherche</a></li>

@@ -3,9 +3,9 @@
 /**
  * Created by PhpStorm.
  * User: Nicolas Sobczak & Vincent Reynaert
- * Date: 21/10/2016
+ * Date: 30/10/2016
  */
-interface Controleur
+class Modele
 {
-    public function getHTML();
+
 }

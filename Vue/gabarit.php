@@ -1,15 +1,15 @@
-<?php require 'Vue/head.php';?>
+<?php require 'Vue/head.php'; ?>
 
 <body>
-    <div id="global">
+<div id="global">
 
-        <?php require 'Vue/header.php';?>
+    <?php require 'Vue/header.php'; ?>
 
-        <div id="contenu">
-            <?= $contenu ?>
-        </div> <!-- #contenu -->
+    <div id="contenu">
+        <?= $contenu ?>
+    </div> <!-- #contenu -->
 
-        <?php require 'Vue/footer.php';?>
+    <?php require 'Vue/footer.php'; ?>
 
-    </div> <!-- #global -->
+</div> <!-- #global -->
 </body>
