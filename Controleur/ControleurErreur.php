@@ -3,24 +3,24 @@
 /**
  * Created by PhpStorm.
  * User: Nicolas Sobczak & Vincent Reynaert
- * Date: 21/10/2016
+ * Date: 30/10/2016
  */
 //________________________________________________________________________________________
 // Require once
 require_once 'Controleur/Controleur.php';
 require_once 'Vue/Vue.php';
 
-class ControleurAccueil implements Controleur
+class ControleurErreur implements Controleur
 {
     public function __construct()
     {
 
     }
 
-    // Affiche la page d'accueil
+    // Affiche la page d'erreur
     public function getHTML()
     {
-        $vue = new Vue("Accueil");
+        $vue = new Vue("Erreur");
         $vue->generer(array());
     }
 }
