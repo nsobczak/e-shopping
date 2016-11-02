@@ -1,4 +1,4 @@
-<?php require 'Vue/head.php'; ?>
+<?php require 'Vue/htmlHead.php'; ?>
 
 <body>
 <div id="global">
