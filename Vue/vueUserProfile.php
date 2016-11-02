@@ -1,7 +1,7 @@
-<?php $titre = "User profile id : " . $user['id']; ?>
+<?php //$titre = "User profile id : " . $user['id']; ?>
 
 <section id=logoProfile>
-    <img class="display" width=10% src="Images/profil-utilisateur.jpg" alt="portrait" title="UserProfile"/>
+    <img class="display" width=10% src="Images/profil_utilisateur.jpg" alt="portrait" title="UserProfile"/>
 </section>
 
 <article>
@@ -14,3 +14,4 @@
         <?= $user['mot_de_passe'] ?>
     </p>
 </article>
+
