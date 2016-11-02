@@ -23,7 +23,7 @@ class Routeur
     public function __construct()
     {
         $this->ctrlAccueil = new ControleurAccueil();
-//        $this->ctrlUserProfile = new ControleurUserProfile();
+        $this->ctrlUserProfile = new ControleurUserProfile();
     }
 
     // Traite une requête entrante

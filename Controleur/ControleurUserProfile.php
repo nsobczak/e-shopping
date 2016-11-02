@@ -12,9 +12,11 @@ require_once 'Vue/Vue.php';
 
 class ControleurUserProfile implements Controleur
 {
+    private $user;
+
     public function __construct()
     {
-
+        $this->user = new UserProfile();
     }
 
     // Affiche la page d'accueil
