@@ -1,5 +1,5 @@
 <htmlHead>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="Contenu/StyleCotcotRecuite.css"/>
+    <link rel="stylesheet" href="Contenu/StyleEShopping.css"/>
     <title><?= $titre ?></title>
 </htmlHead>
