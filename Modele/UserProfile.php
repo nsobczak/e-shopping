@@ -7,7 +7,7 @@ require_once 'Modele/Modele.php';
  * User: Nicolas Sobczak & Vincent Reynaert
  * Date: 02/11/2016
  */
-class UserProfil extends Modele
+class UserProfile extends Modele
 {
 
     /** Renvoie les informations sur un utillisateurs
