@@ -8,6 +8,7 @@
 // Require once
 require_once 'Controleur/Controleur.php';
 require_once 'Controleur/ControleurAccueil.php';
+require_once 'Controleur/ControleurUserProfile.php';
 require_once 'Vue/Vue.php';
 
 
@@ -33,8 +34,8 @@ class Routeur
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'accueil') {
                     $this->ctrlAccueil->getHTML();
-//                } elseif ($_GET['action'] == 'userProfile') {
-//                    $this->ctrlUserProfile->getHTML();
+                } elseif ($_GET['action'] == 'userProfile') {
+                    $this->ctrlUserProfile->getHTML();
                 } else
                     throw new Exception("Action non valide");
             } else {  // aucune action définie : affichage de l'accueil

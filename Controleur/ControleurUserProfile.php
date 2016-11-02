@@ -3,12 +3,13 @@
 /**
  * Created by PhpStorm.
  * User: Nicolas Sobczak & Vincent Reynaert
- * Date: 21/10/2016
+ * Date: 02/11/2016
  */
 //________________________________________________________________________________________
 // Require once
 require_once 'Controleur/Controleur.php';
 require_once 'Vue/Vue.php';
+require_once 'Modele/UserProfile.php';
 
 class ControleurUserProfile implements Controleur
 {
