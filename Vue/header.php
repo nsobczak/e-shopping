@@ -10,7 +10,7 @@
                 <a href="Controleur/Routeur.php?action=product&id=2">Product 2</a>
             </div>
         </li>
-        <li><a href="Controleur/Routeur.php?action=userProfile">User Profile</a></li>
+        <li><a href="index.php?action=userProfile">User Profile</a></li>
         <li><a href="Controleur/Routeur.php?action=inscription">Inscription</a></li>
     </ul>
 

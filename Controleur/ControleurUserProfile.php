@@ -17,7 +17,7 @@ class ControleurUserProfile implements Controleur
 
     public function __construct()
     {
-        $this->user = new UserProfile();
+        //$this->user = new UserProfile();
     }
 
     // Affiche la page d'accueil

@@ -6,10 +6,10 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once (dirname(__FILE__).'/Controleur.php');
-require_once (dirname(__FILE__).'/ControleurAccueil.php');
-require_once (dirname(__FILE__).'/ControleurUserProfile.php');
-require_once (dirname(__FILE__).'/Vue.php');
+require_once ('Controleur/Controleur.php');
+require_once ('Controleur/ControleurAccueil.php');
+require_once ('Controleur/ControleurUserProfile.php');
+require_once ('Vue/Vue.php');
 
 
 //________________________________________________________________________________________
