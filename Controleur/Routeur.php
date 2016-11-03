@@ -6,7 +6,7 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once 'Controleur/Controleur.php';
+//require_once 'Controleur/Controleur.php';
 require_once 'Controleur/ControleurAccueil.php';
 require_once 'Controleur/ControleurUserProfile.php';
 require_once 'Vue/Vue.php';
