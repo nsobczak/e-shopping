@@ -6,8 +6,8 @@
         <li class="dropdown">
             <a href="#" class="dropbtn">Products</a>
             <div class="dropdown-content">
-                <a href="index.php?action=product&id=1">Product 1</a>
-                <a href="index.php?action=product&id=2">Product 2</a>
+                <a href="index.php?action=productCategorie&id=1">Product categorie 1</a>
+                <a href="index.php?action=productCategorie&id=2">Product categorie 2</a>
             </div>
         </li>
         <li><a href="index.php?action=userProfile">User Profile</a></li>
