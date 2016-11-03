@@ -7,8 +7,8 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once 'Controleur/Controleur.php';
-require_once 'Vue/Vue.php';
+require_once (dirname(__FILE__).'/Controleur.php');
+require_once (dirname(__FILE__).'/Vue.php');
 
 class ControleurErreur implements Controleur
 {

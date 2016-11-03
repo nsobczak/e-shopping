@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Modele/Modele.php';
+require_once (dirname(__FILE__).'/Modele.php');
 
 /**
  * Created by PhpStorm.
