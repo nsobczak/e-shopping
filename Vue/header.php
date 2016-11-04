@@ -12,8 +12,10 @@
         </li>
         <li><a href="index.php?action=tunnel">Panier</a></li>
         <li><a href="index.php?action=userProfile">Profil</a></li>
+        <li><a href="index.php?action=login">Login</a></li>
         <li><a href="index.php?action=inscription">Inscription</a></li>
         <li><a href="index.php?action=AdminUser">Admin User</a></li>
+        <li><a href="index.php?action=AdminCompteClient">Admin Compte Client</a></li>
 
     </ul>
 
