@@ -1,5 +1,7 @@
-<?php require 'Vue/htmlHead.php'; ?>
-
+<html>
+<head>
+    <?php require 'Vue/htmlHead.php'; ?>
+</head>
 <body>
 <div id="global">
 
@@ -13,3 +15,4 @@
 
 </div> <!-- #global -->
 </body>
+</html>

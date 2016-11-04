@@ -56,11 +56,11 @@ CREATE TABLE `panier` (
 --
 
 CREATE TABLE `produit` (
-  `poduitID` int(11) NOT NULL,
+  `produitID` int(11) NOT NULL,
   `nomProduit` varchar(255) CHARACTER SET utf8 NOT NULL,
   `prix` int(11) NOT NULL,
-  `desciption` text CHARACTER SET utf8 NOT NULL,
-  `cheminimage` varchar(500) COLLATE utf8_bin NOT NULL
+  `description` text CHARACTER SET utf8 NOT NULL,
+  `cheminImage` varchar(500) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -101,7 +101,7 @@ ALTER TABLE `panier`
 -- Index pour la table `produit`
 --
 ALTER TABLE `produit`
-  ADD PRIMARY KEY (`poduitID`);
+  ADD PRIMARY KEY (`produitID`);
 
 --
 -- Index pour la table `user`
@@ -127,7 +127,7 @@ ALTER TABLE `panier`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `poduitID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `produitID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
@@ -142,7 +142,7 @@ ALTER TABLE `user`
 --
 ALTER TABLE `lignepanier`
   ADD CONSTRAINT `lignepanier_ibfk_1` FOREIGN KEY (`panierID`) REFERENCES `panier` (`panierID`),
-  ADD CONSTRAINT `lignepanier_ibfk_2` FOREIGN KEY (`produitID`) REFERENCES `produit` (`poduitID`);
+  ADD CONSTRAINT `lignepanier_ibfk_2` FOREIGN KEY (`produitID`) REFERENCES `produit` (`produitID`);
 
 --
 -- Contraintes pour la table `panier`
