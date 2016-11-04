@@ -9,8 +9,11 @@
 require_once ('Controleur/Controleur.php');
 require_once ('Controleur/ControleurAccueil.php');
 require_once ('Controleur/ControleurUserProfile.php');
+require_once ('Controleur/ControleurInscription.php');
+require_once ('Controleur/ControleurAdministrationUser.php');
 require_once ('Vue/Vue.php');
-
+require_once ('Controleur/ControleurProduit01.php');
+require_once ('Controleur/ControleurTunnel.php');
 
 //________________________________________________________________________________________
 // Class
@@ -19,12 +22,19 @@ class Routeur
     // Attributs
     private $ctrlAccueil;
     private $ctrlUserProfile;
+    private $ctrlAdminUser;
+    private $ctrlProduit01;
+	private $ctrlTunnel;
 
     // Constructeur
     public function __construct()
     {
         $this->ctrlAccueil = new ControleurAccueil();
         $this->ctrlUserProfile = new ControleurUserProfile();
+        $this->ctrlProduit01 = new ControleurProduit01();
+        $this->ctrlInscription = new ControleurInscription();
+        $this->ctrlAdminUser = new ControleurAdministrationUser();
+		$this->ctrlTunnel = new ControleurTunnel();
     }
 
     // Traite une requête entrante
@@ -36,8 +46,20 @@ class Routeur
                     $this->ctrlAccueil->getHTML();
                 } elseif ($_GET['action'] == 'userProfile') {
                     $this->ctrlUserProfile->getHTML();
-                } else
+                } elseif ($_GET['action'] == 'produit01') {
+                    $this->ctrlProduit01->getHTML();
+                }
+				elseif($_GET['action']== 'tunnel'){
+					$this->ctrlTunnel->getHTML();
+				}
+                elseif ($_GET['action'] == 'inscription') {
+                    $this->ctrlInscription->registerUser();
+                } elseif ($_GET['action'] == 'AdminUser') {
+                    $this->ctrlAdminUser->getHTML();
+                }
+                else {
                     throw new Exception("Action non valide");
+                }
             } else {  // aucune action définie : affichage de l'accueil
                 $this->ctrlAccueil->getHTML();
             }
