@@ -17,13 +17,25 @@ class ControleurUserProfile implements Controleur
 
     public function __construct()
     {
-        //$this->user = new UserProfile();
+        $this->user = new UserProfile();
     }
 
     // Affiche la page d'accueil
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
-        $vue->generer(array());
+        $vue->generer($this->displayUserProfile(1));
+    }
+
+    /** Renvoie les informations sur un utilisateurs
+     *
+     * @param int $userID L'identifiant de l'utilisateur
+     * @return array L'utilisateur
+     */
+    public function displayUserProfile($userID)
+    {
+        $user = new UserProfile();
+        $result = $user->getUser($userID);
+        return $result;
     }
 }

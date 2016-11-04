@@ -17,7 +17,7 @@ class ControleurAccueil implements Controleur
 
     }
 
-    // Affiche la page d'accueil
+    // Affiche la vue de la page
     public function getHTML()
     {
         $vue = new Vue("Accueil");

@@ -1,16 +1,30 @@
-<?php //$titre = "User profile id : " . $user['id']; ?>
+<?php //$titre = "User profile id : " . $userId; ?>
 
-<section id=logoProfile>
-    <img class="display" width=10% src="Images/profil_utilisateur.jpg" alt="portrait" title="UserProfile"/>
-</section>
+<body>
 
-<!--<article>-->
-<!--    <header>-->
-<!--        <h1 class="titreUserProfile">--><?//= $user['nom'] ?><!----><?//= $user['prenom'] ?><!--</h1>-->
-<!--    </header>-->
-<!--    <p>-->
-<!--        --><?//= $user['niveau_accreditation'] ?>
-<!--        --><?//= $user['mail'] ?>
-<!--        --><?//= $user['mot_de_passe'] ?>
-<!--    </p>-->
-<!--</article>-->
+<p>
+<table width="85%" style="line-height: 40px;" border="1">
+    <tr>    <!-- table row -->
+        <td rowspan="4"><img class="display" width=10% src="Images/profil_utilisateur.jpg" alt="user_picture"
+                             title="user_picture"/></td>    <!-- table data -->
+    </tr>
+    <tr>
+        <td> niveau_accreditation =
+        <td/>
+        <td><?= $niveau_accreditation ?>
+        <td/>
+    </tr>
+    <tr>
+        <td> mail =
+        <td/>
+        <td><?= $mail ?></td>
+    </tr>
+    <tr>
+        <td> sha1 du mot de passe =
+        <td/>
+        <td><?= $mot_de_passe ?></td>
+    </tr>
+</table>
+</p>
+
+</body>
