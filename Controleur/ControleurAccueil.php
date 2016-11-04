@@ -7,8 +7,8 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once ('Controleur.php');
-require_once ('Vue/Vue.php');
+require_once('Controleur.php');
+require_once('Vue/Vue.php');
 
 class ControleurAccueil implements Controleur
 {
