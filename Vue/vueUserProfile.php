@@ -1,12 +1,30 @@
-<?php //$titre = "User profile id : " . $userId; ?>
+<?php //$titre = "User profile id : " . $userID; ?>
 
 <body>
 
 <p>
 <table width="85%" style="line-height: 40px;" border="1">
     <tr>    <!-- table row -->
-        <td rowspan="4"><img class="display" width=10% src="Images/profil_utilisateur.jpg" alt="user_picture"
+        <td colspan="1"><img class="display" width=10% src="Images/profil_utilisateur.jpg" alt="user_picture"
                              title="user_picture"/></td>    <!-- table data -->
+    </tr>
+    <tr>
+        <td> user ID =
+        <td/>
+        <td><?= $userID ?>
+        <td/>
+    </tr>
+    <tr>
+        <td> nom =
+        <td/>
+        <td><?= $nom ?>
+        <td/>
+    </tr>
+    <tr>
+        <td> prénom =
+        <td/>
+        <td><?= $prenom ?>
+        <td/>
     </tr>
     <tr>
         <td> niveau_accreditation =

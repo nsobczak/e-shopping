@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf1dc1f-0a5f-4ba1-ac6e-09c105925154" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/ControleurAccueil.php" afterPath="$PROJECT_DIR$/Controleur/ControleurAccueil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/ControleurUserProfile.php" afterPath="$PROJECT_DIR$/Controleur/ControleurUserProfile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele/UserProfile.php" afterPath="$PROJECT_DIR$/Modele/UserProfile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueUserProfile.php" afterPath="$PROJECT_DIR$/Vue/vueUserProfile.php" />
     </list>
     <ignored path="e-commerce.iws" />
@@ -43,9 +41,9 @@
         <entry file="file://$PROJECT_DIR$/Modele/UserProfile.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="35" />
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding>
-                <marker date="1478193259878" expanded="true" signature="456:555" ph="select userI... user" />
+                <marker date="1478298341102" expanded="true" signature="456:549" ph="select userI... user" />
               </folding>
             </state>
           </provider>
@@ -132,23 +130,23 @@
       <file leaf-file-name="vueUserProfile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/vueUserProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding>
-                <marker date="1478298061244" expanded="true" signature="58:60" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="63:65" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="91:109" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="121:675" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="130:352" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="177:319" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="263:314" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="361:476" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="374:407" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="424:462" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="485:559" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="498:515" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="568:666" ph="..." />
-                <marker date="1478298061244" expanded="true" signature="581:614" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="58:60" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="63:65" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="91:109" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="121:958" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="130:352" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="177:319" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="263:314" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="644:759" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="657:690" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="707:745" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="768:842" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="781:798" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="851:949" ph="..." />
+                <marker date="1478298376155" expanded="true" signature="864:897" ph="..." />
               </folding>
             </state>
           </provider>
@@ -172,7 +170,6 @@
         <option value="$PROJECT_DIR$/Vue/gabarit.php" />
         <option value="$PROJECT_DIR$/Vue/htmlHead.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Modele/UserProfile.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurErreur.php" />
         <option value="$PROJECT_DIR$/page_listing.md" />
@@ -188,6 +185,7 @@
         <option value="$PROJECT_DIR$/Controleur/ControleurAccueil.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurAdministrationUser.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurUserProfile.php" />
+        <option value="$PROJECT_DIR$/Modele/UserProfile.php" />
         <option value="$PROJECT_DIR$/Vue/vueUserProfile.php" />
       </list>
     </option>
@@ -423,12 +421,12 @@
       <workItem from="1478191566293" duration="1735000" />
       <workItem from="1478193865566" duration="2124000" />
       <workItem from="1478256872745" duration="340000" />
-      <workItem from="1478287420611" duration="8152000" />
+      <workItem from="1478287420611" duration="8500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27552000" />
+    <option name="totallyTimeSpent" value="27900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1080" extended-state="6" />
@@ -885,16 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/UserProfile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <marker date="1478193259878" expanded="true" signature="456:555" ph="select userI... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/Vue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
@@ -903,25 +891,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/UserProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <marker date="1478298341102" expanded="true" signature="456:549" ph="select userI... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/vueUserProfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="250">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding>
-            <marker date="1478298061244" expanded="true" signature="58:60" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="63:65" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="91:109" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="121:675" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="130:352" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="177:319" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="263:314" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="361:476" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="374:407" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="424:462" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="485:559" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="498:515" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="568:666" ph="..." />
-            <marker date="1478298061244" expanded="true" signature="581:614" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="58:60" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="63:65" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="91:109" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="121:958" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="130:352" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="177:319" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="263:314" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="644:759" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="657:690" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="707:745" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="768:842" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="781:798" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="851:949" ph="..." />
+            <marker date="1478298376155" expanded="true" signature="864:897" ph="..." />
           </folding>
         </state>
       </provider>
