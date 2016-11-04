@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf1dc1f-0a5f-4ba1-ac6e-09c105925154" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueUserProfile.php" afterPath="$PROJECT_DIR$/Vue/vueUserProfile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueErreur.php" afterPath="$PROJECT_DIR$/Vue/vueErreur.php" />
     </list>
     <ignored path="e-commerce.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,19 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Routeur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controleur/Routeur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-              <folding>
-                <element signature="e#6#101#0#PHP" expanded="true" />
-                <marker date="1478291420878" expanded="true" signature="2207:2220" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/UserProfile.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,18 +52,6 @@
               <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdministrationUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modele/AdministrationUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1478287984927" expanded="true" signature="465:564" ph="select userI... user" />
               </folding>
             </state>
           </provider>
@@ -126,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vueUserProfile.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vueUserProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/vueUserProfile.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
@@ -147,6 +122,26 @@
                 <marker date="1478298537083" expanded="true" signature="852:950" ph="..." />
                 <marker date="1478298537083" expanded="true" signature="865:898" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vueAccueil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/vueAccueil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vueErreur.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/vueErreur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,7 +173,6 @@
         <option value="$PROJECT_DIR$/Controleur/ControleurProduit01.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurTunnel.php" />
         <option value="$PROJECT_DIR$/Controleur/Routeur.php" />
-        <option value="$PROJECT_DIR$/Vue/vueErreur.php" />
         <option value="$PROJECT_DIR$/Contenu/StyleEShopping.css" />
         <option value="$PROJECT_DIR$/Vue/header.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurAccueil.php" />
@@ -186,6 +180,7 @@
         <option value="$PROJECT_DIR$/Controleur/ControleurUserProfile.php" />
         <option value="$PROJECT_DIR$/Modele/UserProfile.php" />
         <option value="$PROJECT_DIR$/Vue/vueUserProfile.php" />
+        <option value="$PROJECT_DIR$/Vue/vueErreur.php" />
       </list>
     </option>
   </component>
@@ -420,12 +415,12 @@
       <workItem from="1478191566293" duration="1735000" />
       <workItem from="1478193865566" duration="2124000" />
       <workItem from="1478256872745" duration="340000" />
-      <workItem from="1478287420611" duration="8632000" />
+      <workItem from="1478287420611" duration="9269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28032000" />
+    <option name="totallyTimeSpent" value="28669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1080" extended-state="6" />
@@ -773,26 +768,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/vueErreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/htmlHead.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/vueAccueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="85" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="85" />
           <folding />
         </state>
       </provider>
@@ -920,6 +899,22 @@
             <marker date="1478298537083" expanded="true" signature="852:950" ph="..." />
             <marker date="1478298537083" expanded="true" signature="865:898" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/vueAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/vueErreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
