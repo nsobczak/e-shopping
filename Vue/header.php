@@ -13,7 +13,7 @@
         <li><a href="index.php?action=userProfile">User Profile</a></li>
         <li><a href="index.php?action=inscription">Inscription</a></li>
         <li><a href="index.php?action=AdminUser">Admin User</a></li>
-		<li><a href="index.php?action=tunnel">Pannier</a></li>
+		<li><a href="index.php?action=tunnel">Panier</a></li>
 
     </ul>
 
