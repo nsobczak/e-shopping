@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Nicolas Sobczak & Vincent Reynaert
- * Date: 02/11/2016
+ * User: Magaly & Cuize
+ * Date: 04/11/2016
  */
 //________________________________________________________________________________________
 // Require once

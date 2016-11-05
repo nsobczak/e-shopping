@@ -7,8 +7,8 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once ('Controleur.php');
-require_once ('Vue/Vue.php');
+require_once('Controleur.php');
+require_once('Vue/Vue.php');
 
 class ControleurAccueil implements Controleur
 {
@@ -17,7 +17,7 @@ class ControleurAccueil implements Controleur
 
     }
 
-    // Affiche la page d'accueil
+    // Affiche la vue de la page
     public function getHTML()
     {
         $vue = new Vue("Accueil");
