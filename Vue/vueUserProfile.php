@@ -5,7 +5,7 @@
 <p>
 <table width="95%" style="line-height: 24px;" border="10">
     <tr>    <!-- table row -->
-        <td colspan="6"><img class="display" width=10% src="Images/profil_utilisateur.jpg" alt="user_picture"
+        <td colspan="6"><img class="display" width=10% src="Images/Profil/profil_utilisateur.jpg" alt="user_picture"
                              title="user_picture"/></td>    <!-- table data -->
     </tr>
     <tr>

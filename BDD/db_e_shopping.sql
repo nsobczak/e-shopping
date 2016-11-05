@@ -3,14 +3,16 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
+-- User: Nicolas Sobczak & Vincent Reynaert
 -- Généré le :  Ven 04 Novembre 2016 à 23:10
 -- Version du serveur :  5.7.10-log
 -- Version de PHP :  7.0.10
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
+  
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -19,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `db_e_shopping`
 --
+
 
 -- --------------------------------------------------------
 
@@ -41,7 +44,8 @@ CREATE TABLE `adresse` (
 INSERT INTO `adresse` (`adresseID`, `codePostal`, `ville`, `numeroVoie`, `nomRue`) VALUES
 (1, 59000, 'Lille', 42, 'Bd Vauban'),
 (2, 59000, 'Lille', 42, 'Bd Vauban'),
-(3, 59120, 'Loos', 69, 'Rue de Londres');
+(3, 59120, 'Loos', 69, 'Rue de Londres'),
+(4, 59120, 'Jadielle', 69, 'Rue de du centre');
 
 -- --------------------------------------------------------
 
@@ -201,8 +205,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`, `mail`, `mot_de_passe`) VALUES
 (1, 'Reynaert', 'Vincent', '', 1, 'vincent.reynaert@isen-lille.fr', '1234'),
 (2, 'Sobczak', 'Nicolas', '', 1, 'nicolas.sobczak@isen-lille.fr', '1234'),
-(3, 'Pryfer', 'sylvain', '', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
-(5, 'Pika', 'Chu', '', 2, 'pikachu@nintendo.com', '19be062d13637aaabb2790490fc173dd849aff47');
+(3, 'Pryfer', 'Sylvain', '', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
+(5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', '19be062d13637aaabb2790490fc173dd849aff47');
 
 --
 -- Index pour les tables exportées
