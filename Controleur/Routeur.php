@@ -11,6 +11,7 @@ require_once('Controleur/Controleur.php');
 require_once('Controleur/ControleurAccueil.php');
 require_once('Controleur/ControleurUserProfile.php');
 require_once('Controleur/ControleurInscription.php');
+require_once('Controleur/ControleurAdministrationProduit.php');
 require_once('Controleur/ControleurAdministrationUser.php');
 require_once('Controleur/ControleurProduit01.php');
 require_once('Controleur/ControleurTunnel.php');
@@ -22,6 +23,7 @@ class Routeur
     // Attributs
     private $ctrlAccueil;
     private $ctrlUserProfile;
+    private $ctrlAdminProduit;
     private $ctrlAdminUser;
     private $ctrlProduit01;
     private $ctrlTunnel;
@@ -33,6 +35,7 @@ class Routeur
         $this->ctrlUserProfile = new ControleurUserProfile();
         $this->ctrlProduit01 = new ControleurProduit01();
         $this->ctrlInscription = new ControleurInscription();
+        $this->ctrlAdminProduit = new ControleurAdministrationProduit();
         $this->ctrlAdminUser = new ControleurAdministrationUser();
         $this->ctrlTunnel = new ControleurTunnel();
     }
@@ -52,6 +55,8 @@ class Routeur
                     $this->ctrlTunnel->getHTML();
                 } elseif ($_GET['action'] == 'inscription') {
                     $this->ctrlInscription->registerUser();
+                } elseif ($_GET['action'] == 'adminProduit') {
+                    $this->ctrlAdminProduit->addProduit();
                 } elseif ($_GET['action'] == 'AdminUser') {
                     $this->ctrlAdminUser->getHTML();
                 } else {

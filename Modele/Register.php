@@ -7,7 +7,7 @@
 class Register extends Modele {
 
     public function createNewUser($nom, $prenom, $mail, $password) {
-        if($this->userExist($mail))
+        if($this->userExist($mail) || !filter_var($mail, FILTER_VALIDATE_EMAIL))
             return false;
         $password_hash = sha1("sel_php" . $password);
         $requete = "INSERT INTO `user` (`userID`, `nom`, `prenom`, `niveau_accreditation`, `mail`, `mot_de_passe`) VALUES (NULL, ?, ?, ?, ?, ?)";

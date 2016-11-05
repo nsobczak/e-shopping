@@ -73,10 +73,19 @@ header li {
     border-right: 1px solid #bbb;
 }
 
-header li a img {
-    float: left;
-    width: 2%;
-    border-right: 1px solid #bbb;
+header li.home {
+    width: 50px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+header li.home a {
+    padding: 0;
+    background: transparent;
+}
+
+header li.home a img {
+    width: 30px;
 }
 
 header li a, .dropbtn {

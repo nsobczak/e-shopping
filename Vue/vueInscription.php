@@ -3,8 +3,7 @@
  * Auteurs : B. LANDAIS et Q. LEVERT
  * Date : 04 / 11 / 2016
  */
-
-$register_ok = $donnees[1]; ?>
+?>
 
     <div id="registerForm">
 <?php if($register_ok) { ?>
