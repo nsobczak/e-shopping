@@ -86,7 +86,6 @@ header li.home a {
 
 header li.home a img {
     width: 30px;
-    border-right: 1px solid #bbb;
 }
 
 header li a, .dropbtn {
