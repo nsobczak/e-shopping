@@ -29,7 +29,7 @@ class ControleurInscription implements Controleur {
     public function getHTML()
     {
         $vue = new Vue("Inscription");
-        $vue->generer(array('register_ok', $this->register_ok));
+        $vue->generer(array('register_ok' => $this->register_ok));
     }
 
 }

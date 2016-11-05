@@ -24,6 +24,7 @@ class ControleurUserProfile implements Controleur
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
+        var_dump($this->displayUserProfile(1));
         $vue->generer($this->displayUserProfile(1));
     }
 
