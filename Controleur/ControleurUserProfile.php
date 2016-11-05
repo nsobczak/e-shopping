@@ -24,21 +24,21 @@ class ControleurUserProfile implements Controleur
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
-        $base = $this->displayUserProfile(5);
+        $userProfile = $this->displayUserProfile(2);
 
         // selection de l'image
-        if (!is_null($base[3])) {
-            $cheminImage = $base[3];
-        } else {
-            $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
-        }
-        $replacements = array(3 => $cheminImage);
-        $userProfile = array_replace($base, $replacements);
+//        if (!is_null($base[3])) {
+//            $cheminImage = $base[3];
+//        } else {
+//            $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
+//        }
+//        $replacements = array(3 => $cheminImage);
+//        $userProfile = array_replace($base, $replacements);
 
         $vue->generer($userProfile);
     }
 
-    /** Renvoie les informations sur un utilisateurs
+    /** Renvoie les informations sur un utilisateur
      *
      * @param int $userID L'identifiant de l'utilisateur
      * @return array L'utilisateur

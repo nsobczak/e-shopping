@@ -203,9 +203,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`, `mail`, `mot_de_passe`) VALUES
-(1, 'Reynaert', 'Vincent', NULL, 1, 'vincent.reynaert@isen-lille.fr', '1234'),
-(2, 'Sobczak', 'Nicolas', NULL, 1, 'nicolas.sobczak@isen-lille.fr', '1234'),
-(3, 'Pryfer', 'Sylvain', NULL, 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
+(1, 'Reynaert', 'Vincent', 'Images/Profil/profil_utilisateur.jpg', 1, 'vincent.reynaert@isen-lille.fr', '1234'),
+(2, 'Sobczak', 'Nicolas', 'Images/Profil/profil_utilisateur.jpg', 1, 'nicolas.sobczak@isen-lille.fr', '1234'),
+(3, 'Pryfer', 'Sylvain', 'Images/Profil/profil_utilisateur.jpg', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
 (5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', '19be062d13637aaabb2790490fc173dd849aff47');
 
 --
