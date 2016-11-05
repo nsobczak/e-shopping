@@ -2,7 +2,7 @@
     <a href="index.php?action=accueil"><h1 id="titreSite">GeekProducts.com</h1></a>
 
     <ul>
-<!--        <li><a href="index.php?action=accueil"><img src="Images/Home_Icon.png" title="home"/></a></li>-->
+        <li class="home"><a href="index.php?action=accueil"><img src="Images/Home_Icon.png" title="home"/></a></li>
         <li><a href="index.php?action=recherche">Recherche</a></li>
         <li class="dropdown">
             <a href="#" class="dropbtn">Produits</a>
