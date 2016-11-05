@@ -1,11 +1,21 @@
-<?php //$titre = "User profile id : " . $userID; ?>
+<?php
+//$titre = "User profile id : " . $userID;
+
+// selection de l'image
+if (!is_null($chemin)) {
+    $cheminImage = $chemin;
+} else {
+    $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
+}
+?>
 
 <body>
 
 <p>
 <table width="95%" style="line-height: 24px;" border="10">
     <tr>    <!-- table row -->
-        <td colspan="6"><img class="display" width=10% src=<?= $chemin ?> alt="user_picture" title="user_picture"/>
+        <td colspan="6"><img class="display" width=10%
+                             src=<?= $cheminImage ?> alt="user_picture" title="user_picture"/>
         </td>    <!-- table data -->
     </tr>
     <tr>

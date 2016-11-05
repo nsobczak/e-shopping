@@ -24,7 +24,7 @@ class ControleurUserProfile implements Controleur
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
-        $vue->generer($this->displayUserProfile(5));
+        $vue->generer($this->displayUserProfile(3));
     }
 
     /** Renvoie les informations sur un utilisateurs

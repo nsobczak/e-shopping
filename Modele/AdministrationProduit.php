@@ -1,6 +1,6 @@
 <?php
 
-require_once ('Modele.php');
+require_once('Modele.php');
 
 /**
  * Created by PhpStorm.
@@ -13,7 +13,8 @@ class AdministrationProduit extends Modele
     const ERROR_FORM = 2;
     const ADD_OK = 3;
 
-    public function produitExists($name) {
+    public function produitExists($name)
+    {
         $sql = 'SELECT * FROM produit WHERE nomProduit like ?';
         $produit = $this->executerRequete($sql, array($name));
         if ($produit->rowCount() >= 1)
@@ -22,8 +23,9 @@ class AdministrationProduit extends Modele
             return false;
     }
 
-    public function insertProduit($nom, $prix, $description, $cheminimage) {
-        if($this->produitExists($nom))
+    public function insertProduit($nom, $prix, $description, $cheminimage)
+    {
+        if ($this->produitExists($nom))
             return AdministrationProduit::ALREADY_EXIST;
         $sql = 'INSERT INTO `produit` (`poduitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES (NULL, ?, ?, ?, ?, ?)';
         $this->executerRequete($sql, array($nom, $prix, $description, $cheminimage, '1'));
