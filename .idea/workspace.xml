@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bf1dc1f-0a5f-4ba1-ac6e-09c105925154" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/vueErreur.php" afterPath="$PROJECT_DIR$/Vue/vueErreur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/header.php" afterPath="$PROJECT_DIR$/Vue/header.php" />
     </list>
     <ignored path="e-commerce.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +39,7 @@
       <file leaf-file-name="Vue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/Vue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
+            <state relative-caret-position="1025">
               <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding />
             </state>
@@ -48,7 +49,7 @@
       <file leaf-file-name="ControleurInscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/ControleurInscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="750">
               <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#7#75#0#PHP" expanded="true" />
@@ -57,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vue/header.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="22" selection-end-column="9" />
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -70,7 +71,7 @@
       <file leaf-file-name="ControleurAdministrationUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/ControleurAdministrationUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
+            <state relative-caret-position="525">
               <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="27" selection-end-column="45" />
               <folding>
                 <element signature="e#7#104#0#PHP" expanded="true" />
@@ -82,7 +83,7 @@
       <file leaf-file-name="ControleurUserProfile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/ControleurUserProfile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
+            <state relative-caret-position="875">
               <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="e#7#102#0#PHP" expanded="true" />
@@ -107,19 +108,12 @@
             <state relative-caret-position="575">
               <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding>
+                <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
                 <marker date="1478298537083" expanded="true" signature="58:60" ph="..." />
                 <marker date="1478298537083" expanded="true" signature="63:65" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="91:109" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="122:959" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="131:353" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="178:320" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="264:315" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="645:760" ph="..." />
                 <marker date="1478298537083" expanded="true" signature="658:691" ph="..." />
                 <marker date="1478298537083" expanded="true" signature="708:746" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="769:843" ph="..." />
                 <marker date="1478298537083" expanded="true" signature="782:799" ph="..." />
-                <marker date="1478298537083" expanded="true" signature="852:950" ph="..." />
                 <marker date="1478298537083" expanded="true" signature="865:898" ph="..." />
               </folding>
             </state>
@@ -136,7 +130,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vueErreur.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vueErreur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/vueErreur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -174,13 +168,13 @@
         <option value="$PROJECT_DIR$/Controleur/ControleurTunnel.php" />
         <option value="$PROJECT_DIR$/Controleur/Routeur.php" />
         <option value="$PROJECT_DIR$/Contenu/StyleEShopping.css" />
-        <option value="$PROJECT_DIR$/Vue/header.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurAccueil.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurAdministrationUser.php" />
         <option value="$PROJECT_DIR$/Controleur/ControleurUserProfile.php" />
         <option value="$PROJECT_DIR$/Modele/UserProfile.php" />
         <option value="$PROJECT_DIR$/Vue/vueUserProfile.php" />
         <option value="$PROJECT_DIR$/Vue/vueErreur.php" />
+        <option value="$PROJECT_DIR$/Vue/header.php" />
       </list>
     </option>
   </component>
@@ -415,12 +409,13 @@
       <workItem from="1478191566293" duration="1735000" />
       <workItem from="1478193865566" duration="2124000" />
       <workItem from="1478256872745" duration="340000" />
-      <workItem from="1478287420611" duration="9269000" />
+      <workItem from="1478287420611" duration="9347000" />
+      <workItem from="1478338894165" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28669000" />
+    <option name="totallyTimeSpent" value="29407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1080" extended-state="6" />
@@ -494,7 +489,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="75">
             <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -560,7 +554,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -625,7 +618,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -636,7 +628,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="75">
             <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -682,7 +673,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -760,14 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Contenu/StyleCotcotRecuite.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Contenu/StyleCotcotRecuite.css" />
     <entry file="file://$PROJECT_DIR$/Vue/htmlHead.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -780,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurInscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
+        <state relative-caret-position="750">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#7#75#0#PHP" expanded="true" />
@@ -827,7 +809,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurAdministrationUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
+        <state relative-caret-position="525">
           <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="27" selection-end-column="45" />
           <folding>
             <element signature="e#7#104#0#PHP" expanded="true" />
@@ -837,19 +819,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/ControleurUserProfile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
+        <state relative-caret-position="875">
           <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="e#7#102#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="22" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -863,7 +837,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/Vue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
+        <state relative-caret-position="1025">
           <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding />
         </state>
@@ -884,19 +858,12 @@
         <state relative-caret-position="575">
           <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
             <marker date="1478298537083" expanded="true" signature="58:60" ph="..." />
             <marker date="1478298537083" expanded="true" signature="63:65" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="91:109" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="122:959" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="131:353" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="178:320" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="264:315" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="645:760" ph="..." />
             <marker date="1478298537083" expanded="true" signature="658:691" ph="..." />
             <marker date="1478298537083" expanded="true" signature="708:746" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="769:843" ph="..." />
             <marker date="1478298537083" expanded="true" signature="782:799" ph="..." />
-            <marker date="1478298537083" expanded="true" signature="852:950" ph="..." />
             <marker date="1478298537083" expanded="true" signature="865:898" ph="..." />
           </folding>
         </state>
@@ -914,6 +881,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding />
         </state>
       </provider>

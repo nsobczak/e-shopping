@@ -12,13 +12,22 @@
             </div>
         </li>
         <li><a href="index.php?action=tunnel">Panier</a></li>
+        <li><a href="index.php?action=faq">FAQ</a></li>
         <li>--</li>
         <li><a href="index.php?action=userProfile">Profil</a></li>
         <li><a href="index.php?action=login">Login</a></li>
         <li><a href="index.php?action=inscription">Inscription</a></li>
         <li>--</li>
-        <li><a href="index.php?action=AdminUser">Admin User</a></li>
-        <li><a href="index.php?action=AdminCompteClient">Admin Compte Client</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Administration</a>
+            <div class="dropdown-content">
+                <a href="index.php?action=adminChiffreAffaire">Gérer ples produits</a>
+                <a href="index.php?action=AdminUser">User: gérer les comptes</a>
+                <a href="index.php?action=AdminCompteClient">Compte Client: historique des commandes</a>
+                <a href="index.php?action=adminChiffreAffaire">Gérer paiement et livraison</a>
+                <a href="index.php?action=adminChiffreAffaire">Chiffre d'affaire</a>
+            </div>
+        </li>
 
     </ul>
 
