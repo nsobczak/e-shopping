@@ -21,7 +21,7 @@
         <li class="dropdown">
             <a href="#" class="dropbtn">Administration</a>
             <div class="dropdown-content">
-                <a href="index.php?action=adminChiffreAffaire">Gérer ples produits</a>
+                <a href="index.php?action=adminProduit">Gérer les produits</a>
                 <a href="index.php?action=AdminUser">User: gérer les comptes</a>
                 <a href="index.php?action=AdminCompteClient">Compte Client: historique des commandes</a>
                 <a href="index.php?action=adminChiffreAffaire">Gérer paiement et livraison</a>
