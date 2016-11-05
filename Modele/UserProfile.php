@@ -18,11 +18,7 @@ class UserProfile extends Modele
     public function getUser($userID)
     {
         $sql = 'select userID, nom, prenom, chemin, niveau_accreditation, mail, mot_de_passe from user where userID=?';
-        $arrayUserID = array($userID);
-        var_dump($arrayUserID[3]);
-
-
-        $user = $this->executerRequete($sql, $arrayUserID);
+        $user = $this->executerRequete($sql, array($userID));
         if ($user->rowCount() == 1)
             return $user->fetch();  // Accès à la première ligne de résultat
         else
