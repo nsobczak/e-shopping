@@ -20,22 +20,40 @@ class ControleurUserProfile implements Controleur
         $this->user = new UserProfile();
     }
 
+    /** Selectionne la page a afficher
+     *
+     * @return int L'id de l'utilisateur s'il est connecte, -1 sinon
+     */
+    public function selectHTML()
+    {
+//        if ("utilisateur loggé")
+//        {
+            $userID = 5;
+//        }
+//        else // Pour aller a la page de login
+//        {
+//          $userID = -1;
+//        }
+        return $userID;
+    }
+
     // Affiche la page d'accueil
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
-        $userProfile = $this->displayUserProfile(2);
+        $userID = $this->selectHTML();
 
-        // selection de l'image
-//        if (!is_null($base[3])) {
-//            $cheminImage = $base[3];
-//        } else {
-//            $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
-//        }
-//        $replacements = array(3 => $cheminImage);
-//        $userProfile = array_replace($base, $replacements);
+        // si l'uilisateur est connecte
+        if ($userID >= 0){
+            $userProfile = $this->displayUserProfile($userID);
+            $vue->generer($userProfile);
+        }
+        // sinon redirection vers la page de login
+        else
+        {
+            header('Location: index.php?action=login');
+        }
 
-        $vue->generer($userProfile);
     }
 
     /** Renvoie les informations sur un utilisateur
@@ -50,3 +68,15 @@ class ControleurUserProfile implements Controleur
         return $result;
     }
 }
+
+
+/* brouillon
+            // selection de l'image
+        if (!is_null($base[3])) {
+            $cheminImage = $base[3];
+        } else {
+            $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
+        }
+        $replacements = array(3 => $cheminImage);
+        $userProfile = array_replace($base, $replacements);
+*/
