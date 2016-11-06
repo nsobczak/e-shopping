@@ -1,27 +1,29 @@
 <?php
 
 /*
- * Auteurs : B. LANDAIS et Q. LEVERT
+ * Auteurs : Baudouin LANDAIS et Quentin LEVERT
  * Date : 04 / 11 / 2016
  */
 
 require_once('Modele/Register.php');
 
 class ControleurInscription implements Controleur {
-    private $register_ok;
+    private $register_code;
     private $register;
 
     public function __construct() {
-        $this->register_ok = false;
+        $this->register_code = 0; // default value
         $this->register = new Register();
     }
 
     public function registerUser() {
-        if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['password'])) {
-            $this->register_ok = $this->register->createNewUser($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['password']);
-        }
-        else
-            $this->register_ok = false;
+        // Aucun champ n'est rempli => Le client vient de cliquer sur "Inscription" donc on affiche le formulaire
+        if(empty($_POST['nom']) && empty($_POST['prenom']) && empty($_POST['mail']) && empty($_POST['password']))
+            $this->register_code = 0;
+        elseif(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || empty($_POST['password']))
+            $this->register_code = Register::FORM_INPUTS_ERROR;
+        elseif(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['password']))
+            $this->register_code = $this->register->createNewUser($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['password']);
         $this->getHTML();
     }
 
@@ -29,7 +31,7 @@ class ControleurInscription implements Controleur {
     public function getHTML()
     {
         $vue = new Vue("Inscription");
-        $vue->generer(array('register_ok' => $this->register_ok));
+        $vue->generer(array('register_code' => $this->register_code));
     }
 
 }

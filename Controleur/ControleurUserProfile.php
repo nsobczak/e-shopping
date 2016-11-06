@@ -52,6 +52,7 @@ class ControleurUserProfile implements Controleur
         else
         {
             header('Location: index.php?action=login');
+            die();
         }
 
     }
