@@ -13,6 +13,7 @@ require_once('Controleur/ControleurUserProfile.php');
 require_once('Controleur/ControleurInscription.php');
 require_once('Controleur/ControleurAdministrationProduit.php');
 require_once('Controleur/ControleurAdministrationUser.php');
+require_once('Controleur/ControleurAdministrationPaiementLivraison.php');
 require_once('Controleur/ControleurProduit01.php');
 require_once('Controleur/ControleurTunnel.php');
 
@@ -37,6 +38,7 @@ class Routeur
         $this->ctrlInscription = new ControleurInscription();
         $this->ctrlAdminProduit = new ControleurAdministrationProduit();
         $this->ctrlAdminUser = new ControleurAdministrationUser();
+        $this->ctrlAdminPaiementLivraison = new ControleurAdministrationPaiementLivraison();
         $this->ctrlTunnel = new ControleurTunnel();
     }
 
@@ -59,6 +61,8 @@ class Routeur
                     $this->ctrlAdminProduit->addProduit();
                 } elseif ($_GET['action'] == 'AdminUser') {
                     $this->ctrlAdminUser->getHTML();
+                } elseif ($_GET['action'] == 'adminPaiementLivraison') {
+                    $this->ctrlAdminPaiementLivraison->getHTML();
                 } else {
                     throw new Exception("Action non valide");
                 }
