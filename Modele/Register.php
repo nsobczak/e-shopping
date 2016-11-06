@@ -23,7 +23,7 @@ class Register extends Modele {
         $password_hash = sha1(Register::SALT_REGISTER . $password);
         try {
             $requete = "INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`, `mail`, `mot_de_passe`) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
-            $this->executerRequete($requete, array($nom, $prenom, '', '2', $mail, $password_hash));
+            $this->executerRequete($requete, array($nom, $prenom, 'Images/Profil/profil_utilisateur.jpg', '2', $mail, $password_hash));
             return Register::REGISTER_OK;
         }
         catch(PDOException $e) {
