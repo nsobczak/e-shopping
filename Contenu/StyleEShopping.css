@@ -180,5 +180,10 @@ footer a {
     width: 25%;
 }
 
+#contenu .error {
+    text-align: center;
+    color: red;
+}
+
 /*====================================================*/
 
