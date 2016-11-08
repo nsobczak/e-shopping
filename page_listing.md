@@ -14,6 +14,6 @@
 |ControleurCompteClient||vueCompteClient|recapitulatif compte client (moteur de recherche par date de commande)|admin|Sylvain & Timothée|4|
 |ControleurAdministrationProduit||vueAdministrationProduit|administration produit (ajout prd + modif prix + gestion des categories)|admin|Pierre & Julien|4|
 |ControleurAdministrationUser||vueAdministrationUser|administration user limiter a role admin (validation compte/ gestion autorisation/suppression de compte)|admin|Romain & Vivien|4|
-|ControleurChiffreDAffaire||vueChiffreDAffaire|visu chiffre d'affaire (formulaire de recherche mois/année)|admin||4|
-|ControleurAdministrationPaiementLivraison||vueAdministrationPaiementLivraison|administration des moyens de paiement et mode de livraison|admin||4|
+|ControleurChiffreDAffaire||vueChiffreDAffaire|visu chiffre d'affaire (formulaire de recherche mois/année)|admin|Quentin|4|
+|ControleurAdministrationPaiementLivraison||vueAdministrationPaiementLivraison|administration des moyens de paiement et mode de livraison|admin|Baudouin|4|
 |ControleurFaq||vueFaq|faq|tous||5|

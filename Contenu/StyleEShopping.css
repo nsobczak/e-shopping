@@ -1,48 +1,6 @@
-
-body {
-    height: 75%;
-    margin: 0;
-}
-
-body p {
-    text-align: left;
-    font: normal 15px verdana, sans-serif;
-    padding-left: 10px;
-    margin: 0;
-}
-
-/*=================================================*/
-
-#ingredients {
-    position: fixed;
-    top: 180px;
-    margin-left: 80%;
-    background: #e68a00;
-    border-bottom: 2px solid #995c00;
-    border-radius: 15px;
-}
-
-#ingredients p {
-    margin: 0;
-}
-
-#ingredients table {
-    border-collapse: collapse;
-}
-
-#ingredients td {
-    border: 2px solid white;
-    text-align: center;
-}
-
-#ingredients a {
-    text-decoration: none;
-    color: black;
-    text-align: center;
-}
-
-/*===============================================================*/
-
+/*=================================================
+ * header et son menu deroulant
+ */
 header {
     background: #00cccc;
     height: 102px;
@@ -130,6 +88,26 @@ header .dropdown:hover .dropdown-content {
 
 /*====================================================*/
 
+/*=================================================
+ * body
+ */
+
+body {
+    height: 75%;
+    margin: 0;
+}
+
+body p {
+    text-align: left;
+    font: normal 15px verdana, sans-serif;
+    padding-left: 10px;
+    margin: 0;
+}
+
+
+/*=================================================
+ * footer
+ */
 footer {
     background: #cc0000;
     height: 50px;
@@ -156,6 +134,9 @@ footer a {
 
 /*====================================================*/
 
+/*=================================================
+ *
+ */
 #logo {
     text-align: center;
     margin-top: 120px;
