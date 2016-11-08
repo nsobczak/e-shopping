@@ -1,6 +1,6 @@
 <?php
 /**
- * User: Baudouin LANDAIS & Quentin LEVERT
+ * User: Baudouin LANDAIS
  * Date: 06/11/2016
  */
 ?>
