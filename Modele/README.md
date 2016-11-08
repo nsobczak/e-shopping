@@ -7,3 +7,5 @@ Ce dossier est destiné à accueillir les modeles du site.
 ## Modele.php
 Classe abstraite, mère des sous-classes de modèle. Elle permet de se connecter à la base de données et d'exécuter des requêtes.
 
+## \<Nom_du_modele\>.php
+Classe correspondant à un modèle. Elle hérite de la classe abstraite Modele.php.
