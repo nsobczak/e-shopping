@@ -25,11 +25,12 @@ class ControleurAdministrationPaiementLivraison implements Controleur
      */
     public function handlerPaiementLivraison() {
         $this->addPaiementLivraison(); // vérification si ajout paiement / livraison
+        $this->checkEditPaiement();
         $this->removePaiementLivraison(); // vérification s'il veut éditer un moyen de paiement
         $this->getHTML();
     }
 
-    public function addPaiementLivraison() {
+    private function addPaiementLivraison() {
         if (empty($_POST['type_mode']) && empty($_POST['nomPaiementLivraison']) && empty($_POST['descriptionPaiementLivraison']))
             $this->adminPaiementLivraison_code = 0;
         elseif (empty($_POST['type_mode']) || empty($_POST['nomPaiementLivraison']) || empty($_POST['descriptionPaiementLivraison']))
@@ -43,7 +44,25 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         }
     }
 
-    public function removePaiementLivraison() {
+    private function checkEditPaiement() {
+        if(!empty($_GET['do']) && !empty($_GET['paiementID'])) {
+            if ($_GET['do'] == "delete")
+                return;
+            if ($_GET['do'] == "editPaiement") {
+                $this->adminPaiementLivraison_code = AdministrationPaiementLivraison::EDIT_OK;
+            }
+        }
+        if (!empty($_GET['paiementID']) && empty($_GET['do'])) {
+            $paiement = $this->adminPaiementLivraison->getMoyensPaiementById($_GET['paiementID']);
+            $vue = new Vue("AdminEditPaiement");
+            $vue->generer(array(
+                'paiement' => $paiement,
+                'listMoyensPaiement' => $this->adminPaiementLivraison->getMoyensPaiement()));
+            die();
+        }
+    }
+
+    private function removePaiementLivraison() {
         if(!empty($_GET['paiementID']) && !empty($_GET['do'])) {
             if($_GET['do'] == "delete")
                 $this->adminPaiementLivraison_code == $this->adminPaiementLivraison->removePaiementLivraison($_GET['paiementID']);
