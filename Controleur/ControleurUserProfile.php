@@ -20,6 +20,17 @@ class ControleurUserProfile implements Controleur
         $this->user = new UserProfile();
     }
 
+    /**
+     * Gestionnaire principal de la page d'administration pour la livraison
+     * ainsi que pour les modes de livraison, les vérifications des variables
+     * se feront ici + appel de la page HTML
+     */
+    public function handlerUserProfile()
+    {
+        $this->changeProfilePicture(); // vérification si changement de l'image
+        $this->getHTML();
+    }
+
     /** Selectionne la page a afficher
      *
      * @return int L'id de l'utilisateur s'il est connecte, -1 sinon
@@ -28,7 +39,7 @@ class ControleurUserProfile implements Controleur
     {
 //        if ("utilisateur loggé")
 //        {
-            $userID = 5;
+        $userID = 2;
 //        }
 //        else // Pour aller a la page de login
 //        {
@@ -44,13 +55,11 @@ class ControleurUserProfile implements Controleur
         $userID = $this->selectHTML();
 
         // si l'uilisateur est connecte
-        if ($userID >= 0){
+        if ($userID >= 0) {
             $userProfile = $this->displayUserProfile($userID);
             $vue->generer($userProfile);
-        }
-        // sinon redirection vers la page de login
-        else
-        {
+        } // sinon redirection vers la page de login
+        else {
             header('Location: index.php?action=login');
             die();
         }
@@ -67,6 +76,16 @@ class ControleurUserProfile implements Controleur
         $user = new UserProfile();
         $result = $user->getUser($userID);
         return $result;
+    }
+
+    // Met à jour l'image de profil de l'utilisateur
+    public function changeProfilePicture()
+    {
+//        Faut pouvoir upload une image puis changer son chemin
+        if (!empty($_POST['fichier'])) {
+            $this->user->uploadPicture($_POST['fichier'], 2);
+        }
+
     }
 }
 

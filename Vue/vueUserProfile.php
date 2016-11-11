@@ -4,12 +4,33 @@
 
 <body>
 
-<p>
 <table width="95%" style="line-height: 24px;" border="10">
     <tr>    <!-- table row -->
-        <td colspan="6"><img class="display" width=10%
+        <td colspan="2"><img class="display" width=10%
                              src=<?= $chemin ?> alt="user_picture" title="user_picture"/>
         </td>    <!-- table data -->
+        <td>
+            <?php
+            if (!empty($message)) {
+                echo '<p>', "\n";
+                echo "\t\t<strong>", htmlspecialchars($message), "</strong>\n";
+                echo "\t</p>\n\n";
+            }
+            ?>
+            <form enctype="multipart/form-data" action="?action=userProfile"
+                  method="post">
+                <fieldset>
+                    <legend>Change profile picture</legend>
+                    <p>
+                        <label for="fichier_a_uploader" title="Choose a picture">Change in 2 steps:</label>
+                        <!--                        <input type="hidden" name="MAX_FILE_SIZE" value="-->
+                        <?php //echo MAX_SIZE; ?><!--"/>-->
+                        <input name="fichier" type="file" id="fichier_a_uploader"/>
+                        <input type="submit" name="submit" value="Update picture"/>
+                    </p>
+                </fieldset>
+            </form>
+        </td>
     </tr>
     <tr>
         <td> user ID :
@@ -46,6 +67,5 @@
         <td><?= $mot_de_passe ?></td>
     </tr>
 </table>
-</p>
 
 </body>

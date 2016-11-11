@@ -50,7 +50,7 @@ class Routeur
                 if ($_GET['action'] == 'accueil') {
                     $this->ctrlAccueil->getHTML();
                 } elseif ($_GET['action'] == 'userProfile') {
-                    $this->ctrlUserProfile->getHTML();
+                    $this->ctrlUserProfile->handlerUserProfile();
                 } elseif ($_GET['action'] == 'produit01') {
                     $this->ctrlProduit01->getHTML();
                 } elseif ($_GET['action'] == 'tunnel') {
