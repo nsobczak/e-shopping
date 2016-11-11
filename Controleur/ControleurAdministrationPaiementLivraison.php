@@ -25,8 +25,9 @@ class ControleurAdministrationPaiementLivraison implements Controleur
      */
     public function handlerPaiementLivraison() {
         $this->addPaiementLivraison(); // vérification si ajout paiement / livraison
-        $this->checkEditPaiement();
-        $this->removePaiementLivraison(); // vérification s'il veut éditer un moyen de paiement
+        $this->checkEditPaiement();  // vérification s'il veut éditer un moyen de paiement
+        $this->removePaiementLivraison();  // vérification s'il veut supprimer un paiement
+
         $this->getHTML();
     }
 
@@ -49,6 +50,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
             if ($_GET['do'] == "delete")
                 return;
             if ($_GET['do'] == "editPaiement") {
+                $this->adminPaiementLivraison->editMoyenPaiement($_POST['nomPaiementLivraison'], $_POST['descriptionPaiementLivraison'], $_GET['paiementID']);
                 $this->adminPaiementLivraison_code = AdministrationPaiementLivraison::EDIT_OK;
             }
         }

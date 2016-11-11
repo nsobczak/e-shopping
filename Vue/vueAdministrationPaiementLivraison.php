@@ -20,7 +20,7 @@
 <?php if(count($listModesLivraison) >= 1) { ?>
 <h3>Gestion des modes de livraison</h3>
 <ul>
-    <?php foreach ($listModesLivraison as $modeLivraison) { //TODO ?>
+    <?php foreach ($listModesLivraison as $modeLivraison) { //TODO BDD incomplète livraison ?>
         <li>
             <a href="?action=adminPaiementLivraison&do=delete&livraisonID=<?php echo $modeLivraison['']; ?>">[✖]</a>
             <a href="?action=adminPaiementLivraison&livraisonID=<?php echo $modeLivraison['']; ?>"><?php echo $modeLivraison['']; ?></a>
