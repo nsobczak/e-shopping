@@ -25,7 +25,7 @@
                         <label for="fichier_a_uploader" title="Choose a picture">Change in 2 steps:</label>
                         <!--                        <input type="hidden" name="MAX_FILE_SIZE" value="-->
                         <?php //echo MAX_SIZE; ?><!--"/>-->
-                        <input name="fichier" type="file" id="fichier_a_uploader"/>
+                        <input type="file" name="fichier" id="fichier_a_uploader"/>
                         <input type="submit" name="submit" value="Update picture"/>
                     </p>
                 </fieldset>
