@@ -81,9 +81,11 @@ class ControleurUserProfile implements Controleur
     // Met à jour l'image de profil de l'utilisateur
     public function changeProfilePicture()
     {
-//        Faut pouvoir upload une image puis changer son chemin
-        if (!empty($_POST['fichier'])) {
-            $this->user->uploadPicture($_POST['fichier'], 2);
+        var_dump("coucou1");
+        // Faut pouvoir upload une image puis changer son chemin
+        if (!empty($_POST['submit'])) {
+            var_dump("coucou2");
+            $this->user->uploadPicture($_POST['submit'], 2);
         }
 
     }

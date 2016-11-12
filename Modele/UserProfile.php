@@ -33,74 +33,52 @@ class UserProfile extends Modele
      */
     public function uploadPicture($fichier, $userID)
     {
-        // Constantes
-        define('TARGET', 'Images/Profil)');    // Repertoire cible
-        define('MAX_SIZE', 100000000);    // Taille max en octets du fichier
-        define('WIDTH_MAX', 8000);    // Largeur max de l'image en pixels
-        define('HEIGHT_MAX', 8000);    // Hauteur max de l'image en pixels
+        $target_dir = "Images/Profil/";
+        $target_file = $target_dir . basename($_FILES["fichier"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
-        // Tableaux de donnees
-        $tabExt = array('jpg', 'gif', 'png', 'jpeg');    // Extensions autorisees
-        $infosImg = array();
-
-        // Variables
-        $extension = '';
-        $message = '';
-        $nomImage = '';
-        var_dump("enter l'echo !!!");
-        // Script d'upload
-        // On verifie si le champ est rempli
-        if (!empty($_FILES['fichier']['name'])) {
-            // Recuperation de l'extension du fichier
-            $extension = pathinfo($_FILES['fichier']['name'], PATHINFO_EXTENSION);
-
-            // On verifie l'extension du fichier
-            if (in_array(strtolower($extension), $tabExt)) {
-                // On recupere les dimensions du fichier
-                $infosImg = getimagesize($_FILES['fichier']['tmp_name']);
-
-                // On verifie le type de l'image
-                if ($infosImg[2] >= 1 && $infosImg[2] <= 14) {
-                    // On verifie les dimensions et taille de l'image
-                    if (($infosImg[0] <= WIDTH_MAX) && ($infosImg[1] <= HEIGHT_MAX) && (filesize($_FILES['fichier']['tmp_name']) <= MAX_SIZE)) {
-                        // Parcours du tableau d'erreurs
-                        if (isset($_FILES['fichier']['error'])
-                            && UPLOAD_ERR_OK === $_FILES['fichier']['error']
-                        ) {
-                            // On renomme le fichier
-                            $nomImage = $userID . '.' . $extension;
-
-                            // Si c'est OK, on teste l'upload
-                            if (move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET . $nomImage)) {
-                                $message = 'Upload réussi !';
-                                //On met à jour le chemin dans la table
-                                //updateChemin('TARGET' + $nomImage, $userID);
-                            } else {
-                                // Sinon on affiche une erreur systeme
-                                $message = 'Problème lors de l\'upload !';
-                            }
-                        } else {
-                            $message = 'Une erreur interne a empêché l\'uplaod de l\'image';
-                        }
-                    } else {
-                        // Sinon erreur sur les dimensions et taille de l'image
-                        $message = 'Erreur dans les dimensions de l\'image !';
-                    }
-                } else {
-                    // Sinon erreur sur le type de l'image
-                    $message = 'Le fichier à uploader n\'est pas une image !';
-                }
+        // Check if image file is a actual image or fake image
+        if (isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fichier"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
             } else {
-                // Sinon on affiche une erreur pour l'extension
-                $message = 'L\'extension du fichier est incorrecte !';
+                echo "File is not an image.";
+                $uploadOk = 0;
             }
-        } else {
-            // Sinon on affiche une erreur pour le champ vide
-            $message = 'Veuillez remplir le formulaire svp !';
         }
+
+//        // Check file size
+//        if ($_FILES["fichier"]["size"] > 500000) {
+//            echo "Sorry, your file is too large.";
+//            $uploadOk = 0;
+//        }
+//
+//        // Allow certain file formats
+//        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+//            && $imageFileType != "gif"
+//        ) {
+//            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+//            $uploadOk = 0;
+//        }
+//
+//        // Check if $uploadOk is set to 0 by an error
+//        if ($uploadOk == 0) {
+//            echo "Sorry, your file was not uploaded.";
+//            // if everything is ok, try to upload file
+//        } else {
+//            if (move_uploaded_file($_FILES["fichier"]["tmp_name"], $target_file)) {
+//                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+//            } else {
+//                echo "Sorry, there was an error uploading your file.";
+//            }
+//        }
     }
 
-    public function updateChemin($newPath, $userID) {
+    public function updateChemin($newPath, $userID)
+    {
         $sql = "UPDATE chemin SET chemin = ? WHERE $userID = ?";
         $this->executerRequete($sql, array($newPath, $userID));
     }
