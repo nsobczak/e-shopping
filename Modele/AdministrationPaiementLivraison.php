@@ -12,22 +12,15 @@ class AdministrationPaiementLivraison extends Modele
     const BAD_ITEM_EDIT = 4;
     const EDIT_OK = 5;
 
-    public function insertPaiementLivraison($type_mode, $nom, $description)
+    public function insertPaiementLivraison($nom, $description)
     {
-        // TODO
-        if($type_mode == "paiement") {
-            $sql = "INSERT INTO moyendepaiement(moyenDePaiementID,nomMoyenDePaiement,descriptionMoyenDePaiement) VALUES (NULL, ?, ?)";
-            $this->executerRequete($sql, array($nom, $description));
-        }
-        elseif($type_mode == "livraison") {
-            // TODO : BDD incomplète
-        }
+        $sql = "INSERT INTO moyendepaiement(moyenDePaiementID,nomMoyenDePaiement,descriptionMoyenDePaiement) VALUES (NULL, ?, ?)";
+        $this->executerRequete($sql, array($nom, $description));
         return AdministrationPaiementLivraison::ACTION_OK;
     }
 
     public function removePaiementLivraison($paiementID)
     {
-        // TODO
         $sql = "DELETE FROM moyendepaiement WHERE moyenDePaiementID = ?";
         $this->executerRequete($sql, array($paiementID));
         return AdministrationPaiementLivraison::ACTION_OK;
@@ -53,10 +46,4 @@ class AdministrationPaiementLivraison extends Modele
         else
             throw new Exception("Aucun moyen de paiement n'existe pour l'identifiant '. $paiementID .'");
     }
-
-    public function getModesLivraison() {
-        // TODO : attente bdd
-        return array();
-    }
-
 }

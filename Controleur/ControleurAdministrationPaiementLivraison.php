@@ -32,16 +32,12 @@ class ControleurAdministrationPaiementLivraison implements Controleur
     }
 
     private function addPaiementLivraison() {
-        if (empty($_POST['type_mode']) && empty($_POST['nomPaiementLivraison']) && empty($_POST['descriptionPaiementLivraison']))
+        if (empty($_POST['nomPaiementLivraison']) && empty($_POST['descriptionPaiementLivraison']))
             $this->adminPaiementLivraison_code = 0;
-        elseif (empty($_POST['type_mode']) || empty($_POST['nomPaiementLivraison']) || empty($_POST['descriptionPaiementLivraison']))
+        elseif (empty($_POST['nomPaiementLivraison']) || empty($_POST['descriptionPaiementLivraison']))
             $this->adminPaiementLivraison_code = AdministrationPaiementLivraison::MISSING_PARAMETERS;
-        elseif (!empty($_POST['type_mode']) && !empty($_POST['nomPaiementLivraison']) && !empty($_POST['descriptionPaiementLivraison'])) {
-            if ($_POST['type_mode'] == "paiement" xor $_POST['type_mode'] == "livraison")
-                $this->adminPaiementLivraison_code = $this->adminPaiementLivraison->insertPaiementLivraison($_POST['type_mode'], $_POST['nomPaiementLivraison'], $_POST['descriptionPaiementLivraison']);
-            else
-                $this->adminPaiementLivraison_code = AdministrationPaiementLivraison::INVALID_PARAMETER;
-
+        elseif (empty($_GET['do']) && !empty($_POST['nomPaiementLivraison']) && !empty($_POST['descriptionPaiementLivraison'])) {
+            $this->adminPaiementLivraison_code = $this->adminPaiementLivraison->insertPaiementLivraison($_POST['nomPaiementLivraison'], $_POST['descriptionPaiementLivraison']);
         }
     }
 
@@ -78,7 +74,6 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         // Par défaut, on affiche la liste des moyens de paiement & livraison
         $vue->generer(array(
             'listMoyensPaiement' => $this->adminPaiementLivraison->getMoyensPaiement(),
-            'listModesLivraison' => $this->adminPaiementLivraison->getModesLivraison(),
             'code'               => $this->adminPaiementLivraison_code
         ));
 
