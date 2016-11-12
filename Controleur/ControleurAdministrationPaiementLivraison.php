@@ -19,7 +19,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
     }
 
     /**
-     * Gestionnaire principale de la page d'administration pour la livraison
+     * Gestionnaire principal de la page d'administration pour la livraison
      * ainsi que pour les modes de livraison, les vérifications des variables
      * se feront ici + appel de la page HTML
      */
