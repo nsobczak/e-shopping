@@ -61,11 +61,7 @@
         <td/>
         <td><?= $mail ?></td>
     </tr>
-    <tr>
-        <td> sha1 du mot de passe :
-        <td/>
-        <td><?= $mot_de_passe ?></td>
-    </tr>
+
 </table>
 
 </body>
