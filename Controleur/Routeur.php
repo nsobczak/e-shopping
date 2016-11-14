@@ -66,7 +66,7 @@ class Routeur
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {
                     $this->ctrlAdminPaiementLivraison->handlerPaiementLivraison();
                 } elseif ($_GET['action'] == 'login') {
-                    $this->ctrlLogin->login();
+                    $this->ctrlLogin->getHTML();
                 } else {
                     throw new Exception("Action non valide");
                 }

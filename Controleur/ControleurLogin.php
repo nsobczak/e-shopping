@@ -9,26 +9,16 @@
 // Require once
 require_once 'Controleur/Controleur.php';
 require_once 'Vue/Vue.php';
-require_once 'Modele/UserProfile.php';
+require_once 'Modele/UserLogin.php';
 
 class ControleurLogin implements Controleur
 {
     private $user;
 
+
     public function __construct()
     {
-        $this->user = new UserProfile();
-    }
-
-    /**
-     * Gestionnaire principal de la page d'administration pour la livraison
-     * ainsi que pour les modes de livraison, les vérifications des variables
-     * se feront ici + appel de la page HTML
-     */
-    public function handlerUserProfile()
-    {
-        $this->changeProfilePicture(); // vérification si changement de l'image
-        $this->getHTML();
+        $this->user = new UserLogin();
     }
 
     /** Selectionne la page a afficher
@@ -37,31 +27,32 @@ class ControleurLogin implements Controleur
      */
     public function selectHTML()
     {
-//        if ("utilisateur loggé")
-//        {
-        $userID = 2;
-//        }
-//        else // Pour aller a la page de login
-//        {
-//          $userID = -1;
-//        }
+        if (isset($_SESSION))
+        {
+        $userID = $_SESSION['userID'];
+        }
+        else // Pour aller a la page de login
+        {
+          $userID = -1;
+        }
         return $userID;
     }
 
     // Affiche la page d'accueil
     public function getHTML()
     {
-        $vue = new Vue("UserProfile");
+        $vue = new Vue("UserLogin");
+        session_start();
         $userID = $this->selectHTML();
 
-        // si l'uilisateur est connecte
+        // si l'utilisateur est connecte
         if ($userID >= 0) {
-            $userProfile = $this->displayUserProfile($userID);
-            $vue->generer($userProfile);
+            header('Location: index.php?action=userProfile');
+            die();
         } // sinon redirection vers la page de login
         else {
-            header('Location: index.php?action=login');
-            die();
+
+            $vue->generer();
         }
 
     }
@@ -71,34 +62,58 @@ class ControleurLogin implements Controleur
      * @param int $userID L'identifiant de l'utilisateur
      * @return array L'utilisateur
      */
-    public function displayUserProfile($userID)
+    public function displayUserLogin($userID)
     {
-        $user = new UserProfile();
+        $user = new UserLogin();
         $result = $user->getUser($userID);
         return $result;
     }
 
-    // Met à jour l'image de profil de l'utilisateur
-    public function changeProfilePicture()
-    {
-        var_dump("coucou1");
-        // Faut pouvoir upload une image puis changer son chemin
-        if (!empty($_POST['submit'])) {
-            var_dump("coucou2");
-            $this->user->uploadPicture($_POST['submit'], 2);
-        }
+    /**
+     *
+     */
+    public function login(){
+        // Definition des constantes et variables
+        define('LOGIN','toto');
+        define('PASSWORD','tata');
+        $errorMessage = '';
 
+        // Test de l'envoi du formulaire
+        if(!empty($_POST))
+        {
+            // Les identifiants sont transmis ?
+            if(!empty($_POST['login']) && !empty($_POST['password']))
+            {
+                // Sont-ils les mêmes que les constantes ?
+                if($_POST['login'] !== LOGIN)
+                {
+                    $errorMessage = 'Mauvais login !';
+                }
+                elseif($_POST['password'] !== PASSWORD)
+                {
+                    $errorMessage = 'Mauvais password !';
+                }
+                else
+                {
+                    // On ouvre la session
+                    session_start();
+                    // On enregistre le login en session
+                    $_SESSION['login'] = LOGIN;
+                    // On redirige vers le fichier admin.php
+                    header('Location: http://www.monsite.com/admin.php');
+                    exit();
+                }
+            }
+            else
+            {
+                $errorMessage = 'Veuillez inscrire vos identifiants svp !';
+            }
+        }
     }
+
 }
 
 
-/* brouillon
-            // selection de l'image
-        if (!is_null($base[3])) {
-            $cheminImage = $base[3];
-        } else {
-            $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
-        }
-        $replacements = array(3 => $cheminImage);
-        $userProfile = array_replace($base, $replacements);
-*/
+
+
+
