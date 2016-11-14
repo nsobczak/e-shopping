@@ -9,6 +9,14 @@ require_once('Modele.php');
  */
 class UserLogin extends Modele
 {
+    const FORM_INPUTS_ERROR = 1;
+    const INVALID_MAIL_FORMAT = 2;
+    const DOESNOT_EXIST = 3;
+    const REGISTER_OK = 4;
+    const DATABASE_ERROR = 5;
+
+    const SALT_REGISTER = "sel_php";
+
     /** Renvoie les informations sur un utillisateurs
      *
      * @param int $id L'identifiant de l'utilisateur
@@ -25,13 +33,15 @@ class UserLogin extends Modele
         else
             throw new Exception("Aucun utilisateur ne correspond à l'identifiant '$userID'");
     }
-    // Renvoie la liste des commentaires associés à un billet
-    public function getCommentaires($idBillet) {
-        $sql = 'select COM_ID as id, COM_DATE as date,'
-            . ' COM_AUTEUR as auteur, COM_CONTENU as contenu from T_COMMENTAIRE'
-            . ' where BIL_ID=?';
-        $commentaires = $this->executerRequete($sql, array($idBillet));
-        return $commentaires;
+
+    public function userExist($mailUser) {
+        $sql = "SELECT * FROM user WHERE mail = ?";
+        $user = $this->executerRequete($sql, array($mailUser));
+        if ($user->rowCount() >= 1) {
+            return true;
+        }
+        else
+            return false;
     }
 
 }

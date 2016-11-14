@@ -13,12 +13,14 @@ require_once 'Modele/UserLogin.php';
 
 class ControleurLogin implements Controleur
 {
-    private $user;
+    private $login_code;
+    private $userLogin;
 
 
     public function __construct()
     {
-        $this->user = new UserLogin();
+        $this->login_code = 0;
+        $this->userLogin = new UserLogin();
     }
 
     /** Selectionne la page a afficher
@@ -38,11 +40,20 @@ class ControleurLogin implements Controleur
         return $userID;
     }
 
+    public function registerUser() {
+        // Aucun champ n'est rempli => Le client vient de cliquer sur "Login ou Profil et il n'est pas connecté"
+        // donc on affiche le formulaire
+        if(empty($_POST['mail']) && empty($_POST['password']))
+            $this->register_code = 0;
+        elseif(empty($_POST['mail']) || empty($_POST['password']))
+            $this->register_code = UserLogin::FORM_INPUTS_ERROR;
+        elseif(!empty($_POST['mail']) && !empty($_POST['password']))
+            $this->register_code = $this->register->createNewUser($_POST['mail'], $_POST['password']);
+        $this->getHTML();
+    }
     // Affiche la page d'accueil
     public function getHTML()
     {
-        $vue = new Vue("UserLogin");
-        session_start();
         $userID = $this->selectHTML();
 
         // si l'utilisateur est connecte
@@ -51,6 +62,7 @@ class ControleurLogin implements Controleur
             die();
         } // sinon redirection vers la page de login
         else {
+            $vue = new Vue("UserLogin");
 
             $vue->generer();
         }
@@ -100,7 +112,7 @@ class ControleurLogin implements Controleur
                     // On enregistre le login en session
                     $_SESSION['login'] = LOGIN;
                     // On redirige vers le fichier admin.php
-                    header('Location: http://www.monsite.com/admin.php');
+                    header('Location: index.php?action=userProfile');
                     exit();
                 }
             }
