@@ -16,6 +16,7 @@ require_once('Controleur/ControleurAdministrationUser.php');
 require_once('Controleur/ControleurAdministrationPaiementLivraison.php');
 require_once('Controleur/ControleurProduit01.php');
 require_once('Controleur/ControleurTunnel.php');
+require_once('Controleur/ControleurLogin.php');
 
 //________________________________________________________________________________________
 // Class
@@ -40,6 +41,7 @@ class Routeur
         $this->ctrlAdminUser = new ControleurAdministrationUser();
         $this->ctrlAdminPaiementLivraison = new ControleurAdministrationPaiementLivraison();
         $this->ctrlTunnel = new ControleurTunnel();
+        $this->ctrlLogin = new ControleurLogin();
     }
 
     // Traite une requête entrante
@@ -63,6 +65,8 @@ class Routeur
                     $this->ctrlAdminUser->getHTML();
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {
                     $this->ctrlAdminPaiementLivraison->handlerPaiementLivraison();
+                } elseif ($_GET['action'] == 'login') {
+                    $this->ctrlLogin->login();
                 } else {
                     throw new Exception("Action non valide");
                 }
