@@ -15,14 +15,14 @@ $titre = "Formulaire d'authentification";
             ?> <h2><strong>Format de l'adresse mail incorrect!</strong></h2><?php
         }
         else if($login_code == UserLogin::DOESNOT_EXIST) {
-            ?> <h2><strong>Adresse mail déjà utilisée!</strong></h2><?php
+            ?> <h2><strong>Adresse mail non valide!</strong></h2><?php
         }
         else if ($login_code == UserLogin::DATABASE_ERROR) {
             ?> <h2><strong>Base de données indisponible actuellement!</strong></h2><?php
         }
         ?>
 
-        <form action="index.php?action=login" method="post">
+        <form action="index.php?action=logguer" method="post">
             <fieldset>
                 <legend>Identifiez-vous</legend>
                 <?php

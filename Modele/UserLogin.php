@@ -17,21 +17,37 @@ class UserLogin extends Modele
 
     const SALT_REGISTER = "sel_php";
 
+    public function connectUser($mail, $password) {
+        if(!$this->userExist($mail))
+            return UserLogin::DOESNOT_EXIST;
+        if(!filter_var($mail, FILTER_VALIDATE_EMAIL))
+            return UserLogin::INVALID_MAIL_FORMAT;
+
+        $password_hash = sha1(UserLogin::SALT_REGISTER . $password);
+        try {
+            this.$this->getUser($mail);
+            return UserLogin::REGISTER_OK;
+        }
+        catch(PDOException $e) {
+            return UserLogin::DATABASE_ERROR;
+        }
+    }
+
     /** Renvoie les informations sur un utillisateurs
      *
      * @param int $id L'identifiant de l'utilisateur
      * @return array L'utilisateur
      * @throws Exception Si l'identifiant de l'utilisateur est inconnu
      */
-    public function getUser($userID)
+    public function getUser($mailUser)
     {
-        $sql = 'SELECT userID, nom, prenom, chemin, niveau_accreditation, mail, mot_de_passe '.
-            'from user where userID=?';
-        $user = $this->executerRequete($sql, array($userID));
+        $sql = 'SELECT userID, niveau_accreditation, mail, mot_de_passe '.
+            'from user where mail=?';
+        $user = $this->executerRequete($sql, array($mailUser));
         if ($user->rowCount() == 1)
             return $user->fetch();  // Accès à la première ligne de résultat
         else
-            throw new Exception("Aucun utilisateur ne correspond à l'identifiant '$userID'");
+            throw new Exception("Aucun utilisateur ne correspond au mail '$mailUser'");
     }
 
     public function userExist($mailUser) {
