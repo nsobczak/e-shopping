@@ -3,11 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- User: Nicolas Sobczak & Vincent Reynaert
--- Généré le :  Ven 04 Novembre 2016 à 23:10
+-- Généré le :  Mar 15 Novembre 2016 à 21:51
 -- Version du serveur :  5.7.10-log
 -- Version de PHP :  7.0.10
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -21,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `db_e_shopping`
 --
-
 
 -- --------------------------------------------------------
 
@@ -107,7 +104,6 @@ CREATE TABLE `moyendepaiement` (
 --
 
 INSERT INTO `moyendepaiement` (`moyenDePaiementID`, `nomMoyenDePaiement`, `descriptionMoyenDePaiement`) VALUES
-(1, 'Espèces', 'Les espèces (du vieux Français "payer en espices/épices") numéraires (billets et pièces), utilisables essentiellement dans la zone monétaire de la devise où ils sont libellés, par exemple l\'euro dans la zone euro.'),
 (2, 'Effets de commerce', 'Les effets de commerce tels que la traite (ou lettre de change) et le billet à ordre, instruments tant de crédit que de paiement.'),
 (3, 'Chèque ', 'Le chèque est un moyen de paiement scriptural utilisant le circuit bancaire. Il est généralement utilisé pour faire transiter de la monnaie d\'un compte bancaire à un autre. Tombé en désuétude dans la plupart des pays industrialisés, il reste encore souvent utilisé en France, au Royaume-Uni et aux États-Unis.'),
 (4, 'Coupon de paiement', 'Le coupon de paiement, ticket d\'achat vendu notamment par les buralistes, permettant de recharger des cartes bancaires prépayées ; utilisé notamment pour des créditer une compte de jeux en ligne. Parce qu\'il est également objet de nombreuses fraudes du fait de son caractère anonyme, la directive sur le service des paiements vise a réduire le montant maximum journalier.'),
@@ -144,7 +140,7 @@ INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDeP
 --
 
 CREATE TABLE `produit` (
-  `poduitID` int(11) NOT NULL,
+  `produitID` int(11) NOT NULL,
   `nomProduit` varchar(255) COLLATE utf8_bin NOT NULL,
   `prix` int(11) NOT NULL,
   `desciption` text CHARACTER SET utf8 NOT NULL,
@@ -156,7 +152,7 @@ CREATE TABLE `produit` (
 -- Contenu de la table `produit`
 --
 
-INSERT INTO `produit` (`poduitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES
+INSERT INTO `produit` (`produitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES
 (1, 't-shirt star wars keep caml', 20, 'Magnifique t-shirt de la licence star wars. Imprimé Dark Vador avec "Keep Kalm and use the force"', 'http://i2.cdscdn.com/pdt2/5/0/3/1/300x300/mp03014503/rw/t-shirt-star-wars-keep-calm-and-the-use-force-xxla.jpg', 1),
 (2, 'Lampe Tetris', 30, 'La lampe qu\'il faut pour ton appart !', 'https://images-na.ssl-images-amazon.com/images/I/41rIE-JM3KL._SY355_.jpg', 3);
 
@@ -203,7 +199,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`, `mail`, `mot_de_passe`) VALUES
-(1, 'Reynaert', 'Vincent', 'Images/Profil/profil_utilisateur.jpg', 1, 'vincent.reynaert@isen-lille.fr', '1234'),
+(1, 'Reynaert', 'Vincent', 'Images/Profil/profil_utilisateur.jpg', 1, 'vincent.reynaert@isen-lille.fr', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
 (2, 'Sobczak', 'Nicolas', 'Images/Profil/profil_utilisateur.jpg', 1, 'nicolas.sobczak@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (3, 'Pryfer', 'Sylvain', 'Images/Profil/profil_utilisateur.jpg', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
 (5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', '19be062d13637aaabb2790490fc173dd849aff47');
@@ -251,7 +247,7 @@ ALTER TABLE `panier`
 -- Index pour la table `produit`
 --
 ALTER TABLE `produit`
-  ADD PRIMARY KEY (`poduitID`),
+  ADD PRIMARY KEY (`produitID`),
   ADD KEY `sousCategorieID` (`sousCategorieID`);
 
 --
@@ -275,7 +271,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `adresse`
 --
 ALTER TABLE `adresse`
-  MODIFY `adresseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `adresseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
@@ -290,7 +286,7 @@ ALTER TABLE `lignepanier`
 -- AUTO_INCREMENT pour la table `moyendepaiement`
 --
 ALTER TABLE `moyendepaiement`
-  MODIFY `moyenDePaiementID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `moyenDePaiementID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `panier`
 --
@@ -300,7 +296,7 @@ ALTER TABLE `panier`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `poduitID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `produitID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `souscategorie`
 --
@@ -319,8 +315,7 @@ ALTER TABLE `user`
 -- Contraintes pour la table `lignepanier`
 --
 ALTER TABLE `lignepanier`
-  ADD CONSTRAINT `lignepanier_ibfk_1` FOREIGN KEY (`panierID`) REFERENCES `panier` (`panierID`),
-  ADD CONSTRAINT `lignepanier_ibfk_2` FOREIGN KEY (`produitID`) REFERENCES `produit` (`poduitID`);
+  ADD CONSTRAINT `lignepanier_ibfk_1` FOREIGN KEY (`panierID`) REFERENCES `panier` (`panierID`);
 
 --
 -- Contraintes pour la table `panier`
@@ -334,7 +329,8 @@ ALTER TABLE `panier`
 -- Contraintes pour la table `produit`
 --
 ALTER TABLE `produit`
-  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`sousCategorieID`) REFERENCES `souscategorie` (`sousCategorieID`);
+  ADD CONSTRAINT `produit_ibfk_1` FOREIGN KEY (`sousCategorieID`) REFERENCES `souscategorie` (`sousCategorieID`),
+  ADD CONSTRAINT `produit_ibfk_2` FOREIGN KEY (`produitID`) REFERENCES `lignepanier` (`produitID`);
 
 --
 -- Contraintes pour la table `souscategorie`
