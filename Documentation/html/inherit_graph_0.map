@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interface_controleur.html" title="Controleur" alt="" coords="5,264,88,291"/>
+<area shape="rect" id="node2" href="$class_controleur_accueil.html" title="ControleurAccueil" alt="" coords="170,5,295,32"/>
+<area shape="rect" id="node3" href="$class_controleur_administration_paiement_livraison.html" title="ControleurAdministration\lPaiementLivraison" alt="" coords="150,57,315,98"/>
+<area shape="rect" id="node4" href="$class_controleur_administration_produit.html" title="ControleurAdministration\lProduit" alt="" coords="150,122,315,163"/>
+<area shape="rect" id="node5" href="$class_controleur_administration_user.html" title="ControleurAdministrationUser" alt="" coords="136,188,329,215"/>
+<area shape="rect" id="node6" href="$class_controleur_erreur.html" title="ControleurErreur" alt="" coords="174,239,291,265"/>
+<area shape="rect" id="node7" href="$class_controleur_inscription.html" title="ControleurInscription" alt="" coords="161,289,304,316"/>
+<area shape="rect" id="node8" href="$class_controleur_login.html" title="ControleurLogin" alt="" coords="176,340,289,367"/>
+<area shape="rect" id="node9" href="$class_controleur_produit01.html" title="ControleurProduit01" alt="" coords="164,391,301,417"/>
+<area shape="rect" id="node10" href="$class_controleur_tunnel.html" title="ControleurTunnel" alt="" coords="172,441,293,468"/>
+<area shape="rect" id="node11" href="$class_controleur_user_profile.html" title="ControleurUserProfile" alt="" coords="159,492,306,519"/>
+</map>

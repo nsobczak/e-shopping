@@ -7,6 +7,8 @@
  */
 interface Controleur
 {
-    //Fonction qui affiche la vue
+    /**
+     * Fonction qui affiche la vue
+     */
     public function getHTML();
 }

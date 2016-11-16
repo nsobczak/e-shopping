@@ -30,7 +30,9 @@ class Routeur
     private $ctrlProduit01;
     private $ctrlTunnel;
 
-    // Constructeur
+    /**
+     * Constructeur
+     */
     public function __construct()
     {
         $this->ctrlAccueil = new ControleurAccueil();
@@ -44,7 +46,9 @@ class Routeur
         $this->ctrlLogin = new ControleurLogin();
     }
 
-    // Traite une requête entrante
+    /**
+     * Fonction qui traite une requête entrante
+     */
     public function routerRequete()
     {
         try {
@@ -80,7 +84,9 @@ class Routeur
         }
     }
 
-    // Affiche une erreur
+    /**
+     * Fonction qui affiche une erreur
+     */
     private function erreur($msgErreur)
     {
         $vue = new Vue("Erreur");

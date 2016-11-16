@@ -13,13 +13,22 @@ class Vue
     // Titre de la vue (défini dans le fichier vue)
     private $titre;
 
+    /**
+     * Constructeur
+     *
+     * @param $action
+     */
     public function __construct($action)
     {
         // Détermination du nom du fichier vue à partir de l'action
         $this->fichier = "Vue/vue" . $action . ".php";
     }
 
-    // Génère et affiche la vue
+    /**
+     * Fonction qui génère et affiche la vue
+     *
+     * @param $donnees
+     */
     public function generer($donnees)
     {
         // Génération de la partie spécifique de la vue
@@ -32,7 +41,12 @@ class Vue
         echo $vue;
     }
 
-    // Génère un fichier vue et renvoie le résultat produit
+    /**
+     * Fonction qui génère un fichier vue et renvoie le résultat produit
+     *
+     * @param $fichier
+     * @param $donnees
+     */
     private function genererFichier($fichier, $donnees)
     {
         if (file_exists($fichier)) {
