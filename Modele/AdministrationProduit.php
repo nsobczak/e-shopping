@@ -27,7 +27,7 @@ class AdministrationProduit extends Modele
     {
         if ($this->produitExists($nom))
             return AdministrationProduit::ALREADY_EXIST;
-        $sql = 'INSERT INTO `produit` (`poduitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES (NULL, ?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO `produit` (`produitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES (NULL, ?, ?, ?, ?, ?)';
         $this->executerRequete($sql, array($nom, $prix, $description, $cheminimage, '1'));
         return AdministrationProduit::ADD_OK;
     }

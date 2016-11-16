@@ -39,7 +39,7 @@ class ControleurUserProfile implements Controleur
     {
 //        if ("utilisateur loggé")
 //        {
-        $userID = 2;
+        $userID = 5;
 //        }
 //        else // Pour aller a la page de login
 //        {
