@@ -18,10 +18,15 @@ class UserLogin extends Modele
     const SALT_REGISTER = "sel_php";
 
     public function connectUser($mail, $password) {
-        if(!$this->userExist($mail))
+        var_dump("je vais verifier que le user s'est bien enregistre avant dessayer de se logguer");
+        if(!($this->userExist($mail))) {
+            var_dump("le mail n'est pas enregistre");
             return UserLogin::DOESNOT_EXIST;
-        if(!filter_var($mail, FILTER_VALIDATE_EMAIL))
+        }
+        if(!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+            var_dump("le mail n'est pas valide");
             return UserLogin::INVALID_MAIL_FORMAT;
+        }
 
         $password_hash = sha1(UserLogin::SALT_REGISTER . $password);
         try {
@@ -53,9 +58,8 @@ class UserLogin extends Modele
     public function userExist($mailUser) {
         $sql = "SELECT * FROM user WHERE mail = ?";
         $user = $this->executerRequete($sql, array($mailUser));
-        if ($user->rowCount() >= 1) {
+        if ($user->rowCount() >= 1)
             return true;
-        }
         else
             return false;
     }

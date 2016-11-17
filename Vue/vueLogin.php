@@ -33,8 +33,8 @@ $titre = "Formulaire d'authentification";
                 }
                 ?>
                 <p>
-                    <label for="email">E_Mail :</label>
-                    <input type="text" name="email" id="email" value="" />
+                    <label for="mail">E_Mail :</label>
+                    <input type="text" name="mail" id="mail" value="" />
                 </p>
                 <p>
                     <label for="password">Password :</label>

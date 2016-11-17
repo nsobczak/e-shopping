@@ -43,15 +43,31 @@ class ControleurLogin implements Controleur
     public function logguerUser() {
         // Aucun champ n'est rempli => Le client vient de cliquer sur "Login ou Profil et il n'est pas connecté"
         // donc on affiche le formulaire
-        if(empty($_POST['mail']) && empty($_POST['password']))
-            $this->login_code = 0;
-        elseif(empty($_POST['mail']) || empty($_POST['password']))
-            $this->login_code = UserLogin::FORM_INPUTS_ERROR;
-        elseif(!empty($_POST['mail']) && !empty($_POST['password']))
-            $this->login_code = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
+        var_dump('je suis dans logguerUser');
+        $vue = new Vue("Login");
+        if (isset($_POST)){
 
-        $vue = new Vue("UserLogin");
-        $vue->generer(array('login_code' => $this->login_code));
+            var_dump('le post est set');
+            var_dump($_POST);
+            if(empty($_POST['mail']) && empty($_POST['password'])){
+                $this->login_code = 0;
+                var_dump('il ny a ni mail ni password dentree');
+            }
+            elseif(empty($_POST['mail']) || empty($_POST['password'])) {
+                $this->login_code = UserLogin::FORM_INPUTS_ERROR;
+                var_dump('il manque le mail ou le password');
+            }
+            elseif(!empty($_POST['mail']) && !empty($_POST['password'])) {
+                var_dump('tu mas bien donnee mail et password maintenant faut que je regarde ca');
+                $this->login_code = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
+            }
+
+            $vue->generer(array('login_code' => $this->login_code));
+        }else{
+
+            var_dump('rien n est poste');
+            $vue->generer();
+        }
     }
     // Affiche la page d'accueil
     public function getHTML()
@@ -64,7 +80,7 @@ class ControleurLogin implements Controleur
             die();
         } // sinon redirection vers la page de login
         else {
-            this.$this->logguerUser();
+            $this->logguerUser();
         }
 
     }
@@ -85,7 +101,9 @@ class ControleurLogin implements Controleur
      *
      */
     public function logguer(){
-        this.$this->logguerUser();
+
+        var_dump('on va logguer le user');
+        $this->logguerUser();
     }
 
 }
