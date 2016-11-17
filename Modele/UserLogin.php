@@ -12,8 +12,9 @@ class UserLogin extends Modele
     const FORM_INPUTS_ERROR = 1;
     const INVALID_MAIL_FORMAT = 2;
     const DOESNOT_EXIST = 3;
-    const REGISTER_OK = 4;
-    const DATABASE_ERROR = 5;
+    const BAD_PASSWORD = 4;
+    const REGISTER_OK = 5;
+    const DATABASE_ERROR = 6;
 
     const SALT_REGISTER = "sel_php";
 
@@ -28,10 +29,16 @@ class UserLogin extends Modele
             return UserLogin::INVALID_MAIL_FORMAT;
         }
 
+        var_dump("le mail est OK");
         $password_hash = sha1(UserLogin::SALT_REGISTER . $password);
+
+        var_dump($password_hash);
+        if(!$this->valid_password($mail, $password_hash)){
+            return UserLogin::BAD_PASSWORD;
+        }
         try {
-            this.$this->getUser($mail);
-            return UserLogin::REGISTER_OK;
+            $user = $this->getUser($mail);
+            return $user;
         }
         catch(PDOException $e) {
             return UserLogin::DATABASE_ERROR;
@@ -56,12 +63,27 @@ class UserLogin extends Modele
     }
 
     public function userExist($mailUser) {
+        var_dump("le mail existe-t-il ?");
         $sql = "SELECT * FROM user WHERE mail = ?";
         $user = $this->executerRequete($sql, array($mailUser));
-        if ($user->rowCount() >= 1)
+        $occurrence_mail = $user->rowCount();
+        var_dump("occurrence_mail : ".$occurrence_mail);
+        if ($occurrence_mail == 1)
             return true;
         else
             return false;
+    }
+    public function valid_password($mail, $password_hash){
+        var_dump("mdp valide ?");
+        $sql = "SELECT * FROM user WHERE mail = ? AND mot_de_passe = ?";
+        $user = $this->executerRequete($sql, array($mail, $password_hash));
+        $occurrence = $user->rowCount();
+        var_dump("nombre de match avec mon adrs et mdp : ".$occurrence);
+        if ($occurrence == 1)
+            return true;
+        else
+            return false;
+
     }
 
 }

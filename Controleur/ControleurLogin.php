@@ -5,6 +5,7 @@
  * User: Nicolas Sobczak & Vincent Reynaert
  * Date: 02/11/2016
  */
+//TODO : initialiser dans $_SESSION les parametres de users
 //________________________________________________________________________________________
 // Require once
 require_once 'Controleur/Controleur.php';
@@ -59,7 +60,14 @@ class ControleurLogin implements Controleur
             }
             elseif(!empty($_POST['mail']) && !empty($_POST['password'])) {
                 var_dump('tu mas bien donnee mail et password maintenant faut que je regarde ca');
-                $this->login_code = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
+                $user = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
+                // On ouvre la session
+                session_start();
+                // On enregistre le login en session
+                //$_SESSION['nom'] = $user['nom'];
+                // On redirige vers le fichier admin.php
+                header('Location: index.php?action=userProfile');
+                die();
             }
 
             $vue->generer(array('login_code' => $this->login_code));

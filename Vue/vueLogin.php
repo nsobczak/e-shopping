@@ -6,7 +6,7 @@ $titre = "Formulaire d'authentification";
 <body>
     <div id="loginForm">
         <?php if($login_code == UserLogin::REGISTER_OK) { ?>
-            <h2><strong>Inscription reussie !</strong></h2>
+            <h2><strong>Vous êtes connecté !</strong></h2>
         <?php } else {
         if($login_code == UserLogin::FORM_INPUTS_ERROR) {
             ?> <h2><strong>Erreur lors de la saisie du formulaire (champ(s) manquant(s))!</strong></h2><?php
@@ -16,6 +16,9 @@ $titre = "Formulaire d'authentification";
         }
         else if($login_code == UserLogin::DOESNOT_EXIST) {
             ?> <h2><strong>Adresse mail non valide!</strong></h2><?php
+        }
+        else if($login_code == UserLogin::BAD_PASSWORD) {
+            ?> <h2><strong>Mot de passe incorrect!</strong></h2><?php
         }
         else if ($login_code == UserLogin::DATABASE_ERROR) {
             ?> <h2><strong>Base de données indisponible actuellement!</strong></h2><?php
