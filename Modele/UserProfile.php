@@ -77,6 +77,13 @@ class UserProfile extends Modele
         }
     }
 
+
+    /**
+     * Fonction updateChemin = fonction qui met à jour le chemin de l'image utilisateur
+     *
+     * @param $newPath
+     * @param $userID
+     */
     public function updateChemin($newPath, $userID)
     {
         $sql = "UPDATE chemin SET chemin = ? WHERE $userID = ?";

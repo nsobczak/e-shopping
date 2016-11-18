@@ -11,16 +11,27 @@ require_once 'Controleur/Controleur.php';
 require_once 'Vue/Vue.php';
 require_once 'Modele/AdministrationUser.php';
 
-class ControleurAdministrationUser implements Controleur {
+class ControleurAdministrationUser implements Controleur
+{
 
-	private $user ;
+    /**
+     * @var
+     */
+    private $user;
 
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurAdministrationUser constructor.
+     */
     public function __construct()
     {
-    	$user = new AdministrationUser();
+        $user = new AdministrationUser();
     }
 
-    // Affiche la page d'admin user
+    /**
+     * Affiche la page d'admin user
+     */
     public function getHTML()
     {
         $vue = new Vue("AdministrationUser");
@@ -28,16 +39,21 @@ class ControleurAdministrationUser implements Controleur {
         $vue->generer($this->displayUser(1));
     }
 
+    /**
+     * Fonction qui...
+     *
+     * @param $userID
+     * @return array
+     */
     public function displayUser($userID)
     {
-    	$user = new AdministrationUser();
-    	$result = $user->getUser($userID);
-    	// print_r($result);
+        $user = new AdministrationUser();
+        $result = $user->getUser($userID);
+        // print_r($result);
 
-    	return $result;
+        return $result;
     }
 }
-
 
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Nicolas Sobczak & Vincent Reynaert
+ * User: Nicolas Sobczak & Vincent Reynaert & everyone add its part
  * Date: 21/10/2016
  */
 //________________________________________________________________________________________
@@ -30,8 +30,10 @@ class Routeur
     private $ctrlProduit01;
     private $ctrlTunnel;
 
+
+    //______________________________________________________________________________________
     /**
-     * Constructeur
+     * Routeur constructor.
      */
     public function __construct()
     {
@@ -45,6 +47,7 @@ class Routeur
         $this->ctrlTunnel = new ControleurTunnel();
         $this->ctrlLogin = new ControleurLogin();
     }
+
 
     /**
      * Fonction qui traite une requête entrante
@@ -84,8 +87,11 @@ class Routeur
         }
     }
 
+
     /**
      * Fonction qui affiche une erreur
+     *
+     * @param $msgErreur
      */
     private function erreur($msgErreur)
     {

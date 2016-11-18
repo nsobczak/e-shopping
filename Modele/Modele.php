@@ -8,9 +8,13 @@
 abstract class Modele
 {
 
-    /** Objet PDO d'accès à la BD */
+    /**
+     * @var Objet PDO d'accès à la BD
+     */
     private $bdd;
 
+
+    //______________________________________________________________________________________
     /**
      * Renvoie un objet de connexion à la BD en initialisant la connexion au besoin
      *
@@ -24,6 +28,7 @@ abstract class Modele
         }
         return $this->bdd;
     }
+
 
     /**
      * Exécute une requête SQL éventuellement paramétrée

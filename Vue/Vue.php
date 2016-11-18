@@ -8,11 +8,17 @@
 class Vue
 {
 
-    // Nom du fichier associé à la vue
+    /**
+     * @var string : Nom du fichier associé à la vue
+     */
     private $fichier;
-    // Titre de la vue (défini dans le fichier vue)
+    /**
+     * @var : Titre de la vue (défini dans le fichier vue)
+     */
     private $titre;
 
+
+    //______________________________________________________________________________________
     /**
      * Constructeur
      *
@@ -23,6 +29,7 @@ class Vue
         // Détermination du nom du fichier vue à partir de l'action
         $this->fichier = "Vue/vue" . $action . ".php";
     }
+
 
     /**
      * Fonction qui génère et affiche la vue
@@ -40,6 +47,7 @@ class Vue
         // Renvoi de la vue au navigateur
         echo $vue;
     }
+
 
     /**
      * Fonction qui génère un fichier vue et renvoie le résultat produit

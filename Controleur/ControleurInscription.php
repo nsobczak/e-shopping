@@ -7,27 +7,48 @@
 
 require_once('Modele/Register.php');
 
-class ControleurInscription implements Controleur {
+class ControleurInscription implements Controleur
+{
+    //Attributs
+    /**
+     * @var int
+     */
     private $register_code;
+    /**
+     * @var Register
+     */
     private $register;
 
-    public function __construct() {
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurInscription constructor.
+     */
+    public function __construct()
+    {
         $this->register_code = 0; // default value
         $this->register = new Register();
     }
 
-    public function registerUser() {
+
+    /**
+     *  Fonction qui...
+     */
+    public function registerUser()
+    {
         // Aucun champ n'est rempli => Le client vient de cliquer sur "Inscription" donc on affiche le formulaire
-        if(empty($_POST['nom']) && empty($_POST['prenom']) && empty($_POST['mail']) && empty($_POST['password']))
+        if (empty($_POST['nom']) && empty($_POST['prenom']) && empty($_POST['mail']) && empty($_POST['password']))
             $this->register_code = 0;
-        elseif(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || empty($_POST['password']))
+        elseif (empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || empty($_POST['password']))
             $this->register_code = Register::FORM_INPUTS_ERROR;
-        elseif(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['password']))
+        elseif (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['password']))
             $this->register_code = $this->register->createNewUser($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['password']);
         $this->getHTML();
     }
 
-    // Affiche la page d'erreur
+    /**
+     * Affiche la page d'inscription
+     */
     public function getHTML()
     {
         $vue = new Vue("Inscription");

@@ -12,12 +12,17 @@ require_once('Vue/Vue.php');
 
 class ControleurAccueil implements Controleur
 {
+    /**
+     * ControleurAccueil constructor.
+     */
     public function __construct()
     {
 
     }
 
-    // Affiche la vue de la page
+    /**
+     *  Affiche la vue de la page
+     */
     public function getHTML()
     {
         $vue = new Vue("Accueil");

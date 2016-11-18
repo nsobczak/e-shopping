@@ -12,14 +12,25 @@ require_once 'Vue/Vue.php';
 
 class ControleurProduit01 implements Controleur
 {
+    /**
+     * @var
+     */
     private $produit;
 
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurProduit01 constructor.
+     */
     public function __construct()
     {
         //$this->user = new UserProfile();
     }
 
-    // Affiche la page d'accueil
+    
+    /**
+     * Affiche la page produit
+     */
     public function getHTML()
     {
         $vue = new Vue("Produit");

@@ -9,6 +9,7 @@ require_once('Modele.php');
  */
 class UserLogin extends Modele
 {
+    //Constantes
     const FORM_INPUTS_ERROR = 1;
     const INVALID_MAIL_FORMAT = 2;
     const DOESNOT_EXIST = 3;
@@ -18,6 +19,14 @@ class UserLogin extends Modele
 
     const SALT_REGISTER = "sel_php";
 
+    //______________________________________________________________________________________
+    /**
+     * Fonction qui...
+     *
+     * @param $mail
+     * @param $password
+     * @return array|int
+     */
     public function connectUser($mail, $password) {
         var_dump("je vais verifier que le user s'est bien enregistre avant dessayer de se logguer");
         if(!($this->userExist($mail))) {
@@ -45,6 +54,7 @@ class UserLogin extends Modele
         }
     }
 
+
     /** Renvoie les informations sur un utillisateurs
      *
      * @param int $id L'identifiant de l'utilisateur
@@ -62,6 +72,12 @@ class UserLogin extends Modele
             throw new Exception("Aucun utilisateur ne correspond au mail '$mailUser'");
     }
 
+    /**
+     * Fonction qui regarde si l'utilisateur existe ou pas
+     *
+     * @param $mailUser
+     * @return bool
+     */
     public function userExist($mailUser) {
         var_dump("le mail existe-t-il ?");
         $sql = "SELECT * FROM user WHERE mail = ?";
@@ -73,6 +89,15 @@ class UserLogin extends Modele
         else
             return false;
     }
+
+
+    /**
+     * Fonction qui regarde si un mot de passe est valide ou non
+     *
+     * @param $mail
+     * @param $password_hash
+     * @return bool
+     */
     public function valid_password($mail, $password_hash){
         var_dump("mdp valide ?");
         $sql = "SELECT * FROM user WHERE mail = ? AND mot_de_passe = ?";
