@@ -15,8 +15,12 @@
         <li><a href="index.php?action=faq">FAQ</a></li>
         <li>--</li>
         <li><a href="index.php?action=userProfile">Profil</a></li>
-        <li><a href="index.php?action=login">Login</a></li>
-        <li><a href="index.php?action=inscription">Inscription</a></li>
+        <?php if(!isset($_SESSION['userID'])) { ?>
+            <li><a href="index.php?action=login">Login</a></li>
+            <li><a href="index.php?action=inscription">Inscription</a></li>
+        <?php } else { ?>
+            <li><a href="index.php?action=deconnexion">Deconnexion</a></li>
+        <?php } ?>
         <li>--</li>
         <li class="dropdown">
             <a href="#" class="dropbtn">Administration</a>

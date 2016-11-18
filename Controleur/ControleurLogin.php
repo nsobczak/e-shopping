@@ -43,7 +43,7 @@ class ControleurLogin implements Controleur
      */
     public function selectHTML()
     {
-        if (isset($_SESSION)) {
+        if (isset($_SESSION['userID'])) {
             $userID = $_SESSION['userID'];
         } else // Pour aller a la page de login
         {
@@ -74,16 +74,13 @@ class ControleurLogin implements Controleur
                 var_dump('il manque le mail ou le password');
             } elseif (!empty($_POST['mail']) && !empty($_POST['password'])) {
                 var_dump('tu mas bien donnee mail et password maintenant faut que je regarde ca');
-                $user = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
-                // On ouvre la session
-                session_start();
-                // On enregistre le login en session
-                //$_SESSION['nom'] = $user['nom'];
-                // On redirige vers le fichier admin.php
-                header('Location: index.php?action=userProfile');
-                die();
+                $this->login_code = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
+                if($this->login_code == UserLogin::LOGIN_OK)
+                {
+                    header('Location: index.php?action=userProfile');
+                    die();
+                }
             }
-
             $vue->generer(array('login_code' => $this->login_code));
         } else {
 

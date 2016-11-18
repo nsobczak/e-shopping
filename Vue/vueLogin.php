@@ -5,7 +5,7 @@ $titre = "Formulaire d'authentification";
 
 <body>
     <div id="loginForm">
-        <?php if($login_code == UserLogin::REGISTER_OK) { ?>
+        <?php if($login_code == UserLogin::LOGIN_OK) { ?>
             <h2><strong>Vous êtes connecté !</strong></h2>
         <?php } else {
         if($login_code == UserLogin::FORM_INPUTS_ERROR) {

@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: Nicolas Sobczak & Vincent Reynaert & everyone add its part
