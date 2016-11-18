@@ -1,7 +1,8 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
- * User: Nicolas Sobczak & Vincent Reynaert
+ * User: Nicolas Sobczak & Vincent Reynaert & everyone add its part
  * Date: 21/10/2016
  */
 //________________________________________________________________________________________
@@ -16,6 +17,7 @@ require_once('Controleur/ControleurAdministrationUser.php');
 require_once('Controleur/ControleurAdministrationPaiementLivraison.php');
 require_once('Controleur/ControleurProduit01.php');
 require_once('Controleur/ControleurTunnel.php');
+require_once('Controleur/ControleurLogin.php');
 
 //________________________________________________________________________________________
 // Class
@@ -29,7 +31,11 @@ class Routeur
     private $ctrlProduit01;
     private $ctrlTunnel;
 
-    // Constructeur
+
+    //______________________________________________________________________________________
+    /**
+     * Routeur constructor.
+     */
     public function __construct()
     {
         $this->ctrlAccueil = new ControleurAccueil();
@@ -40,9 +46,13 @@ class Routeur
         $this->ctrlAdminUser = new ControleurAdministrationUser();
         $this->ctrlAdminPaiementLivraison = new ControleurAdministrationPaiementLivraison();
         $this->ctrlTunnel = new ControleurTunnel();
+        $this->ctrlLogin = new ControleurLogin();
     }
 
-    // Traite une requête entrante
+
+    /**
+     * Fonction qui traite une requête entrante
+     */
     public function routerRequete()
     {
         try {
@@ -63,6 +73,10 @@ class Routeur
                     $this->ctrlAdminUser->getHTML();
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {
                     $this->ctrlAdminPaiementLivraison->handlerPaiementLivraison();
+                } elseif ($_GET['action'] == 'login') {
+                    $this->ctrlLogin->getHTML();
+                } elseif ($_GET['action'] == 'logguer') {
+                    $this->ctrlLogin->logguer();
                 } else {
                     throw new Exception("Action non valide");
                 }
@@ -74,7 +88,12 @@ class Routeur
         }
     }
 
-    // Affiche une erreur
+
+    /**
+     * Fonction qui affiche une erreur
+     *
+     * @param $msgErreur
+     */
     private function erreur($msgErreur)
     {
         $vue = new Vue("Erreur");
