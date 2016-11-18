@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['handlerpaiementlivraison',['handlerPaiementLivraison',['../class_controleur_administration_paiement_livraison.html#aa1e42d60aec4a06c067e93735409b119',1,'ControleurAdministrationPaiementLivraison']]],
-  ['handleruserprofile',['handlerUserProfile',['../class_controleur_user_profile.html#af17687ea3275ab6d52df3220f5c5ea8a',1,'ControleurUserProfile']]]
+  ['editmoyenpaiement',['editMoyenPaiement',['../class_administration_paiement_livraison.html#a6d936def263021076df082157837f3d4',1,'AdministrationPaiementLivraison']]],
+  ['executerrequete',['executerRequete',['../class_modele.html#a2fe407712b9a72eecac1615d934df767',1,'Modele']]]
 ];

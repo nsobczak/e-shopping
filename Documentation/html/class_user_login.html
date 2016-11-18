@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Cook.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GeekProduct.com
-   &#160;<span id="projectnumber">1.1</span>
+   &#160;<span id="projectnumber">1.2</span>
    </div>
    <div id="projectbrief">An e-shopping website</div>
   </td>
@@ -133,14 +133,14 @@ Collaboration diagram for UserLogin:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1534f7aff57af0309726ee4126aa5d1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1534f7aff57af0309726ee4126aa5d1c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>connectUser</b> ($mail, $password)</td></tr>
+<tr class="memitem:a1534f7aff57af0309726ee4126aa5d1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_login.html#a1534f7aff57af0309726ee4126aa5d1c">connectUser</a> ($mail, $password)</td></tr>
 <tr class="separator:a1534f7aff57af0309726ee4126aa5d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cb9120cb9bb55a14b3c2427d22318f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_login.html#a5cb9120cb9bb55a14b3c2427d22318f1">getUser</a> ($mailUser)</td></tr>
 <tr class="separator:a5cb9120cb9bb55a14b3c2427d22318f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31d9501c9afa0cf622801e7f07fa2713"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31d9501c9afa0cf622801e7f07fa2713"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>userExist</b> ($mailUser)</td></tr>
+<tr class="memitem:a31d9501c9afa0cf622801e7f07fa2713"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_login.html#a31d9501c9afa0cf622801e7f07fa2713">userExist</a> ($mailUser)</td></tr>
 <tr class="separator:a31d9501c9afa0cf622801e7f07fa2713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cafafbb80101063e758d6d037e1467"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_login.html#a99cafafbb80101063e758d6d037e1467">valid_password</a> ($mail, $password_hash)</td></tr>
+<tr class="separator:a99cafafbb80101063e758d6d037e1467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -153,11 +153,14 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>INVALID_MAIL_FORMAT<
 <tr class="memitem:a3f69a0c9def9fa58b727b9aea97ed474"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f69a0c9def9fa58b727b9aea97ed474"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>DOESNOT_EXIST</b> = 3</td></tr>
 <tr class="separator:a3f69a0c9def9fa58b727b9aea97ed474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1504336ddd53ed15c390b7bbc0222b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1504336ddd53ed15c390b7bbc0222b8"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>BAD_PASSWORD</b> = 4</td></tr>
+<tr class="separator:ab1504336ddd53ed15c390b7bbc0222b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d6fea855224a6038a55ba7364990883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d6fea855224a6038a55ba7364990883"></a>
-const&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_OK</b> = 4</td></tr>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>REGISTER_OK</b> = 5</td></tr>
 <tr class="separator:a7d6fea855224a6038a55ba7364990883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34b223109162f12815ed33db507ac73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af34b223109162f12815ed33db507ac73"></a>
-const&#160;</td><td class="memItemRight" valign="bottom"><b>DATABASE_ERROR</b> = 5</td></tr>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>DATABASE_ERROR</b> = 6</td></tr>
 <tr class="separator:af34b223109162f12815ed33db507ac73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e3070b350a34c0465c2f2e26af81d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94e3070b350a34c0465c2f2e26af81d6"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>SALT_REGISTER</b> = &quot;sel_php&quot;</td></tr>
@@ -172,6 +175,41 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Created by PhpStorm. User: Nicolas Sobczak &amp; Vincent Reynaert Date: 02/11/2016 </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1534f7aff57af0309726ee4126aa5d1c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">connectUser </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$mail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui...</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$mail</td><td></td></tr>
+    <tr><td class="paramname">$password</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array|int </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5cb9120cb9bb55a14b3c2427d22318f1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -199,6 +237,65 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a31d9501c9afa0cf622801e7f07fa2713"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">userExist </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$mailUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui regarde si l'utilisateur existe ou pas</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$mailUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99cafafbb80101063e758d6d037e1467"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">valid_password </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$mail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$password_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui regarde si un mot de passe est valide ou non</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$mail</td><td></td></tr>
+    <tr><td class="paramname">$password_hash</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>

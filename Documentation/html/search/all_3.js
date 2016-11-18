@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['changeprofilepicture',['changeProfilePicture',['../class_controleur_user_profile.html#a02dc9e59a9b193ca793452f4e6cbe5df',1,'ControleurUserProfile']]],
+  ['connectuser',['connectUser',['../class_user_login.html#a1534f7aff57af0309726ee4126aa5d1c',1,'UserLogin']]],
   ['controleur',['Controleur',['../interface_controleur.html',1,'']]],
   ['controleuraccueil',['ControleurAccueil',['../class_controleur_accueil.html',1,'']]],
   ['controleuradministrationpaiementlivraison',['ControleurAdministrationPaiementLivraison',['../class_controleur_administration_paiement_livraison.html',1,'']]],
@@ -11,6 +13,7 @@ var searchData=
   ['controleurproduit01',['ControleurProduit01',['../class_controleur_produit01.html',1,'']]],
   ['controleurtunnel',['ControleurTunnel',['../class_controleur_tunnel.html',1,'']]],
   ['controleuruserprofile',['ControleurUserProfile',['../class_controleur_user_profile.html',1,'']]],
+  ['createnewuser',['createNewUser',['../class_register.html#a390d5eb557ffad56986a2507aad71dbf',1,'Register']]],
   ['contenu',['Contenu',['../md_Contenu_README.html',1,'']]],
   ['controleur',['Controleur',['../md_Controleur_README.html',1,'']]]
 ];

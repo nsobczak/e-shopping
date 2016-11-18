@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Auteurs : Baudouin LANDAIS et Quentin LEVERT
  * Date : 04 / 11 / 2016
  */
