@@ -19,6 +19,7 @@ require_once('Controleur/ControleurProductCategorie.php');
 require_once('Controleur/ControleurProduitList.php');
 require_once('Controleur/ControleurTunnel.php');
 require_once('Controleur/ControleurLogin.php');
+require_once('Controleur/ControleurRecherche.php');
 
 //________________________________________________________________________________________
 // Class
@@ -32,6 +33,7 @@ class Routeur
     private $ctrlProductCategorie;
     private $ctrlProduitList;
     private $ctrlTunnel;
+    private $ctrlRecherche;
 
 
     //______________________________________________________________________________________
@@ -50,6 +52,7 @@ class Routeur
         $this->ctrlAdminPaiementLivraison = new ControleurAdministrationPaiementLivraison();
         $this->ctrlTunnel = new ControleurTunnel();
         $this->ctrlLogin = new ControleurLogin();
+        $this->ctrlRecherche = new ControleurRecherche();
     }
 
 
@@ -84,7 +87,10 @@ class Routeur
                     $this->ctrlLogin->logOut();
                 } elseif ($_GET['action'] == 'logguer') {
                     $this->ctrlLogin->logguerUser();
-                } else {
+                } elseif ($_GET['action'] == 'recherche') {
+                    $this->ctrlRecherche->getHTML();
+                }
+                else {
                     throw new Exception("Action non valide");
                 }
             } else {  // aucune action définie : affichage de l'accueil
