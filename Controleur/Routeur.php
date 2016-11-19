@@ -15,7 +15,8 @@ require_once('Controleur/ControleurInscription.php');
 require_once('Controleur/ControleurAdministrationProduit.php');
 require_once('Controleur/ControleurAdministrationUser.php');
 require_once('Controleur/ControleurAdministrationPaiementLivraison.php');
-require_once('Controleur/ControleurProduit01.php');
+require_once('Controleur/ControleurProductCategorie.php');
+require_once('Controleur/ControleurProduitList.php');
 require_once('Controleur/ControleurTunnel.php');
 require_once('Controleur/ControleurLogin.php');
 
@@ -28,7 +29,8 @@ class Routeur
     private $ctrlUserProfile;
     private $ctrlAdminProduit;
     private $ctrlAdminUser;
-    private $ctrlProduit01;
+    private $ctrlProductCategorie;
+    private $ctrlProduitList;
     private $ctrlTunnel;
 
 
@@ -40,7 +42,8 @@ class Routeur
     {
         $this->ctrlAccueil = new ControleurAccueil();
         $this->ctrlUserProfile = new ControleurUserProfile();
-        $this->ctrlProduit01 = new ControleurProduit01();
+        $this->ctrlProductCategorie = new ControleurProductCategorie();
+        $this->ctrlProduitList = new ControleurProduitList();
         $this->ctrlInscription = new ControleurInscription();
         $this->ctrlAdminProduit = new ControleurAdministrationProduit();
         $this->ctrlAdminUser = new ControleurAdministrationUser();
@@ -61,8 +64,10 @@ class Routeur
                     $this->ctrlAccueil->getHTML();
                 } elseif ($_GET['action'] == 'userProfile') {
                     $this->ctrlUserProfile->handlerUserProfile();
-                } elseif ($_GET['action'] == 'produit01') {
-                    $this->ctrlProduit01->getHTML();
+                } elseif ($_GET['action'] == 'productCategorie') {
+                    $this->ctrlProductCategorie->getHTML();
+                } elseif ($_GET['action'] == 'ProduitList') {
+                    $this->ctrlProduitList->getHTML();
                 } elseif ($_GET['action'] == 'tunnel') {
                     $this->ctrlTunnel->getHTML();
                 } elseif ($_GET['action'] == 'inscription') {

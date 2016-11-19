@@ -5,7 +5,7 @@
         <li class="home"><a href="index.php?action=accueil"><img src="Images/Home_Icon.png" title="home"/></a></li>
         <li><a href="index.php?action=recherche">Recherche</a></li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">Produits</a>
+            <a href="index.php?action=ProduitList" class="dropbtn">Produits</a>
             <div class="dropdown-content">
                 <a href="index.php?action=productCategorie&id=1">Categorie de produits 1</a>
                 <a href="index.php?action=productCategorie&id=2">Categorie de produits 2</a>
