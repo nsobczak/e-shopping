@@ -17,17 +17,17 @@
 </ul>
 <?php } ?>
 
-<!-- Partie ajout d'un mode de livraison ou d'un moyen de paiement !-->
+<!-- Partie ajout d'un moyen de paiement !-->
 <hr>
 <?php if($code == AdministrationPaiementLivraison::INVALID_PARAMETER) {
     echo '<h3 class="error">Paramètres invalides</h3>';
 } elseif($code == AdministrationPaiementLivraison::MISSING_PARAMETERS) {
     echo '<h3 class="error">Paramètres manquants</h3>';
 }?>
-<h3>Ajouter un nouveau moyen de paiement ou de mode de livraison</h3>
+<h3>Ajouter un nouveau moyen de paiement</h3>
 <form action="?action=adminPaiementLivraison" method="post">
     <label for="nomPaiementLivraison">Name :</label>
-    <input type="text" name="nomPaiementLivraison" placeholder="Nom du moyen de paiement/livraison" /><br>
+    <input type="text" name="nomPaiementLivraison" placeholder="Nom du moyen de paiement" /><br>
     <label for="descriptionPaiementLivraison">Description :</label><br>
     <textarea name="descriptionPaiementLivraison" rows="10" cols="75"></textarea><br>
     <input type="submit" value="Envoyer" />
