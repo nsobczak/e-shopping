@@ -15,7 +15,7 @@ class Produit extends Modele
      */
     public function getProduit($produitID)
     {
-        $sql = 'select poduitID, nomProduit, prix, desciption, cheminimage from produit where poduitID=?';
+        $sql = 'select produitID, nomProduit, prix, description, cheminimage from produit where produitID=?';
         $produit = $this->executerRequete($sql, array($produitID));
         if ($produit->rowCount() == 1)
             return $produit->fetch();  // Accès à la première ligne de résultat

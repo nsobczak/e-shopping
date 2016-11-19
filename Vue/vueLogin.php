@@ -15,7 +15,7 @@ $titre = "Formulaire d'authentification";
             ?> <h2><strong>Format de l'adresse mail incorrect!</strong></h2><?php
         }
         else if($login_code == UserLogin::DOESNOT_EXIST) {
-            ?> <h2><strong>Adresse mail non valide!</strong></h2><?php
+            ?> <h2><strong>L'utilisateur n'existe pas</strong></h2><?php
         }
         else if($login_code == UserLogin::BAD_PASSWORD) {
             ?> <h2><strong>Mot de passe incorrect!</strong></h2><?php
