@@ -66,7 +66,7 @@ class Routeur
                     $this->ctrlUserProfile->handlerUserProfile();
                 } elseif ($_GET['action'] == 'productCategorie') {
                     $this->ctrlProductCategorie->getHTML();
-                } elseif ($_GET['action'] == 'ProduitList') {
+                } elseif ($_GET['action'] == 'produitList') {
                     $this->ctrlProduitList->getHTML();
                 } elseif ($_GET['action'] == 'tunnel') {
                     $this->ctrlTunnel->getHTML();
@@ -74,7 +74,7 @@ class Routeur
                     $this->ctrlInscription->registerUser();
                 } elseif ($_GET['action'] == 'adminProduit') {
                     $this->ctrlAdminProduit->addProduit();
-                } elseif ($_GET['action'] == 'AdminUser') {
+                } elseif ($_GET['action'] == 'adminUser') {
                     $this->ctrlAdminUser->getHTML();
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {
                     $this->ctrlAdminPaiementLivraison->handlerPaiementLivraison();

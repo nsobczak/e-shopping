@@ -5,13 +5,13 @@
 require_once('Modele.php');
 
 
-
 class Produit extends Modele
-{    /** Renvoie les informations sur un utillisateurs
+{
+    /** Renvoie les informations sur un utillisateurs
      *
      * @param int $id L'identifiant de l'utilisateur
      * @return array L'utilisateur
-     * @throws Exception Si l'identifiant du produit est inconnu
+     * @throws Exception Si l'identifiant de l'utilisateur est inconnu
      */
     public function getProduit($produitID)
     {
@@ -28,7 +28,7 @@ class Produit extends Modele
      *
      * @param int $id L'identifiant de l'utilisateur
      * @return array L'utilisateur
-     * @throws Exception Si l'identifiant du produit est inconnu
+     * @throws Exception Si l'identifiant de l'utilisateur est inconnu
      */
     public function getAllProduit()
     {
@@ -36,8 +36,7 @@ class Produit extends Modele
         $produit = $this->executerRequete($sql);
         if ($produit->rowCount() >= 1) {
             return $produit->fetchAll();  // Accès à la première ligne de résultat
-        }
-        else
+        } else
             throw new Exception("Aucun produit ne correspond à l'identifiant");
     }
 }

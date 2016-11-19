@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=db_e_shopping', 'root', '');
+$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', 'ISEN');
 $query1 = "Select * from produit where produitID=:produitID";
 $req1 = $bdd->prepare($query1);
 $req1->execute(array('produitID' => $_GET["id"]));
