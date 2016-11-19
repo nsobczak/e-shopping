@@ -1,4 +1,14 @@
 /*=================================================
+ *  Le css comporte 2 parties:
+ * - La 1ère partie contient les styles des entêtes, body et footer
+ * - La 2ème partie contient les styles des pages de chacun
+ *
+ * TODO: Ajouter le style correspondant à votre page à la suite de ce css en précisant le titre de votre page
+ */
+/*________________________________________________________________________________________________________________
+  ________________________________________________________________________________________________________________*/
+
+/*=================================================
  * header et son menu deroulant
  */
 header {
@@ -86,8 +96,6 @@ header .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/*====================================================*/
-
 /*=================================================
  * body
  */
@@ -103,7 +111,6 @@ body p {
     padding-left: 10px;
     margin: 0;
 }
-
 
 /*=================================================
  * footer
@@ -132,10 +139,11 @@ footer a {
     text-align: center;
 }
 
-/*====================================================*/
+/*________________________________________________________________________________________________________________
+  ________________________________________________________________________________________________________________*/
 
 /*=================================================
- *
+ * Page de login et de profil ?
  */
 #logo {
     text-align: center;
@@ -166,5 +174,151 @@ footer a {
     color: red;
 }
 
-/*====================================================*/
+/*=================================================
+ *  Page produit
+ */
+#phead {
+    font-size: 50px;
+    text-align: center;
+    color: blue;
+}
+
+#produit {
+    text-align: center;
+}
+
+#produit img {
+    height: 400px;
+}
+
+#decription1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#decription2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#prix {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+#panier {
+    height: 50px;
+    position: fixed;
+    top: 140px;
+    right: 50px;
+}
+
+/*=================================================
+ *  Page panier, tunnel de commande
+ */
+label {
+    font-size: 16px;
+}
+
+.custom-dropdown--large {
+    font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+    font-size: 2.7em;
+}
+
+.custom-dropdown__select {
+    font-size: inherit; /* inherit size from .custom-dropdown */
+    padding: .5em; /* add some space*/
+    margin: 0; /* remove default margins */
+}
+
+.custom-dropdown__select--white {
+    background-color: #EEE;
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "\25BC";
+        height: 2.5em;
+        font-size: .5em;
+        line-height: 1;
+        right: 0.5em;
+        top: 50%;
+        margin-top: -.5em;
+        background-color: #EEE;
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 2em;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0, 0, 0, .3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0, 0, 0, .1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        top: .5em;
+        bottom: .5em;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0, 0, 0, .9);
+    }
+
+    /* FF only temp fix */
+    @-moz-document url-prefix() {
+        .custom-dropdown__select {
+            padding-right: .9em
+        }
+        .custom-dropdown--large .custom-dropdown__select {
+            padding-right: 1.3em
+        }
+        .custom-dropdown--small .custom-dropdown__select {
+            padding-right: .5em
+        }
+    }
+}
+
+/*=================================================
+ *  Page panier, tunnel de commande
+ */
 

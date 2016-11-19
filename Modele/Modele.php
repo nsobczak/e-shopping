@@ -24,7 +24,7 @@ abstract class Modele
     {
         if ($this->bdd == null) {
             // Création de la connexion
-            $this->bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', '');
+            $this->bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', 'ISEN');
         }
         return $this->bdd;
     }
