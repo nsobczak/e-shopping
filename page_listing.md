@@ -17,4 +17,4 @@
 |ControleurChiffreDAffaire||vueChiffreDAffaire|visu chiffre d'affaire (formulaire de recherche mois/année)|admin|Quentin|4|
 |ControleurAdministrationPaiement||vueAdministrationPaiement|administration des moyens de paiement|admin|Baudouin|4|
 |ControleurFaq||vueFaq|faq|tous|?|5|
-|ControleurRecherche||vueRecherche|recherche produit|tous|?|5|
+|ControleurRecherche||vueRecherche|recherche produit|tous|Baudouin|5|

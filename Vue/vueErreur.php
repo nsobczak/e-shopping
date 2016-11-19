@@ -1,7 +1,8 @@
 <section id=erreur>
     <h1> Page d'erreur <h1/>
         <p>
-            Work in progress
+            Work in progress<br>
+            <strong>Message d'erreur:</strong> <?php echo $msgErreur; ?>
         <p/>
 </section>
 
