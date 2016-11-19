@@ -35,23 +35,16 @@ class ControleurLogin implements Controleur
         $this->userLogin = new UserLogin();
     }
 
-
     /**
-     * Selectionne la page a afficher
-     *
-     * @return int L'id de l'utilisateur s'il est connecte, -1 sinon
+     * Fonction qui deconnecte l'utilisateur et le redirige vers la page d'accueil
      */
-    public function selectHTML()
-    {
-        if (isset($_SESSION['userID'])) {
-            $userID = $_SESSION['userID'];
-        } else // Pour aller a la page de login
-        {
-            $userID = -1;
+    public function logOut() {
+        if(isset($_SESSION['userID'])) {
+            session_destroy();
+            header('Location: index.php');
+            die();
         }
-        return $userID;
     }
-
 
     /**
      * Fonction qui...
@@ -81,12 +74,8 @@ class ControleurLogin implements Controleur
                     die();
                 }
             }
-            $vue->generer(array('login_code' => $this->login_code));
-        } else {
-
-            var_dump('rien n est poste');
-            $vue->generer();
         }
+        $vue->generer(array('login_code' => $this->login_code));
     }
 
 
@@ -95,10 +84,8 @@ class ControleurLogin implements Controleur
      */
     public function getHTML()
     {
-        $userID = $this->selectHTML();
-
         // si l'utilisateur est connecte
-        if ($userID >= 0) {
+        if (isset($_SESSION['userID'])) {
             header('Location: index.php?action=userProfile');
             die();
         } // sinon redirection vers la page de login
@@ -120,17 +107,6 @@ class ControleurLogin implements Controleur
         $user = new UserLogin();
         $result = $user->getUser($userID);
         return $result;
-    }
-
-
-    /**
-     * Fonction qui...
-     */
-    public function logguer()
-    {
-
-        var_dump('on va logguer le user');
-        $this->logguerUser();
     }
 
 }
