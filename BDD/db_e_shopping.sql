@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 18 Novembre 2016 à 16:24
--- Version du serveur :  5.7.10-log
--- Version de PHP :  7.0.10
+-- Généré le :  Sam 19 Novembre 2016 à 13:52
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -142,10 +142,10 @@ INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDeP
 --
 
 CREATE TABLE `produit` (
-  `poduitID` int(11) NOT NULL,
+  `produitID` int(11) NOT NULL,
   `nomProduit` varchar(255) COLLATE utf8_bin NOT NULL,
   `prix` int(11) NOT NULL,
-  `desciption` text CHARACTER SET utf8 NOT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
   `cheminimage` varchar(500) COLLATE utf8_bin NOT NULL,
   `sousCategorieID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -154,7 +154,7 @@ CREATE TABLE `produit` (
 -- Contenu de la table `produit`
 --
 
-INSERT INTO `produit` (`poduitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES
+INSERT INTO `produit` (`produitID`, `nomProduit`, `prix`, `description`, `cheminimage`, `sousCategorieID`) VALUES
 (1, 't-shirt star wars keep caml', 20, 'Magnifique t-shirt de la licence star wars. Imprimé Dark Vador avec "Keep Kalm and use the force"', 'Images/Produit/1.jpg', 1),
 (2, 'Lampe Tetris', 30, 'La lampe qu\'il faut pour ton appart !', 'Images/Produit/2.jpg', 3);
 
@@ -250,7 +250,7 @@ ALTER TABLE `panier`
 -- Index pour la table `produit`
 --
 ALTER TABLE `produit`
-  ADD PRIMARY KEY (`poduitID`),
+  ADD PRIMARY KEY (`produitID`),
   ADD KEY `sousCategorieID` (`sousCategorieID`);
 
 --
@@ -274,7 +274,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `adresse`
 --
 ALTER TABLE `adresse`
-  MODIFY `adresseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `adresseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
@@ -299,7 +299,7 @@ ALTER TABLE `panier`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `poduitID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `produitID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `souscategorie`
 --
@@ -319,7 +319,7 @@ ALTER TABLE `user`
 --
 ALTER TABLE `lignepanier`
   ADD CONSTRAINT `lignepanier_ibfk_1` FOREIGN KEY (`panierID`) REFERENCES `panier` (`panierID`),
-  ADD CONSTRAINT `lignepanier_ibfk_2` FOREIGN KEY (`produitID`) REFERENCES `produit` (`poduitID`);
+  ADD CONSTRAINT `lignepanier_ibfk_2` FOREIGN KEY (`produitID`) REFERENCES `produit` (`produitID`);
 
 --
 -- Contraintes pour la table `panier`
@@ -344,4 +344,3 @@ ALTER TABLE `souscategorie`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-

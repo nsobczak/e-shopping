@@ -22,6 +22,7 @@
             <li><a href="index.php?action=deconnexion">Deconnexion</a></li>
         <?php } ?>
         <li>--</li>
+        <?php if(isset($_SESSION['userID']) && $_SESSION['niveau_accreditation'] == 1) { ?>
         <li class="dropdown">
             <a href="#" class="dropbtn">Administration</a>
             <div class="dropdown-content">
@@ -32,7 +33,7 @@
                 <a href="index.php?action=adminChiffreAffaire">Chiffre d'affaires</a>
             </div>
         </li>
-
+        <?php } ?>
     </ul>
 
 </header>

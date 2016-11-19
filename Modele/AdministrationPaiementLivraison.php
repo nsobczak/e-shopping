@@ -60,23 +60,26 @@ class AdministrationPaiementLivraison extends Modele
 
 
     /**
-     * Fonction qui...
+     * Fonction qui retourne la liste des moyens de paiement actuellement dans la BDD
      *
-     * @return PDOStatement
+     * @return array    Tableau contenant la liste des moyens de paiement
      */
     public function getMoyensPaiement() {
         $sql = "SELECT * FROM moyendepaiement";
         $moyensPaiement = $this->executerRequete($sql);
-        return $moyensPaiement;
+        if($moyensPaiement->rowCount() > 0)
+            return $moyensPaiement->fetchAll();
+        else
+            return array();
     }
 
 
     /**
-     * Fonction qui...
+     * Fonction qui retourne un moyen de paiement depuis son identifiant
      *
-     * @param $paiementID
-     * @return mixed
-     * @throws Exception
+     * @param $paiementID   ID du moyen de paiement
+     * @return mixed    Soit retourne le moyen de paiement (tableau), soit une erreur
+     * @throws Exception    Si erreur, moyen de paiement introuvable
      */
     public function getMoyensPaiementById($paiementID) {
         $sql = "SELECT * FROM moyendepaiement WHERE moyenDePaiementID =  ?";

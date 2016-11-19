@@ -98,6 +98,7 @@ class UserLogin extends Modele
             $user_param = $this->getUser($mail);
             if ($user_param['mot_de_passe'] == $password_hash) {
                 $_SESSION['userID'] = $user_param['userID'];
+                $_SESSION['niveau_accreditation'] = $user_param['niveau_accreditation'];
                 return UserLogin::LOGIN_OK;
             }
             else
