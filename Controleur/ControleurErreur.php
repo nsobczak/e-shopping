@@ -7,17 +7,22 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once ('Controleur/Controleur.php');
-require_once ('Vue/Vue.php');
+require_once('Controleur/Controleur.php');
+require_once('Vue/Vue.php');
 
 class ControleurErreur implements Controleur
 {
+    /**
+     * ControleurErreur constructor.
+     */
     public function __construct()
     {
 
     }
 
-    // Affiche la page d'erreur
+    /**
+     * Affiche la page d'erreur
+     */
     public function getHTML()
     {
         $vue = new Vue("Erreur");

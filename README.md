@@ -6,6 +6,8 @@ Dans l'architecture MVC, les rôles sont les suivants:
 - vue : interface utilisateur (entrées et sorties)
 - contrôleur : gestion des événements et synchronisation
 
+![**Schema to always keep in mind**](Images/MVC.png)
+
 ## Explication de l'architecture MVC
 
 Source : <https://www.irif.fr/~carton/Enseignement/InterfacesGraphiques/MasterInfo/Cours/Swing/mvc.html>

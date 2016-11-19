@@ -7,7 +7,7 @@
 <table width="95%" style="line-height: 24px;" border="10">
     <tr>    <!-- table row -->
         <td colspan="2"><img class="display" width=10%
-                             src=<?= $chemin ?> alt="user_picture" title="user_picture"/>
+                             src=<?= $listUserProfile[3] ?> alt="user_picture" title="user_picture"/>
         </td>    <!-- table data -->
         <td>
             <?php
@@ -35,37 +35,33 @@
     <tr>
         <td> user ID :
         <td/>
-        <td><?= $userID ?>
+        <td><?= $listUserProfile[0] ?>
         <td/>
     </tr>
     <tr>
         <td> nom :
         <td/>
-        <td><?= $nom ?>
+        <td><?= $listUserProfile[1] ?>
         <td/>
     </tr>
     <tr>
         <td> prénom :
         <td/>
-        <td><?= $prenom ?>
+        <td><?= $listUserProfile[2] ?>
         <td/>
     </tr>
     <tr>
         <td> niveau_accreditation :
         <td/>
-        <td><?= $niveau_accreditation ?>
+        <td><?= $listUserProfile[4] ?>
         <td/>
     </tr>
     <tr>
         <td> mail :
         <td/>
-        <td><?= $mail ?></td>
+        <td><?= $listUserProfile[5] ?></td>
     </tr>
-    <tr>
-        <td> sha1 du mot de passe :
-        <td/>
-        <td><?= $mot_de_passe ?></td>
-    </tr>
+
 </table>
 
 </body>

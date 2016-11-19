@@ -6,17 +6,23 @@
  */
 //________________________________________________________________________________________
 // Require once
-require_once ('Controleur.php');
-require_once ('Vue/Vue.php');
+require_once('Controleur.php');
+require_once('Vue/Vue.php');
 
 class ControleurTunnel implements Controleur
 {
+    /**
+     * ControleurTunnel constructor.
+     */
     public function __construct()
     {
 
     }
 
-    // Affiche la page tunnel
+
+    /**
+     * Affiche la page tunnel
+     */
     public function getHTML()
     {
         $vue = new Vue("Tunnel");

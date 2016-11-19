@@ -13,12 +13,21 @@ require_once 'Modele/UserProfile.php';
 
 class ControleurUserProfile implements Controleur
 {
+    /**
+     * @var UserProfile
+     */
     private $user;
 
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurUserProfile constructor.
+     */
     public function __construct()
     {
         $this->user = new UserProfile();
     }
+
 
     /**
      * Gestionnaire principal de la page d'administration pour la livraison
@@ -31,6 +40,7 @@ class ControleurUserProfile implements Controleur
         $this->getHTML();
     }
 
+
     /** Selectionne la page a afficher
      *
      * @return int L'id de l'utilisateur s'il est connecte, -1 sinon
@@ -39,7 +49,7 @@ class ControleurUserProfile implements Controleur
     {
 //        if ("utilisateur loggé")
 //        {
-        $userID = 2;
+        $userID = 5;
 //        }
 //        else // Pour aller a la page de login
 //        {
@@ -48,7 +58,10 @@ class ControleurUserProfile implements Controleur
         return $userID;
     }
 
-    // Affiche la page d'accueil
+
+    /**
+     * Fonction qui affiche la page d'accueil
+     */
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
@@ -56,8 +69,10 @@ class ControleurUserProfile implements Controleur
 
         // si l'uilisateur est connecte
         if ($userID >= 0) {
-            $userProfile = $this->displayUserProfile($userID);
-            $vue->generer($userProfile);
+            $vue->generer(array(
+                'listUserProfile' => $this->user->getUser($userID),
+            ));
+
         } // sinon redirection vers la page de login
         else {
             header('Location: index.php?action=login');
@@ -66,19 +81,10 @@ class ControleurUserProfile implements Controleur
 
     }
 
-    /** Renvoie les informations sur un utilisateur
-     *
-     * @param int $userID L'identifiant de l'utilisateur
-     * @return array L'utilisateur
-     */
-    public function displayUserProfile($userID)
-    {
-        $user = new UserProfile();
-        $result = $user->getUser($userID);
-        return $result;
-    }
 
-    // Met à jour l'image de profil de l'utilisateur
+    /**
+     * Fonction qui met à jour l'image de profil de l'utilisateur
+     */
     public function changeProfilePicture()
     {
         var_dump("coucou1");

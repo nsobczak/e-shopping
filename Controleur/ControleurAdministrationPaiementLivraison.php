@@ -10,9 +10,20 @@ require_once 'Modele/AdministrationPaiementLivraison.php';
 
 class ControleurAdministrationPaiementLivraison implements Controleur
 {
+    /**
+     * @var AdministrationPaiementLivraison
+     */
     private $adminPaiementLivraison;
+    /**
+     * @var int
+     */
     private $adminPaiementLivraison_code;
 
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurAdministrationPaiementLivraison constructor.
+     */
     public function __construct() {
         $this->adminPaiementLivraison = new AdministrationPaiementLivraison();
         $this->adminPaiementLivraison_code = 0; // default
@@ -31,6 +42,9 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         $this->getHTML();
     }
 
+    /**
+     *
+     */
     private function addPaiementLivraison() {
         if (empty($_POST['nomPaiementLivraison']) && empty($_POST['descriptionPaiementLivraison']))
             $this->adminPaiementLivraison_code = 0;
@@ -41,6 +55,9 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         }
     }
 
+    /**
+     *
+     */
     private function checkEditPaiement() {
         if(!empty($_GET['do']) && !empty($_GET['paiementID'])) {
             if ($_GET['do'] == "delete")
@@ -60,6 +77,9 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         }
     }
 
+    /**
+     *
+     */
     private function removePaiementLivraison() {
         if(!empty($_GET['paiementID']) && !empty($_GET['do'])) {
             if($_GET['do'] == "delete")
@@ -67,6 +87,9 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         }
     }
 
+    /**
+     *
+     */
     public function getHTML()
     {
         // TODO : vérifier que le client est connecté et qu'il a un niveau d'accrédition suffisant

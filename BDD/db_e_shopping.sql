@@ -3,11 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- User: Nicolas Sobczak & Vincent Reynaert
--- Généré le :  Ven 04 Novembre 2016 à 23:10
+-- Généré le :  Ven 18 Novembre 2016 à 16:24
 -- Version du serveur :  5.7.10-log
 -- Version de PHP :  7.0.10
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -21,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `db_e_shopping`
 --
-
 
 -- --------------------------------------------------------
 
@@ -45,7 +42,8 @@ INSERT INTO `adresse` (`adresseID`, `codePostal`, `ville`, `numeroVoie`, `nomRue
 (1, 59000, 'Lille', 42, 'Bd Vauban'),
 (2, 59000, 'Lille', 42, 'Bd Vauban'),
 (3, 59120, 'Loos', 69, 'Rue de Londres'),
-(4, 59120, 'Jadielle', 69, 'Rue de du centre');
+(4, 59120, 'Jadielle', 69, 'Rue de du centre'),
+(5, 27080, 'Arendelle', 301, 'Place du marché');
 
 -- --------------------------------------------------------
 
@@ -157,8 +155,8 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`poduitID`, `nomProduit`, `prix`, `desciption`, `cheminimage`, `sousCategorieID`) VALUES
-(1, 't-shirt star wars keep caml', 20, 'Magnifique t-shirt de la licence star wars. Imprimé Dark Vador avec "Keep Kalm and use the force"', 'http://i2.cdscdn.com/pdt2/5/0/3/1/300x300/mp03014503/rw/t-shirt-star-wars-keep-calm-and-the-use-force-xxla.jpg', 1),
-(2, 'Lampe Tetris', 30, 'La lampe qu\'il faut pour ton appart !', 'https://images-na.ssl-images-amazon.com/images/I/41rIE-JM3KL._SY355_.jpg', 3);
+(1, 't-shirt star wars keep caml', 20, 'Magnifique t-shirt de la licence star wars. Imprimé Dark Vador avec "Keep Kalm and use the force"', 'Images/Produit/1.jpg', 1),
+(2, 'Lampe Tetris', 30, 'La lampe qu\'il faut pour ton appart !', 'Images/Produit/2.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -206,6 +204,7 @@ INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`,
 (1, 'Reynaert', 'Vincent', 'Images/Profil/profil_utilisateur.jpg', 1, 'vincent.reynaert@isen-lille.fr', '1234'),
 (2, 'Sobczak', 'Nicolas', 'Images/Profil/profil_utilisateur.jpg', 1, 'nicolas.sobczak@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (3, 'Pryfer', 'Sylvain', 'Images/Profil/profil_utilisateur.jpg', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
+(4, 'Elsa', 'Queen of Arendelle', 'Images/Profil/4.jpg', 2, 'anna.elsa@gmail.com', '19be062d13637aaabb2790490fc173dd849aff47'),
 (5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', '19be062d13637aaabb2790490fc173dd849aff47');
 
 --
@@ -275,7 +274,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `adresse`
 --
 ALTER TABLE `adresse`
-  MODIFY `adresseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `adresseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
@@ -345,3 +344,4 @@ ALTER TABLE `souscategorie`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

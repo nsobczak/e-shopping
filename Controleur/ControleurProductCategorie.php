@@ -10,7 +10,7 @@ require_once 'Controleur/Controleur.php';
 require_once 'Vue/Vue.php';
 
 
-class ControleurProduit01 implements Controleur
+class ControleurProductCategorie implements Controleur
 {
     private $produit;
 
