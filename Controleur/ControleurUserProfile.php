@@ -40,35 +40,17 @@ class ControleurUserProfile implements Controleur
         $this->getHTML();
     }
 
-
-    /** Selectionne la page a afficher
-     *
-     * @return int L'id de l'utilisateur s'il est connecte, -1 sinon
-     */
-    public function selectHTML()
-    {
-//        if ("utilisateur loggé")
-//        {
-        $userID = 5;
-//        }
-//        else // Pour aller a la page de login
-//        {
-//          $userID = -1;
-//        }
-        return $userID;
-    }
-
-
+    
     /**
      * Fonction qui affiche la page d'accueil
      */
     public function getHTML()
     {
         $vue = new Vue("UserProfile");
-        $userID = $this->selectHTML();
 
         // si l'uilisateur est connecte
-        if ($userID >= 0) {
+        if (isset($_SESSION['userID'])) {
+            $userID = $_SESSION['userID'];
             $vue->generer(array(
                 'listUserProfile' => $this->user->getUser($userID),
             ));
