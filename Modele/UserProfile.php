@@ -90,4 +90,16 @@ class UserProfile extends Modele
         $this->executerRequete($sql, array($newPath, $userID));
     }
 
+    /**
+     * Fonction updatePassword = fonction qui met à jour le mot de passe de l'utilisateur
+     *
+     * @param $newPassword
+     * @param $userID
+     */
+    public function updatePassword($newPassword, $userID)
+    {
+        $sql = "UPDATE mot_de_passe SET mot_de_passe = ? WHERE $userID = ?";
+        $this->executerRequete($sql, array($newPassword, $userID));
+    }
+
 }

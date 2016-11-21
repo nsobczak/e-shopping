@@ -7,7 +7,7 @@
 <table width="95%" style="line-height: 24px;" border="10">
     <tr>    <!-- table row -->
         <td colspan="2"><img class="display" width=10%
-                             src=<?= $listUserProfile[3] ?> alt="user_picture" title="user_picture"/>
+                             src=<?= $listUserProfile['chemin'] ?> alt="user_picture" title="user_picture"/>
         </td>    <!-- table data -->
         <td>
             <?php
@@ -35,31 +35,36 @@
     <tr>
         <td> user ID :
         <td/>
-        <td><?= $listUserProfile[0] ?>
+        <td><?= $listUserProfile['userID'] ?>
         <td/>
     </tr>
     <tr>
         <td> nom :
         <td/>
-        <td><?= $listUserProfile[1] ?>
+        <td><?= $listUserProfile['nom'] ?>
         <td/>
     </tr>
     <tr>
         <td> prénom :
         <td/>
-        <td><?= $listUserProfile[2] ?>
+        <td><?= $listUserProfile['prenom'] ?>
         <td/>
     </tr>
     <tr>
         <td> niveau_accreditation :
         <td/>
-        <td><?= $listUserProfile[4] ?>
+        <td><?= $listUserProfile['niveau_accreditation'] ?>
         <td/>
     </tr>
     <tr>
         <td> mail :
         <td/>
-        <td><?= $listUserProfile[5] ?></td>
+        <td><?= $listUserProfile['mail'] ?></td>
+    </tr>
+    <tr>
+        <td> Change password :
+        <td/>
+        <td>TODO: insert here le bouton pour changer le password</td>
     </tr>
 
 </table>

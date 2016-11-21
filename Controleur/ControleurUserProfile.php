@@ -40,7 +40,7 @@ class ControleurUserProfile implements Controleur
         $this->getHTML();
     }
 
-    
+
     /**
      * Fonction qui affiche la page d'accueil
      */
@@ -75,6 +75,16 @@ class ControleurUserProfile implements Controleur
             var_dump("coucou2");
             $this->user->uploadPicture($_POST['submit'], 2);
         }
+
+    }
+
+    /**
+     * Fonction qui met à jour le mot de passe d'un utilisateur
+     */
+    public function changeUserPassword()
+    {
+        var_dump("password");
+
 
     }
 }
