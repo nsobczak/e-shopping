@@ -16,11 +16,6 @@ class ControleurRecherche implements Controleur
         $this->recherche = new Recherche();
     }
 
-    public function getSearchModule() {
-        if(empty($_POST['produitName'])) {
-        }
-    }
-
     /**
      * Fonction qui affiche la vue
      */
@@ -29,12 +24,16 @@ class ControleurRecherche implements Controleur
         $vue = new Vue("Recherche");
         if (!empty($_POST['searchName'])) {
             $produitsList = $this->recherche->getProduitByName($_POST['searchName']);
-            if (count($produitsList) == 1) { // Il n'a trouvé qu'un seul produit
-                header('Location: index.php?action=productCategorie&id=' . $produitsList[0]['produitID']); // TODO
-                die();
-            } else {
-                $vue->generer(array("produitsSearch" => $produitsList));
+            if (isset($produitsList)) {
+                if (count($produitsList) == 1) { // Il n'a trouvé qu'un seul produit
+                    header('Location: index.php?action=productCategorie&id=' . $produitsList[0]['produitID']); // TODO
+                    die();
+                } else { // plusieurs produits
+                    $vue->generer(array("produitsSearch" => $produitsList));
+                }
             }
+            else
+                $vue->generer(array("error" => Recherche::NO_RESULT));
         }
         else
             $vue->generer(array("produitsSearch" => ""));

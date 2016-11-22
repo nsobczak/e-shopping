@@ -5,6 +5,7 @@
 
 class Recherche extends Modele
 {
+    const NO_RESULT = 1;
 
     public function getProduitByName($name) {
         $term = '%' . $name . '%';
@@ -13,6 +14,6 @@ class Recherche extends Modele
         if($results->rowCount() > 0)
             return $results->fetchAll();
         else
-            return array();
+            return null;
     }
 }
