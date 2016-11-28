@@ -17,6 +17,8 @@ class Vue
      */
     private $titre;
 
+    private $categories;
+
 
     //______________________________________________________________________________________
     /**
@@ -28,6 +30,7 @@ class Vue
     {
         // Détermination du nom du fichier vue à partir de l'action
         $this->fichier = "Vue/vue" . $action . ".php";
+        $this->categories = new Produit();
     }
 
 
@@ -42,7 +45,7 @@ class Vue
         $contenu = $this->genererFichier($this->fichier, $donnees);
         // Génération du gabarit commun utilisant la partie spécifique
         $vue = $this->genererFichier('Vue/gabarit.php',
-            array('titre' => $this->titre, 'contenu' => $contenu)
+            array('titre' => $this->titre, 'contenu' => $contenu, 'categories' => $this->categories->getCategories())
         );
         // Renvoi de la vue au navigateur
         echo $vue;

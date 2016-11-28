@@ -24,10 +24,11 @@ class ControleurProductCategorie implements Controleur
      */
     public function __construct()
     {
-        //$this->user = new UserProfile();
+        $this->produit = new Produit();
     }
 
     //TODO: getters et setters
+
 
 
     //______________________________________________________________________________________
@@ -36,7 +37,17 @@ class ControleurProductCategorie implements Controleur
      */
     public function getHTML()
     {
-        $vue = new Vue("Produit");
-        $vue->generer(array());
+        if(isset($_GET['idCategorie'])) {
+            $vue = new Vue("ProduitList");
+            $vue->generer(array("ProduitList" => $this->produit->getAllProduitsByCategorieId($_GET['idCategorie'])));
+        }
+        else if(isset($_GET['id'])) {
+            // On a un item !
+            $vue = new Vue("Produit");
+            $vue->generer(array());
+        }
+        else {
+            // Erreur
+        }
     }
 }

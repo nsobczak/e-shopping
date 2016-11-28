@@ -3,7 +3,7 @@
 * User: Francis Polaert & Kévin Noet
 * Date: 04/11/2016
 */
-$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', 'ISEN');
+$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', '');
 $paiemment = $bdd->query("SELECT * FROM moyendepaiement");
 /*$lignepanier = $bdd->query("SELECT *
                             FROM lignepanier, panier, produit
