@@ -1,6 +1,7 @@
 <?php
 /**
  * Auteur: Baudouin Landais
+ * Date: 11/2016
  */
 
 require_once('Modele/Register.php');
@@ -9,12 +10,54 @@ require_once('Modele/Recherche.php');
 class ControleurRecherche implements Controleur
 {
 
+    /**
+     * @var Recherche
+     */
     private $recherche;
 
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurRecherche constructor.
+     */
     public function __construct()
     {
         $this->recherche = new Recherche();
     }
+
+
+    /**
+     * Getter de $recherche
+     *
+     * @return Recherche
+     */
+    public function getUser()
+    {
+        return $this->recherche;
+    }
+
+
+    /**
+     * Setter de $recherche
+     *
+     * @param $newRecherche
+     */
+    public function setUser($newRecherche)
+    {
+        $this->user = $newRecherche;
+    }
+
+
+    //______________________________________________________________________________________
+    /**
+     *
+     */
+    public function getSearchModule()
+    {
+        if (empty($_POST['produitName'])) {
+        }
+    }
+
 
     /**
      * Fonction qui affiche la vue

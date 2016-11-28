@@ -1,7 +1,3 @@
-<?php
-//$titre = "User profile id : " . $userID;
-?>
-
 <body>
 
 <table width="95%" style="line-height: 24px;" border="10">

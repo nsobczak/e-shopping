@@ -204,8 +204,8 @@ INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`,
 (1, 'Reynaert', 'Vincent', 'Images/Profil/profil_utilisateur.jpg', 1, 'vincent.reynaert@isen-lille.fr', '1234'),
 (2, 'Sobczak', 'Nicolas', 'Images/Profil/profil_utilisateur.jpg', 1, 'nicolas.sobczak@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (3, 'Pryfer', 'Sylvain', 'Images/Profil/profil_utilisateur.jpg', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
-(4, 'Elsa', 'Queen of Arendelle', 'Images/Profil/4.jpg', 2, 'anna.elsa@gmail.com', '19be062d13637aaabb2790490fc173dd849aff47'),
-(5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', '19be062d13637aaabb2790490fc173dd849aff47');
+(4, 'Elsa', 'Queen of Arendelle', 'Images/Profil/4.jpg', 2, 'anna.elsa@gmail.com', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', 'ad0557319768587a736ee716b5bc48945c39aaab');
 
 --
 -- Index pour les tables exportées

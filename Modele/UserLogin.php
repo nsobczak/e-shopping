@@ -19,6 +19,7 @@ class UserLogin extends Modele
 
     const SALT_REGISTER = "sel_php";
 
+
     //______________________________________________________________________________________
     /**
      * Fonction qui...
@@ -65,6 +66,7 @@ class UserLogin extends Modele
             throw new Exception("Aucun utilisateur ne correspond au mail '$mailUser'");
     }
 
+    
     /**
      * Fonction qui regarde si l'utilisateur existe ou pas
      *

@@ -26,17 +26,14 @@ class ControleurAdministrationUser implements Controleur
      */
     public function __construct()
     {
-        $user = new AdministrationUser();
+        $this->user = new AdministrationUser();
     }
 
-    /**
-     * Affiche la page d'admin user
-     */
-    public function getHTML()
+    public function handlerAdministrationUser()
     {
-        $vue = new Vue("AdministrationUser");
-        // $vue->generer(array());
-        $vue->generer($this->displayUser(1));
+        $this->deleteUser();
+        $this->changeAccre();
+        $this->getHTML();
     }
 
     /**
@@ -53,7 +50,55 @@ class ControleurAdministrationUser implements Controleur
 
         return $result;
     }
+
+    /**
+     * Affiche la page d'admin user
+     */
+    public function getHTML()
+    {
+        $vue = new Vue("AdministrationUser");
+        $listUsers = $this->user->getUserList();
+        $vue->generer(array('listUsers' => $listUsers));
+
+    }
+
+    public function deleteUser()
+    {
+        if (isset($_GET['do']) && (isset($_GET['userID']))) {
+            if ($_GET['do'] == "deleteUser") {
+                // if ('<script type="text/javascript" language="javascript"> confirm("Vous désirez vraiment quitter?")</script>') {
+                $this->user->deleteUser($_GET["userID"]);
+                // }
+            }
+        }
+    }
+
+    public function changeAccre()
+    {
+        if (isset($_GET['do']) && (isset($_GET['userID'])) && (isset($_GET['accLevel']))) {
+            if ($_GET['do'] == "changeAcc") {
+                // if ('<script type="text/javascript" language="javascript"> confirm("Vous désirez vraiment quitter?")</script>') {
+                $this->user->updateUserStatus($_GET["userID"], $_GET["accLevel"]);
+                // }
+            }
+        }
+    }
+
+
 }
 
 
 ?>
+
+<script type="text/javascript">
+
+    /**
+     * Fonction qui met à jour le niveau d'accreditation d'un utilisateur
+     *
+     * @param value
+     * @param id
+     */
+    function changeAccreditation(value, id) {
+        window.location = "?action=AdministrationUser&do=changeAcc&userID=" + id + "&accLevel=" + value;
+    }
+</script>

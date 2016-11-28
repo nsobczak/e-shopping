@@ -26,6 +26,20 @@ class UserProfile extends Modele
     }
 
 
+    /**
+     * Fonction updateChemin = fonction qui met à jour le chemin de l'image utilisateur
+     *
+     * @param $newPath
+     * @param $userID
+     */
+    public function updateChemin($newPath, $userID)
+    {
+        echo "updateChemin";
+        $sql = "UPDATE user SET chemin = ? WHERE userID = ?";
+        $this->executerRequete($sql, array($newPath, $userID));
+    }
+
+
     /** Enregistre une image sur le serveur et change le chemin de l'image de l'utilisateur
      *
      * @param file $fichier L'image à télécharger
@@ -37,6 +51,7 @@ class UserProfile extends Modele
         $target_file = $target_dir . basename($_FILES["fichier"]["name"]);
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+        echo ' $FILES : ' . $_FILES["fichier"]["name"] . '||';
 
         // Check if image file is a actual image or fake image
         if (isset($_POST["submit"])) {
@@ -69,7 +84,12 @@ class UserProfile extends Modele
             echo "Sorry, your file was not uploaded.";
             // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["fichier"]["tmp_name"], $target_file)) {
+            // replace filename by userID
+            $file_titre = $target_dir . $userID . '.' . $imageFileType;
+            if (move_uploaded_file($_FILES["fichier"]["tmp_name"], $file_titre)) {
+                // on met a jour la bdd
+                echo " file titre : " . $file_titre;
+                $this->updateChemin($file_titre, $userID);
                 echo "The file " . basename($_FILES["fichier"]["name"]) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
@@ -77,18 +97,6 @@ class UserProfile extends Modele
         }
     }
 
-
-    /**
-     * Fonction updateChemin = fonction qui met à jour le chemin de l'image utilisateur
-     *
-     * @param $newPath
-     * @param $userID
-     */
-    public function updateChemin($newPath, $userID)
-    {
-        $sql = "UPDATE chemin SET chemin = ? WHERE $userID = ?";
-        $this->executerRequete($sql, array($newPath, $userID));
-    }
 
     /**
      * Fonction updatePassword = fonction qui met à jour le mot de passe de l'utilisateur

@@ -35,16 +35,22 @@ class ControleurLogin implements Controleur
         $this->userLogin = new UserLogin();
     }
 
+    //TODO: getters et setters
+
+
+    //______________________________________________________________________________________
     /**
      * Fonction qui deconnecte l'utilisateur et le redirige vers la page d'accueil
      */
-    public function logOut() {
-        if(isset($_SESSION['userID'])) {
+    public function logOut()
+    {
+        if (isset($_SESSION['userID'])) {
             session_destroy();
             header('Location: index.php');
             die();
         }
     }
+
 
     /**
      * Fonction qui...
@@ -61,8 +67,7 @@ class ControleurLogin implements Controleur
                 $this->login_code = UserLogin::FORM_INPUTS_ERROR;
             } elseif (!empty($_POST['mail']) && !empty($_POST['password'])) {
                 $this->login_code = $this->userLogin->connectUser($_POST['mail'], $_POST['password']);
-                if($this->login_code == UserLogin::LOGIN_OK)
-                {
+                if ($this->login_code == UserLogin::LOGIN_OK) {
                     header('Location: index.php?action=userProfile');
                     die();
                 }

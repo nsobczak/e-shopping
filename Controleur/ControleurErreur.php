@@ -12,6 +12,7 @@ require_once('Vue/Vue.php');
 
 class ControleurErreur implements Controleur
 {
+    //______________________________________________________________________________________
     /**
      * ControleurErreur constructor.
      */
@@ -20,6 +21,7 @@ class ControleurErreur implements Controleur
 
     }
 
+    //______________________________________________________________________________________
     /**
      * Affiche la page d'erreur
      */

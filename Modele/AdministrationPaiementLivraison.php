@@ -1,9 +1,9 @@
 <?php
+
 /***
  * User: Baudouin LANDAIS
  * Date: 06/11/2016
  */
-
 class AdministrationPaiementLivraison extends Modele
 {
     //Constantes
@@ -52,7 +52,8 @@ class AdministrationPaiementLivraison extends Modele
      * @param $paiementID
      * @return int
      */
-    public function editMoyenPaiement($nom, $description, $paiementID) {
+    public function editMoyenPaiement($nom, $description, $paiementID)
+    {
         $sql = "UPDATE moyendepaiement SET nomMoyenDePaiement = ?, descriptionMoyenDePaiement = ? WHERE moyenDePaiementID = ?";
         $this->executerRequete($sql, array($nom, $description, $paiementID));
         return AdministrationPaiementLivraison::EDIT_OK;
@@ -64,10 +65,11 @@ class AdministrationPaiementLivraison extends Modele
      *
      * @return array    Tableau contenant la liste des moyens de paiement
      */
-    public function getMoyensPaiement() {
+    public function getMoyensPaiement()
+    {
         $sql = "SELECT * FROM moyendepaiement";
         $moyensPaiement = $this->executerRequete($sql);
-        if($moyensPaiement->rowCount() > 0)
+        if ($moyensPaiement->rowCount() > 0)
             return $moyensPaiement->fetchAll();
         else
             return array();
@@ -81,7 +83,8 @@ class AdministrationPaiementLivraison extends Modele
      * @return mixed    Soit retourne le moyen de paiement (tableau), soit une erreur
      * @throws Exception    Si erreur, moyen de paiement introuvable
      */
-    public function getMoyensPaiementById($paiementID) {
+    public function getMoyensPaiementById($paiementID)
+    {
         $sql = "SELECT * FROM moyendepaiement WHERE moyenDePaiementID =  ?";
         $paiement = $this->executerRequete($sql, array($paiementID));
         if ($paiement->rowCount() == 1)

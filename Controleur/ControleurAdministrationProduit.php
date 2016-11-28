@@ -33,7 +33,10 @@ class ControleurAdministrationProduit implements Controleur
         $this->add_produit = new AdministrationProduit();
     }
 
+    //TODO: getters et setters
 
+
+    //______________________________________________________________________________________
     /**
      * Fonction qui...
      */

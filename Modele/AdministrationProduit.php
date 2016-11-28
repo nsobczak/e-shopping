@@ -31,6 +31,7 @@ class AdministrationProduit extends Modele
             return false;
     }
 
+
     /**
      * Fonction qui...
      *

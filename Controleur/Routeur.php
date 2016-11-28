@@ -57,7 +57,7 @@ class Routeur
 
 
     /**
-     * Fonction qui traite une requête entrante
+     * Fonction qui traite une requête entrante en fonction de l'action
      */
     public function routerRequete()
     {
@@ -78,7 +78,7 @@ class Routeur
                 } elseif ($_GET['action'] == 'adminProduit') {
                     $this->ctrlAdminProduit->addProduit();
                 } elseif ($_GET['action'] == 'adminUser') {
-                    $this->ctrlAdminUser->getHTML();
+                    $this->ctrlAdminUser->handlerAdministrationUser();
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {
                     $this->ctrlAdminPaiementLivraison->handlerPaiementLivraison();
                 } elseif ($_GET['action'] == 'login') {
