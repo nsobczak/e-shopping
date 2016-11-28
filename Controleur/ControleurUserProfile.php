@@ -69,11 +69,10 @@ class ControleurUserProfile implements Controleur
      */
     public function changeProfilePicture()
     {
-        var_dump("coucou1");
         // Faut pouvoir upload une image puis changer son chemin
         if (!empty($_POST['submit'])) {
-            var_dump("coucou2");
-            $this->user->uploadPicture($_POST['submit'], 2);
+            var_dump("uploadPicture");
+            $this->user->uploadPicture($_POST['submit'], $_SESSION['userID']);
         }
 
     }
