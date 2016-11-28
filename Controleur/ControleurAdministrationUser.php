@@ -91,6 +91,13 @@ class ControleurAdministrationUser implements Controleur
 ?>
 
 <script type="text/javascript">
+
+    /**
+     * Fonction qui met à jour le niveau d'accreditation d'un utilisateur
+     *
+     * @param value
+     * @param id
+     */
     function changeAccreditation(value, id) {
         window.location = "?action=AdministrationUser&do=changeAcc&userID=" + id + "&accLevel=" + value;
     }

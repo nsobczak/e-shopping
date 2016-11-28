@@ -6,9 +6,7 @@
 //________________________________________________________________________________________ -->
 
 <div class="admin">
-    Bonjour admin,
-
-    bienvenue sur la page Admin User ! <br>
+    Bonjour admin, bienvenue sur la page Admin User ! <br>
     <?php if (count($listUsers) >= 1) { ?>
         <h3> Users List : </h3>
         <table>
