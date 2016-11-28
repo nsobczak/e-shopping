@@ -12,6 +12,7 @@ require_once('Vue/Vue.php');
 
 class ControleurAccueil implements Controleur
 {
+    //______________________________________________________________________________________
     /**
      * ControleurAccueil constructor.
      */
@@ -20,6 +21,8 @@ class ControleurAccueil implements Controleur
 
     }
 
+
+    //______________________________________________________________________________________
     /**
      *  Affiche la vue de la page
      */

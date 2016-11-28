@@ -39,6 +39,7 @@ class UserProfile extends Modele
         $this->executerRequete($sql, array($newPath, $userID));
     }
 
+
     /** Enregistre une image sur le serveur et change le chemin de l'image de l'utilisateur
      *
      * @param file $fichier L'image à télécharger

@@ -11,6 +11,7 @@ require_once('Vue/Vue.php');
 
 class ControleurTunnel implements Controleur
 {
+    //______________________________________________________________________________________
     /**
      * ControleurTunnel constructor.
      */
@@ -20,6 +21,7 @@ class ControleurTunnel implements Controleur
     }
 
 
+    //______________________________________________________________________________________
     /**
      * Affiche la page tunnel
      */

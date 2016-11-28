@@ -30,7 +30,10 @@ class ControleurInscription implements Controleur
         $this->register = new Register();
     }
 
+    //TODO: getters et setters
 
+
+    //______________________________________________________________________________________
     /**
      *  Fonction qui...
      */
@@ -45,6 +48,7 @@ class ControleurInscription implements Controleur
             $this->register_code = $this->register->createNewUser($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['password']);
         $this->getHTML();
     }
+
 
     /**
      * Affiche la page d'inscription

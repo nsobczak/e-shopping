@@ -57,7 +57,7 @@ class Routeur
 
 
     /**
-     * Fonction qui traite une requête entrante
+     * Fonction qui traite une requête entrante en fonction de l'action
      */
     public function routerRequete()
     {

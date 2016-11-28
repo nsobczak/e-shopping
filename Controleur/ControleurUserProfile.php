@@ -30,6 +30,29 @@ class ControleurUserProfile implements Controleur
 
 
     /**
+     * Getter du user
+     *
+     * @return UserProfile
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+
+    /**
+     * Setter du user
+     *
+     * @param $newUser
+     */
+    public function setUser($newUser)
+    {
+        $this->user = $newUser;
+    }
+
+
+    //______________________________________________________________________________________
+    /**
      * Gestionnaire principal de la page d'administration pour la livraison
      * ainsi que pour les modes de livraison, les vérifications des variables
      * se feront ici + appel de la page HTML
@@ -77,25 +100,12 @@ class ControleurUserProfile implements Controleur
 
     }
 
+
     /**
      * Fonction qui met à jour le mot de passe d'un utilisateur
      */
     public function changeUserPassword()
     {
         var_dump("password");
-
-
     }
 }
-
-
-/* brouillon
-            // selection de l'image
-        if (!is_null($base[3])) {
-            $cheminImage = $base[3];
-        } else {
-            $cheminImage = 'Images/Profil/profil_utilisateur.jpg';
-        }
-        $replacements = array(3 => $cheminImage);
-        $userProfile = array_replace($base, $replacements);
-*/

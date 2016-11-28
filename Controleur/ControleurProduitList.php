@@ -9,15 +9,28 @@ require_once 'Modele/Produit.php';
 
 class ControleurProduitList implements Controleur
 {
+    /**
+     * @var Produit
+     */
     private $produit;
 
+
+    //______________________________________________________________________________________
+    /**
+     * ControleurProduitList constructor.
+     */
     public function __construct()
     {
         $this->produit = new Produit();
     }
 
+    //TODO: getters et setters
 
-    // Affiche la page d'accueil
+
+    //______________________________________________________________________________________
+    /**
+     * Affiche la page d'accueil
+     */
     public function getHTML()
     {
         $vue = new Vue("ProduitList");
@@ -25,19 +38,5 @@ class ControleurProduitList implements Controleur
         $vue->generer(array('ProduitList' => $this->produit->getAllProduit()));
     }
 
-    /*
-            if ($produitID >= 0) {
-                //$produit = $this->displayProduit($produitID);
-                //$vue->generer($produit);
-
-
-                $vue->generer(array(
-                'ProduitList' => $this->Produit->getProduit(),
-            } // sinon redirection vers la page de login
-            else {
-                header('Location: index.php?action=login');
-                die();
-            }
-    */
 
 }
