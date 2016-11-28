@@ -78,7 +78,7 @@ class Routeur
                 } elseif ($_GET['action'] == 'adminProduit') {
                     $this->ctrlAdminProduit->addProduit();
                 } elseif ($_GET['action'] == 'adminUser') {
-                    $this->ctrlAdminUser->getHTML();
+                    $this->ctrlAdminUser->handlerAdministrationUser();
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {
                     $this->ctrlAdminPaiementLivraison->handlerPaiementLivraison();
                 } elseif ($_GET['action'] == 'login') {
