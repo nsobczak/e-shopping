@@ -7,8 +7,8 @@
  */
 ?>
 
-    Pour avoir le chiffre d'affaire de l'année, veuillez entrer l'année. ex: 2016<br/>
-    Pour avoir le chiffre d'affaire d'un mois, veuillez entrer l'année et le mois. ex: 03 et 2016<br/>
+    Pour avoir le chiffre d'affaires de l'année, veuillez entrer l'année. Ex: 2016<br/>
+    Pour avoir le chiffre d'affaires d'un mois, veuillez entrer l'année et le mois. Ex: 03 et 2016<br/>
     <br/>
     <form action="?action=adminChiffreAffaire" method="POST">
         Mois : <input type="text" name="month" placeholder="Numéro du mois"/><br/>
