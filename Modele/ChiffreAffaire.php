@@ -10,7 +10,9 @@
 class ChiffreAffaire extends Modele
 {
     /**
-     * @return int
+     * Fonction qui calcule le chiffre d'affaire
+     *
+     * @return int: le chiffre d'affaire
      */
     public function getChiffreAffaire()
     {

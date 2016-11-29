@@ -10,7 +10,8 @@ require_once('Modele.php');
 class AdministrationUser extends Modele
 {
 
-    /** Renvoie les informations sur un utillisateur
+    /**
+     * Renvoie les informations sur un utillisateur
      *
      * @param int $id L'identifiant de l'utilisateur
      * @return array L'utilisateur
@@ -26,7 +27,10 @@ class AdministrationUser extends Modele
             throw new Exception("Aucun utilisateur ne correspond à l'identifiant '$userID'");
     }
 
+
     /**
+     * Fonction qui renvoie la liste des utilisateurs.
+     *
      * @return PDOStatement
      */
     public function getUserList()
@@ -36,9 +40,12 @@ class AdministrationUser extends Modele
         return $user;
     }
 
+
     /**
-     * @param $userID
-     * @param $level
+     * Fonction qui met à jour le niveau d'accréditation d'un utilisateur
+     *
+     * @param $userID : l'id du user que l'ont veut modifier
+     * @param $level : le nouveau niveau d'accréditation
      */
     public function updateUserStatus($userID, $level)
     {
@@ -46,18 +53,17 @@ class AdministrationUser extends Modele
         $this->executerRequete($sql, array($level, $userID));
     }
 
+
     /**
-     * Fonction qui...
+     * Fonction qui supprimer un utilisateur de la base de données
      *
-     * @param $userID
-     * @return int
+     * @param $userID :l'id du user que l'ont veut supprimer
      */
     public function deleteUser($userID)
     {
         // TODO
         $sql = "DELETE FROM user WHERE userID = ?";
         $this->executerRequete($sql, array($userID));
-        // return AdministrationPaiementLivraison::ACTION_OK;
     }
 }
 

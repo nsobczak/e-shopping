@@ -19,6 +19,7 @@ class ControleurChiffreAffaire implements Controleur
     private $ChiffreAffaire;
 
 
+    //______________________________________________________________________________________
     /**
      * ControleurChiffreAffaire constructor.
      */
@@ -27,9 +28,12 @@ class ControleurChiffreAffaire implements Controleur
         $this->ChiffreAffaire = new ChiffreAffaire();
     }
 
+    //TODO: getters et setters
 
+
+    //______________________________________________________________________________________
     /**
-     *
+     *  Fonction qui affiche la vue
      */
     public function getHTML()
     {

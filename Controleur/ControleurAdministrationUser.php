@@ -29,6 +29,9 @@ class ControleurAdministrationUser implements Controleur
         $this->user = new AdministrationUser();
     }
 
+    //TODO: getters et setters
+
+
     //______________________________________________________________________________________
     /**
      *
@@ -40,8 +43,9 @@ class ControleurAdministrationUser implements Controleur
         $this->getHTML();
     }
 
+
     /**
-     * Fonction qui...
+     * Fonction qui affiche un utilisateur
      *
      * @param $userID
      * @return array
@@ -67,7 +71,7 @@ class ControleurAdministrationUser implements Controleur
     }
 
     /**
-     *
+     *  Fonction qui supprime un utilisateur
      */
     public function deleteUser()
     {
@@ -81,7 +85,7 @@ class ControleurAdministrationUser implements Controleur
     }
 
     /**
-     *
+     *  Fonction qui... ???
      */
     public function changeAccre()
     {
