@@ -70,7 +70,8 @@ class ControleurProductCategorie implements Controleur
         $panier = $this->produit->getPanierForUser($_SESSION['userID']);
         if($panier == null) {
             // insert new panier (soit aucun panier, soit tous sont achetés
-            $panier = $this->produit->createNewPanier($_SESSION['userID']);
+            $this->produit->createNewPanier($_SESSION['userID']);
+            $panier = $this->produit->getPanierForUser($_SESSION['userID']);
         }
         $ligne_panier = $this->produit->getLignePanier($panier['panierID'], $produitID);
         if($ligne_panier == null) // pas trouvé de ligne panier pour ce produit

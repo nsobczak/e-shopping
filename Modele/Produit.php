@@ -117,9 +117,9 @@ class Produit extends Modele
     }
 
     public function createNewPanier($userID) {
-        // TODO ! La table panier est étrange... besoin de connaître tout ces paramètres ?!
-        $sql = "INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`, `HeureAchat`, `IDProduit`) VALUES (NULL, ?, ?, ?, ?, NULL, ?)";
-        $this->executerRequete($sql, array($userID, 0, 0, 0, 0));
+        // Les paramètres inutiles sont à NULL
+        $sql = "INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`, `HeureAchat`) VALUES (NULL, ?, ?, NULL, NULL, NULL)";
+        $this->executerRequete($sql, array($userID, 0));
     }
 
 }
