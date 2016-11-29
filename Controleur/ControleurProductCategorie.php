@@ -47,6 +47,8 @@ class ControleurProductCategorie implements Controleur
             $vue->generer(array("add_panier" => false));
         }
         else if(isset($_GET['do']) && isset($_GET['id'])) { // ajout d'un produit au panier
+            if(!isset($_SESSION['userID'])) // il faut être connecté
+                return;
             if($_GET['do'] == "addPanier") {
                 $vue = new Vue("Produit");
                 $vue->generer(array("add_panier" => $this->addProduitToPanier($_GET['id'])));
