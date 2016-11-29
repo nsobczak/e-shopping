@@ -112,6 +112,10 @@ body p {
     margin: 0;
 }
 
+header div {
+    padding-bottom: 0px !important;
+}
+
 body div {
     padding-bottom: 50px;
 }
