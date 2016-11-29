@@ -8,7 +8,7 @@ if (empty($_SESSION['userID'])){
 		echo "Vous n'êtes pas connecté";
 	}
 else{
-$bdd = new PDO('mysql:host=localhost:3307; dbname=db_e_shopping; charset=utf8', 'root', '');
+$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', '');
 $paiemment = $bdd->query("SELECT * FROM moyendepaiement");
 $lignepanier = $bdd->query("SELECT *
                             FROM lignepanier, panier, produit
