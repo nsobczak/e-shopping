@@ -63,7 +63,9 @@ CREATE TABLE `categorie` (
 
 INSERT INTO `categorie` (`categorieID`, `nomCategorie`, `descriptionCategorie`) VALUES
 (1, 'Vêtements', 'Tout ce qui sert à couvrir le corps humain pour le protéger ; pièce de l\'habillement. Littéraire. Ce qui habille, recouvre quelque chose ; parure, manteau.'),
-(2, 'Décorations', 'Action de décorer, manière dont quelque chose est décoré ; ensemble de ce qui sert à décorer : La décoration d\'une salle pour une fête. Chacun des éléments qui décore quelque chose, un lieu ; ornements (surtout pluriel).');
+(2, 'Décorations', 'Action de décorer, manière dont quelque chose est décoré ; ensemble de ce qui sert à décorer : La décoration d\'une salle pour une fête. Chacun des éléments qui décore quelque chose, un lieu ; ornements (surtout pluriel).'),
+(3, 'Vaisselle', 'Ensemble des pièces et accessoires destinés au service de la table'),
+(4, 'Jeu vidéo', 'Un jeu vidéo est une activité de loisir basée sur des périphériques informatiques (écran LCD, manette/joystick, hauts parleurs, ...) permettant d\'interagir dans un environnement virtuel conformément à un ensemble de règles prédéfinies');
 
 -- --------------------------------------------------------
 
@@ -156,7 +158,15 @@ CREATE TABLE `produit` (
 
 INSERT INTO `produit` (`produitID`, `nomProduit`, `prix`, `description`, `cheminimage`, `sousCategorieID`) VALUES
 (1, 't-shirt star wars keep caml', 20, 'Magnifique t-shirt de la licence star wars. Imprimé Dark Vador avec "Keep Kalm and use the force"', 'Images/Produit/1.jpg', 1),
-(2, 'Lampe Tetris', 30, 'La lampe qu\'il faut pour ton appart !', 'Images/Produit/2.jpg', 3);
+(2, 'Lampe Tetris', 30, 'La lampe qu\'il faut pour ton appart !', 'Images/Produit/2.jpg', 3),
+(3, 'Tasse Winston', 15, 'Tasse à l\'effigie du personnage de Winston du jeu Overwatch', 'Images/Produit/3.jpg', 6),
+(4, 'Tasse Reaper', 15, 'Tasse à l\'effigie du personnage de Reaper du jeu Overwatch', 'Images/Produit/4.jpg', 6),
+(5, 'Tasse Tracer', 15, 'Tasse à l\'effigie du personnage de Tracer du jeu Overwatch', 'Images/Produit/5.jpg', 6),
+(6, 'Starcraft 2 Legacy of the void - PC', 35, 'StarCraft II poursuit la saga épique de Protoss, des Terrans et des Zergs ! Ces trois puissantes races s\'affrontent une nouvelle fois dans ce jeu de stratégie en temps réel au rythme rapide, suite du légendaire StarCraft. Des légions d\'unités expérimentées, modernisées, et entièrement nouvelles combattront dans toute la galaxie, alors que chaque faction lutte pour sa survie !', 'Images/Produit/6.jpg', 4),
+(7, 'Bravely Default - Nintendo 3DS', 41, 'La lueur du cristal s\'évanouit progressivement. Sa lumière faiblissante laisse présager un grand malheur. Il faut agir…
+Dans Bravely Default, la quête à travers Luxendarc pour réveiller les cristaux est un RPG unique et innovant, en exclusivité sur les consoles de la famille Nintendo 3DS. ', 'Images/Produit/7.jpg', 4),
+(8, 'Souris Pro Gamer', 110, 'Logitech G900 Chaos Spectrum Souris Pro Gamer sans-fil ambidextre Noir', 'Images/Produit/8.jpg', 5),
+(9, 'Volant de course', 110, 'Volant de course pour PC, PS3 et PS4, en cuir et métal - noir', 'Images/Produit/9.jpg', 5);
 
 -- --------------------------------------------------------
 
@@ -178,7 +188,10 @@ CREATE TABLE `souscategorie` (
 INSERT INTO `souscategorie` (`sousCategorieID`, `nomSousCategorie`, `descriptionSousCategorie`, `categorieID`) VALUES
 (1, 't-shirt', 'Maillot en coton à ras de cou et à manches courtes que l\'on porte directement sur la peau.', 1),
 (2, 'chaussures', 'Les chaussures constituent un élément d\'habillement dont le rôle est de protéger les pieds. Le terme chaussure dérive du verbe chausser, issu du latin calceare « mettre des souliers ». La plus vieille chaussure du monde a 5 500 ans et a été découverte dans une grotte en Arménie. La forme des chaussures peut varier à l\'infini, notamment en fonction de la mode et du statut social. La matière la plus couramment utilisée pour fabriquer les chaussures est le cuir. L\'artisan spécialiste de la réparation des chaussures est le cordonnier, métier qui a fortement décliné dans les pays occidentaux.', 1),
-(3, 'Lampes', 'Source de rayonnement construite en vue de produire de la lumière visible ou des rayonnements infrarouges ou ultraviolets. Appareil d\'éclairage constitué par l\'ampoule et l\'appareillage ; luminaire. Partie du luminaire qui produit la lumière : Griller une lampe. Dispositif produisant une flamme : Lampe à alcool.', 2);
+(3, 'Lampes', 'Source de rayonnement construite en vue de produire de la lumière visible ou des rayonnements infrarouges ou ultraviolets. Appareil d\'éclairage constitué par l\'ampoule et l\'appareillage ; luminaire. Partie du luminaire qui produit la lumière : Griller une lampe. Dispositif produisant une flamme : Lampe à alcool.', 2),
+(4, 'Jeux', 'Jeux vidéos', 4),
+(5, 'Accessoies', 'Manettes, batteries, multiprises, connectique, tout ce qu\'il faut pour faire fonctionner consoles et ordinateurs', 4),
+(6, 'Tasses', 'Tasses, mugs, bols et autre récipients', 3);
 
 -- --------------------------------------------------------
 
@@ -202,10 +215,21 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`, `mail`, `mot_de_passe`) VALUES
 (1, 'Reynaert', 'Vincent', 'Images/Profil/profil_utilisateur.jpg', 1, 'vincent.reynaert@isen-lille.fr', '1234'),
-(2, 'Sobczak', 'Nicolas', 'Images/Profil/profil_utilisateur.jpg', 1, 'nicolas.sobczak@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(2, 'Sobczak', 'Nicolas', 'Images/Profil/2.jpg', 1, 'nicolas.sobczak@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (3, 'Pryfer', 'Sylvain', 'Images/Profil/profil_utilisateur.jpg', 2, 'feitte@gmail.com', '6b65fc634ff39db427281e38ff08747249466ff8'),
 (4, 'Elsa', 'Queen of Arendelle', 'Images/Profil/4.jpg', 2, 'anna.elsa@gmail.com', 'ad0557319768587a736ee716b5bc48945c39aaab'),
-(5, 'Pika', 'Chu', 'Images/Profil/Pikachu.png', 2, 'pikachu@nintendo.com', 'ad0557319768587a736ee716b5bc48945c39aaab');
+(5, 'Pika', 'Chu', 'Images/Profil/5.png', 2, 'pikachu@nintendo.com', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(6, 'Landais', 'Baudouin', 'Images/Profil/profil_utilisateur.jpg', 2, 'baudouin.landais@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(7, 'Levert', 'Quentin', 'Images/Profil/profil_utilisateur.jpg', 2, 'quentin.levert@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(8, 'Noet', 'Kevin', 'Images/Profil/profil_utilisateur.jpg', 2, 'kevin.noet@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(9, 'Percq', 'Timothée', 'Images/Profil/profil_utilisateur.jpg', 2, 'timothee.percq@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(10, 'Polaert', 'Francis', 'Images/Profil/profil_utilisateur.jpg', 2, 'francis.polaert@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(11, 'Valencourt', 'Vivien', 'Images/Profil/profil_utilisateur.jpg', 2, 'vivien.valencourt@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(12, 'Vandierdonck', 'Guillaume', 'Images/Profil/profil_utilisateur.jpg', 2, 'guillaume.vandierdonck@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(13, 'Vanmarcke', 'Romain', 'Images/Profil/profil_utilisateur.jpg', 2, 'romain.vanmarcke@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(14, 'Vermeil', 'Julien', 'Images/Profil/profil_utilisateur.jpg', 2, 'julien.vermeil@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(15, 'You', 'Qi', 'Images/Profil/profil_utilisateur.jpg', 2, 'qi.you@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(16, 'Yue', 'Cuize', 'Images/Profil/profil_utilisateur.jpg', 2, 'cuize.yue@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab');
 
 --
 -- Index pour les tables exportées
