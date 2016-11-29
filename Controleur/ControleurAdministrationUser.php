@@ -29,18 +29,20 @@ class ControleurAdministrationUser implements Controleur
         $this->user = new AdministrationUser();
     }
 
-    //TODO: getters et setters
 
+    //TODO: getters et setters de $user
 
     //______________________________________________________________________________________
     /**
+     * Fonction qui appelle toutes les ahutres fonctions
      *
+     * @param $userID
      */
     public function handlerAdministrationUser()
     {
-        $this->deleteUser();
-        $this->changeAccre();
-        $this->getHTML();
+        $this->deleteUser();    // fonction appelée pour supprimer un utilisateur
+        $this->changeAccre();   // fonction appelée pour changer le niveau d'accréditation d'un utilisateur
+        $this->getHTML();       // fonction appelée pour générer le code HTML de la page
     }
 
 
@@ -54,10 +56,9 @@ class ControleurAdministrationUser implements Controleur
     {
         $user = new AdministrationUser();
         $result = $user->getUser($userID);
-        // print_r($result);
-
         return $result;
     }
+
 
     /**
      * Affiche la page d'admin user
@@ -70,22 +71,25 @@ class ControleurAdministrationUser implements Controleur
 
     }
 
+
     /**
-     *  Fonction qui supprime un utilisateur
+     * Fonction qui exécute la requête de suppression d'utilisateur de la base de données
+     *
      */
     public function deleteUser()
     {
         if (isset($_GET['do']) && (isset($_GET['userID']))) {
             if ($_GET['do'] == "deleteUser") {
-                // if ('<script type="text/javascript" language="javascript"> confirm("Vous désirez vraiment quitter?")</script>') {
                 $this->user->deleteUser($_GET["userID"]);
-                // }
             }
         }
     }
 
+
     /**
-     *  Fonction qui... ???
+     * Fonction qui exécute la requête de changement d'accreditation d'un utilisateur, dans la base de
+     *
+     * @param $userID
      */
     public function changeAccre()
     {
@@ -105,12 +109,10 @@ class ControleurAdministrationUser implements Controleur
 ?>
 
 <script type="text/javascript">
-
     /**
-     * Fonction qui met à jour le niveau d'accreditation d'un utilisateur
+     * Fonction qui permet de générer l'URL voulue pour le changement d'accreditation
      *
-     * @param value
-     * @param id
+     * @param $userID
      */
     function changeAccreditation(value, id) {
         window.location = "?action=adminUser&do=changeAcc&userID=" + id + "&accLevel=" + value;

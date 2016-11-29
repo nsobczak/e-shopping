@@ -55,7 +55,7 @@ class AdministrationUser extends Modele
 
 
     /**
-     * Fonction qui supprimer un utilisateur de la base de données
+     * Fonction qui supprime un utilisateur de la base de données
      *
      * @param $userID :l'id du user que l'ont veut supprimer
      */
