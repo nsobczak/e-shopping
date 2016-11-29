@@ -377,5 +377,23 @@ body .admin th {
  */
 
 
+/*===================
+ * Historique commande
+ */
+#historique {
+    text-align: center;
+}
+
+#historique h1{
+    color: red;
+}
+
+#historique table {
+    text-align: center;
+}
+
+
+
+
 
 
