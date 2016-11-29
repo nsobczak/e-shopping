@@ -41,11 +41,17 @@ class ControleurAdministrationPaiementLivraison implements Controleur
      */
     public function handlerPaiementLivraison()
     {
-        $this->addPaiementLivraison(); // vérification si ajout paiement / livraison
-        $this->checkEditPaiement();  // vérification s'il veut éditer un moyen de paiement
-        $this->removePaiementLivraison();  // vérification s'il veut supprimer un paiement
+        if (isset($_SESSION['userID']) && $_SESSION['niveau_accreditation'] == 1) {
+            $this->addPaiementLivraison(); // vérification si ajout paiement / livraison
+            $this->checkEditPaiement();  // vérification s'il veut éditer un moyen de paiement
+            $this->removePaiementLivraison();  // vérification s'il veut supprimer un paiement
 
-        $this->getHTML();
+            $this->getHTML();
+        }
+        else {
+            header('Location: index.php?action=login');
+            die();
+        }
     }
 
 

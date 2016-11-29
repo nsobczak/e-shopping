@@ -113,4 +113,3 @@ class Routeur
         $vue->generer(array('msgErreur' => $msgErreur));
     }
 }
-

@@ -6,10 +6,13 @@
         <li><a href="index.php?action=recherche">Recherche</a></li>
         <li class="dropdown">
             <a href="index.php?action=produitList" class="dropbtn">Produits</a>
-            <div class="dropdown-content">
-                <a href="index.php?action=productCategorie&id=1">Categorie de produits 1</a>
-                <a href="index.php?action=productCategorie&id=2">Categorie de produits 2</a>
-            </div>
+            <?php if(!empty($categories)) { ?>
+                <div class="dropdown-content">
+                    <?php foreach ($categories as $category) { ?>
+                        <a href="index.php?action=productCategorie&idCategorie=<?php echo $category['categorieID']; ?>"><?php echo $category['nomCategorie']; ?></a>
+                    <?php } ?>
+                </div>
+            <?php  } ?>
         </li>
         <li><a href="index.php?action=tunnel">Panier</a></li>
         <li><a href="index.php?action=faq">FAQ</a></li>
@@ -29,7 +32,7 @@
                 <a href="index.php?action=adminProduit">Gérer les produits</a>
                 <a href="index.php?action=adminUser">User: gérer les comptes</a>
                 <a href="index.php?action=adminCompteClient">Compte Client: historique des commandes</a>
-                <a href="index.php?action=adminPaiementLivraison">Gérer moyens de paiement et de livraison</a>
+                <a href="index.php?action=adminPaiementLivraison">Gérer moyens de paiement</a>
                 <a href="index.php?action=adminChiffreAffaire">Chiffre d'affaires</a>
             </div>
         </li>

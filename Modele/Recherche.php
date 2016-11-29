@@ -5,6 +5,7 @@
  */
 class Recherche extends Modele
 {
+    const NO_RESULT = 1;
 
     /**
      * @param $name
@@ -18,6 +19,6 @@ class Recherche extends Modele
         if ($results->rowCount() > 0)
             return $results->fetchAll();
         else
-            return array();
+            return null;
     }
 }

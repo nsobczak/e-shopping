@@ -20,7 +20,7 @@ class Produit extends Modele
         if ($produit->rowCount() == 1)
             return $produit->fetch();  // Accès à la première ligne de résultat
         else
-            throw new Exception("Aucun utilisateur ne correspond à l'identifiant '$produitID'");
+            throw new Exception("Aucun produit ne correspond à l'identifiant '$produitID'");
     }
 
 
@@ -39,6 +39,28 @@ class Produit extends Modele
         } else
             throw new Exception("Aucun produit ne correspond à l'identifiant");
     }
+
+
+    /** Retourne tous les produits appartenants à la catégorie spécifiée
+     * @param $idCategorie
+     * @return un tableau avec les produits
+     * @throws Exception si aucun produit dans la sous catégorie choisie
+     */
+    public function getAllProduitsByCategorieId($idCategorie) {
+        $sql = "SELECT * FROM produit, categorie, souscategorie WHERE produit.sousCategorieID = souscategorie.sousCategorieID AND souscategorie.categorieID = categorie.categorieID AND categorie.categorieID = ?";
+        $produits = $this->executerRequete($sql, array($idCategorie));
+        if ($produits->rowCount() >= 1)
+            return $produits->fetchAll();  // Accès à la première ligne de résultat
+    }
+
+
+    public function getCategories() {
+        $sql = "SELECT * FROM categorie";
+        $produits = $this->executerRequete($sql, array());
+        if ($produits->rowCount() >= 1)
+            return $produits->fetchAll();  // Accès à la première ligne de résultat
+    }
+
 }
 
 

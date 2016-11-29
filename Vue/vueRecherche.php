@@ -11,6 +11,9 @@
         <input type="submit" value="Valider" />
     </form>
     <hr>
+    <?php if(!empty($error)) {
+        ?> <h5>Aucun produit ne correspond à cette recherche</h5> <?php
+    } ?>
     <?php if(!empty($produitsSearch)) {
         foreach ($produitsSearch as $produit) { ?>
             <ul>

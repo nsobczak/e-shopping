@@ -215,6 +215,44 @@ footer a {
 }
 
 /*=================================================
+ * Page produit list
+ */
+
+.produit_list {
+    height: 41%;
+    margin-top: 10px;
+}
+
+.produit_list hr {
+    margin-left: 0px;
+    width: 35%;
+}
+
+.image_produit {
+    float: left;
+    width: 15%;
+    border-right: 1px solid gray;
+}
+
+.image_produit img {
+    width: 100%;
+}
+
+.content_produit {
+    margin-left: 15%;
+    font-size: 16px;
+    height: 70%;
+}
+
+.content_produit span {
+    padding: 5px;
+}
+
+.content_produit span.description {
+    padding: 10px;
+}
+
+/*=================================================
  *  Page panier, tunnel de commande
  */
 label {
