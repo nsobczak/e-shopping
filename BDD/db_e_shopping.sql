@@ -107,13 +107,12 @@ CREATE TABLE `moyendepaiement` (
 --
 
 INSERT INTO `moyendepaiement` (`moyenDePaiementID`, `nomMoyenDePaiement`, `descriptionMoyenDePaiement`) VALUES
-(1, 'Espèces', 'Les espèces (du vieux Français "payer en espices/épices") numéraires (billets et pièces), utilisables essentiellement dans la zone monétaire de la devise où ils sont libellés, par exemple l\'euro dans la zone euro.'),
-(2, 'Effets de commerce', 'Les effets de commerce tels que la traite (ou lettre de change) et le billet à ordre, instruments tant de crédit que de paiement.'),
-(3, 'Chèque ', 'Le chèque est un moyen de paiement scriptural utilisant le circuit bancaire. Il est généralement utilisé pour faire transiter de la monnaie d\'un compte bancaire à un autre. Tombé en désuétude dans la plupart des pays industrialisés, il reste encore souvent utilisé en France, au Royaume-Uni et aux États-Unis.'),
-(4, 'Coupon de paiement', 'Le coupon de paiement, ticket d\'achat vendu notamment par les buralistes, permettant de recharger des cartes bancaires prépayées ; utilisé notamment pour des créditer une compte de jeux en ligne. Parce qu\'il est également objet de nombreuses fraudes du fait de son caractère anonyme, la directive sur le service des paiements vise a réduire le montant maximum journalier.'),
-(5, 'Porte-monnaie électronique', 'Le porte-monnaie électronique est un dispositif qui peut stocker de la monnaie sans avoir besoin d\'un compte bancaire et d\'effectuer directement des paiements sur des terminaux de paiement.'),
-(6, 'Crypto-monnaie', 'Une crypto-monnaie ou monnaie cryptographique est une monnaie électronique sur un réseau informatique pair à pair ou décentralisée basé sur les principes de la cryptographie pour valider les transactions et émettre la monnaie elle-même1,2. Aujourd\'hui, toutes les crypto-monnaies sont des monnaies alternatives, car elles n\'ont de cours légal dans aucun pays. Les crypto-monnaies utilisent un système de preuve de travail pour les protéger des contrefaçons électroniques. De nombreuses crypto-monnaies ont été développées mais la plupart sont similaires et dérivent de la première implémentation complète : le Bitcoin.'),
-(7, 'Carte de paiement', 'Une carte de paiement est un moyen de paiement se présentant sous la forme d\'une carte plastique mesurant 85,60 × 53,98 mm, équipée d\'une bande magnétique et/ou puce électronique (c\'est alors une carte à puce), et qui permet :\r\n\r\nle paiement, auprès de commerces physiques possédant un terminal de paiement électronique ou auprès de commerces virtuels via Internet ;\r\nles retraits d\'espèces aux distributeurs de billets.\r\nLa carte de paiement est associée à un réseau de paiement, tel que VISA, MasterCard, American Express, JCB, le Groupe Carte Bleue. Une carte de paiement peut être à « débit immédiat », à débit différé ou une carte de crédit.\r\n\r\nLe réseau interbancaire français possède une particularité : toute carte disposant de la marque « CB - Carte bancaire » permet de payer par le biais du réseau interbancaire français, le Groupement des Cartes Bancaires CB.');
+(1, 'Effets de commerce', 'Les effets de commerce tels que la traite (ou lettre de change) et le billet à ordre, instruments tant de crédit que de paiement.'),
+(2, 'Chèque ', 'Le chèque est un moyen de paiement scriptural utilisant le circuit bancaire. Il est généralement utilisé pour faire transiter de la monnaie d\'un compte bancaire à un autre. Tombé en désuétude dans la plupart des pays industrialisés, il reste encore souvent utilisé en France, au Royaume-Uni et aux États-Unis.'),
+(3, 'Coupon de paiement', 'Le coupon de paiement, ticket d\'achat vendu notamment par les buralistes, permettant de recharger des cartes bancaires prépayées ; utilisé notamment pour des créditer une compte de jeux en ligne. Parce qu\'il est également objet de nombreuses fraudes du fait de son caractère anonyme, la directive sur le service des paiements vise a réduire le montant maximum journalier.'),
+(4, 'Porte-monnaie électronique', 'Le porte-monnaie électronique est un dispositif qui peut stocker de la monnaie sans avoir besoin d\'un compte bancaire et d\'effectuer directement des paiements sur des terminaux de paiement.'),
+(5, 'Crypto-monnaie', 'Une crypto-monnaie ou monnaie cryptographique est une monnaie électronique sur un réseau informatique pair à pair ou décentralisée basé sur les principes de la cryptographie pour valider les transactions et émettre la monnaie elle-même1,2. Aujourd\'hui, toutes les crypto-monnaies sont des monnaies alternatives, car elles n\'ont de cours légal dans aucun pays. Les crypto-monnaies utilisent un système de preuve de travail pour les protéger des contrefaçons électroniques. De nombreuses crypto-monnaies ont été développées mais la plupart sont similaires et dérivent de la première implémentation complète : le Bitcoin.'),
+(6, 'Carte de paiement', 'Une carte de paiement est un moyen de paiement se présentant sous la forme d\'une carte plastique mesurant 85,60 × 53,98 mm, équipée d\'une bande magnétique et/ou puce électronique (c\'est alors une carte à puce), et qui permet :\r\n\r\nle paiement, auprès de commerces physiques possédant un terminal de paiement électronique ou auprès de commerces virtuels via Internet ;\r\nles retraits d\'espèces aux distributeurs de billets.\r\nLa carte de paiement est associée à un réseau de paiement, tel que VISA, MasterCard, American Express, JCB, le Groupe Carte Bleue. Une carte de paiement peut être à « débit immédiat », à débit différé ou une carte de crédit.\r\n\r\nLe réseau interbancaire français possède une particularité : toute carte disposant de la marque « CB - Carte bancaire » permet de payer par le biais du réseau interbancaire français, le Groupement des Cartes Bancaires CB.');
 
 -- --------------------------------------------------------
 
@@ -126,16 +125,19 @@ CREATE TABLE `panier` (
   `userID` int(11) NOT NULL,
   `etatPanier` int(11) NOT NULL,
   `adresseID` int(11) NOT NULL,
-  `moyenDePaiementID` int(11) NOT NULL
+  `moyenDePaiementID` int(11) NOT NULL,
+  `HeureAchat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `IDProduit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `panier`
 --
 
-INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`) VALUES
-(1, 3, 0, 1, 3),
-(2, 5, 0, 3, 4);
+INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`, `HeureAchat`, `IDProduit`) VALUES
+(1, 3, 1, 1, 3, '2016-11-18 13:28:18', 0),
+(2, 5, 0, 3, 4, '2016-11-18 13:28:18', 0),
+(4, 3, 1, 1, 3, '2016-05-03 12:28:18', 0);
 
 -- --------------------------------------------------------
 
