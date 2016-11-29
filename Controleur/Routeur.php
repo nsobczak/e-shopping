@@ -12,8 +12,9 @@ require_once('Controleur/Controleur.php');
 require_once('Controleur/ControleurAccueil.php');
 require_once('Controleur/ControleurUserProfile.php');
 require_once('Controleur/ControleurInscription.php');
-require_once('Controleur/ControleurAdministrationProduit.php');
 require_once('Controleur/ControleurAdministrationUser.php');
+require_once('Controleur/ControleurAdministrationHistoriqueCommande.php');
+require_once('Controleur/ControleurAdministrationProduit.php');
 require_once('Controleur/ControleurAdministrationPaiementLivraison.php');
 require_once('Controleur/ControleurProductCategorie.php');
 require_once('Controleur/ControleurProduitList.php');
@@ -30,6 +31,7 @@ class Routeur
     private $ctrlAccueil;
     private $ctrlUserProfile;
     private $ctrlAdminProduit;
+    private $ctrlAdminHistoriqueCommande;
     private $ctrlAdminUser;
     private $ctrlProductCategorie;
     private $ctrlProduitList;
@@ -52,6 +54,7 @@ class Routeur
         $this->ctrlAdminProduit = new ControleurAdministrationProduit();
         $this->ctrlAdminUser = new ControleurAdministrationUser();
         $this->ctrlAdminPaiementLivraison = new ControleurAdministrationPaiementLivraison();
+        $this->ctrlAdminHistoriqueCommande = new ControleurAdministrationHistoriqueCommande();
         $this->ctrlTunnel = new ControleurTunnel();
         $this->ctrlLogin = new ControleurLogin();
         $this->ctrlRecherche = new ControleurRecherche();
@@ -94,7 +97,12 @@ class Routeur
                     $this->ctrlRecherche->getHTML();
                 } elseif ($_GET['action'] == 'adminChiffreAffaire'){
                     $this->ctrlChiffreAffaire->getHTML();
+                } elseif ($_GET['action']=='adminHistoriqueCommande') {
+                    $this->ctrlAdminHistoriqueCommande->handlerHistoriqueCommande();
                 }
+
+
+
                 else {
                     throw new Exception("Action non valide");
                 }

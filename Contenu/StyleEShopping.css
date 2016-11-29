@@ -112,6 +112,10 @@ body p {
     margin: 0;
 }
 
+body div {
+    padding-bottom: 50px;
+}
+
 /*=================================================
  * footer
  */
@@ -377,6 +381,24 @@ body .admin th {
 /*=================================================
  *  Page panier, tunnel de commande
  */
+
+
+/*===================
+ * Historique commande
+ */
+#historique {
+    text-align: center;
+}
+
+#historique h1{
+    color: red;
+}
+
+#historique table {
+    text-align: center;
+}
+
+
 
 
 

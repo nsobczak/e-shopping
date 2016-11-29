@@ -3,24 +3,27 @@
 * User: Francis Polaert & Kévin Noet
 * Date: 04/11/2016
 */
-$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', 'ISEN');
+
+if (empty($_SESSION['userID'])){
+		echo "Vous n'êtes pas connecté";
+	}
+else{
+$bdd = new PDO('mysql:host=localhost:3307; dbname=db_e_shopping; charset=utf8', 'root', '');
 $paiemment = $bdd->query("SELECT * FROM moyendepaiement");
-/*$lignepanier = $bdd->query("SELECT *
+$lignepanier = $bdd->query("SELECT *
                             FROM lignepanier, panier, produit
                             WHERE panier.userID = ".$_SESSION['userID']."
                             AND panier.panierID = lignepanier.panierID
-                            AND lignepanier.produitID = produit.produitID");*/
-$lignepanier = $bdd->query("SELECT * 
-							FROM lignepanier, panier, produit 
-							WHERE panier.userID = 3
-							AND panier.panierID = lignepanier.panierID
-							AND lignepanier.produitID = produit.produitID
+                            AND lignepanier.produitID = produit.produitID
 							AND panier.etatPanier = 0");
 ?>
 
 <table>
     <?php
-    while ($lignepanier_line = $lignepanier->fetch()) {
+	if(empty($lignepanier_line=$lignepanier->fetch())){
+		echo "Votre panier est vide";
+	}else{
+    while ($lignepanier_line) {
         ?>
         <tr>
             <td>
@@ -48,11 +51,12 @@ $lignepanier = $bdd->query("SELECT *
             </td>
         </tr>
         <?php
-    }
+		$lignepanier_line =$lignepanier->fetch();
+		}
     ?>
 </table>
 
-<form method="POST" action="index.php?action=vueTunnel">
+<form method="POST" action="?action=tunnel">
     <table>
 
         <tr>
@@ -90,12 +94,39 @@ $lignepanier = $bdd->query("SELECT *
 		</span>
     </label>
     <?php
-    if (isset($_POST['paiemment'])) {
-        echo $moyenPaiemment = $_POST['paiemment'];
+	if (isset($_POST['paiemment'])){
+    $moyenPaiemment= $_POST['paiemment'];
     }
     ?>
     <br/>
     <br/>
-
     <input value="Valider" href="index.php?action=tunnel" type="submit">
 </form>
+
+	<?php
+	if (empty($_POST['number'])){
+		echo"Vous n'avez pas entré un numéro de rue";
+	}
+	elseif(empty($_POST['adress'])){
+		echo "Vous n'avez pas entré une adresse";
+	}
+	elseif(empty($_POST['city'])){
+		echo "Vous n'avez pas entré votre ville";
+	}
+	elseif (empty($_POST['code'])){
+		echo "Vous n'avez pas entré un code postal";
+	}
+	else{
+		$bdd->exec('INSERT INTO adresse(adresseID,codePostal,ville,numeroVoie,nomRue) VALUES ( , '.$_POST['code'].' , '.$_POST['city'].' , '.$_POST['number'].' , '.$_POST['adress'].')');
+		$bdd->exec('UPDATE panier SET etatPanier =1 WHERE userID='.$_SESSION['userID'].'');
+		$MoyenPaiement = $bdd->query('SELECT * 
+									FROM moyendepaiement 
+									WHERE nomMoyenDePaiement="'.$moyenPaiemment.'";');
+		$MoyenPaiement = $MoyenPaiement->fetch();
+		echo $MoyenPaiement['moyenDePaiementID'];
+		$bdd->exec('UPDATE panier SET moyenDePaiementID ='.$MoyenPaiement['moyenDePaiementID'].' WHERE userID='.$_SESSION['userID'].'');
+		echo"Votre panier à bien été accepté";
+		}
+	}
+}
+	?>
