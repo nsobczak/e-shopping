@@ -26,6 +26,9 @@ class AdministrationUser extends Modele
             throw new Exception("Aucun utilisateur ne correspond à l'identifiant '$userID'");
     }
 
+    /**
+     * @return PDOStatement
+     */
     public function getUserList()
     {
         $sql = "SELECT * FROM user";
@@ -33,6 +36,10 @@ class AdministrationUser extends Modele
         return $user;
     }
 
+    /**
+     * @param $userID
+     * @param $level
+     */
     public function updateUserStatus($userID, $level)
     {
         $sql = "UPDATE user SET niveau_accreditation = ? WHERE userID = ?";

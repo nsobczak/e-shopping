@@ -102,7 +102,7 @@ header .dropdown:hover .dropdown-content {
 
 body {
     height: 75%;
-    margin: 0;
+    margin: 10px;
 }
 
 body p {

@@ -29,6 +29,10 @@ class ControleurAdministrationUser implements Controleur
         $this->user = new AdministrationUser();
     }
 
+    //______________________________________________________________________________________
+    /**
+     *
+     */
     public function handlerAdministrationUser()
     {
         $this->deleteUser();
@@ -62,6 +66,9 @@ class ControleurAdministrationUser implements Controleur
 
     }
 
+    /**
+     *
+     */
     public function deleteUser()
     {
         if (isset($_GET['do']) && (isset($_GET['userID']))) {
@@ -73,6 +80,9 @@ class ControleurAdministrationUser implements Controleur
         }
     }
 
+    /**
+     *
+     */
     public function changeAccre()
     {
         if (isset($_GET['do']) && (isset($_GET['userID'])) && (isset($_GET['accLevel']))) {
@@ -99,6 +109,6 @@ class ControleurAdministrationUser implements Controleur
      * @param id
      */
     function changeAccreditation(value, id) {
-        window.location = "?action=AdministrationUser&do=changeAcc&userID=" + id + "&accLevel=" + value;
+        window.location = "?action=adminUser&do=changeAcc&userID=" + id + "&accLevel=" + value;
     }
 </script>

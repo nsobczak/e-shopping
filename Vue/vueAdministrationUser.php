@@ -21,7 +21,7 @@
             <?php foreach ($listUsers as $user) { ?>
                 <tr>
                     <!-- <td><button>X</button></td> -->
-                    <td><a href="?action=AdministrationUser&do=deleteUser&userID=<?php echo $user['userID']; ?>"
+                    <td><a href="?action=adminUser&do=deleteUser&userID=<?php echo $user['userID']; ?>"
                            title="Supprimer">[X]</a></td>
                     <td><?php echo '<img height="30px" src="./' . $user["chemin"] . '">'; ?></td>
                     <td><?php echo $user["userID"]; ?></td>
