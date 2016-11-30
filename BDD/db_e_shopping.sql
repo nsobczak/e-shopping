@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 19 Novembre 2016 à 13:52
+-- Généré le :  Mar 29 Novembre 2016 à 20:19
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -124,20 +124,19 @@ CREATE TABLE `panier` (
   `panierID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `etatPanier` int(11) NOT NULL,
-  `adresseID` int(11) NOT NULL,
-  `moyenDePaiementID` int(11) NOT NULL,
-  `HeureAchat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `IDProduit` int(11) NOT NULL
+  `adresseID` int(11) DEFAULT NULL,
+  `moyenDePaiementID` int(11) DEFAULT NULL,
+  `HeureAchat` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Contenu de la table `panier`
 --
 
-INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`, `HeureAchat`, `IDProduit`) VALUES
-(1, 3, 1, 1, 3, '2016-11-18 13:28:18', 0),
-(2, 5, 0, 3, 4, '2016-11-18 13:28:18', 0),
-(4, 3, 1, 1, 3, '2016-05-03 12:28:18', 0);
+INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`, `HeureAchat`) VALUES
+(1, 3, 1, 1, 3, '2016-11-18 13:28:18'),
+(2, 5, 0, 3, 4, '2016-11-18 13:28:18'),
+(4, 3, 1, 1, 3, '2016-05-03 12:28:18');
 
 -- --------------------------------------------------------
 
@@ -305,7 +304,7 @@ ALTER TABLE `adresse`
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `categorieID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `categorieID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `lignepanier`
 --
@@ -320,22 +319,22 @@ ALTER TABLE `moyendepaiement`
 -- AUTO_INCREMENT pour la table `panier`
 --
 ALTER TABLE `panier`
-  MODIFY `panierID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `panierID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `produitID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `produitID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `souscategorie`
 --
 ALTER TABLE `souscategorie`
-  MODIFY `sousCategorieID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `sousCategorieID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- Contraintes pour les tables exportées
 --

@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', 'ISEN');
+$bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', '');
 $query1 = "Select * from produit where produitID=:produitID";
 $req1 = $bdd->prepare($query1);
 $req1->execute(array('produitID' => $_GET["id"]));
@@ -19,6 +19,7 @@ while ($row1 = $req1->fetch()) {
         <p id="phead">
             <?php echo $b; ?>
         </p>
+        <?php if($add_panier) { ?><p><strong>Produit ajouté au panier !</strong></p> <?php } ?>
         <img id="produitImage" src="<?php echo $e; ?>"/>
         <p id="decription1">description:</p>
         <p id="decription2">
@@ -30,7 +31,7 @@ while ($row1 = $req1->fetch()) {
     </div>
 
     <div>
-        <a href="#"><img id="panier" src="Images/panier.png" alt="panier"></a>
+        <a href="?action=productCategorie&do=addPanier&id=<?php echo $_GET['id']; ?>"><img id="panier" src="Images/panier.png" alt="panier"></a>
 
     </div>
 

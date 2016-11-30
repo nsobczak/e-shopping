@@ -112,6 +112,10 @@ body p {
     margin: 0;
 }
 
+header div {
+    padding-bottom: 0px !important;
+}
+
 body div {
     padding-bottom: 50px;
 }
@@ -235,11 +239,13 @@ footer a {
 .image_produit {
     float: left;
     width: 15%;
+    height: 41%;
     border-right: 1px solid gray;
 }
 
 .image_produit img {
-    width: 100%;
+    width: 80%;
+    padding: 15px;
 }
 
 .content_produit {
