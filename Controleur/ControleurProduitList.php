@@ -34,7 +34,6 @@ class ControleurProduitList implements Controleur
     public function getHTML()
     {
         $vue = new Vue("ProduitList");
-        //$produitID = $this->selectHTML();
         $vue->generer(array('ProduitList' => $this->produit->getAllProduit()));
     }
 

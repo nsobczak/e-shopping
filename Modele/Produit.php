@@ -42,6 +42,7 @@ class Produit extends Modele
 
 
     /** Retourne tous les produits appartenants à la catégorie spécifiée
+     *
      * @param $idCategorie
      * @return un tableau avec les produits
      * @throws Exception si aucun produit dans la sous catégorie choisie
@@ -57,6 +58,7 @@ class Produit extends Modele
 
     /**
      * Retourne toutes les catégories disponibles
+     *
      * @return array Un tableau des catégories
      */
     public function getCategories()
@@ -69,6 +71,8 @@ class Produit extends Modele
 
 
     /**
+     * Fonction qui récupère le panier d'un utilisateur
+     *
      * @param $userID   L'id de l'utilisateur
      * @return mixed|null  Le panier en cours ou null s'il y en a aucun
      */
@@ -83,6 +87,13 @@ class Produit extends Modele
     }
 
 
+    /**
+     * Fonction qui récupère une ligne du panier
+     *
+     * @param $panierID
+     * @param $produitID
+     * @return mixed|null
+     */
     public function getLignePanier($panierID, $produitID)
     {
         $sql = "SELECT * FROM lignepanier WHERE panierID = ? AND produitID = ?";
@@ -93,6 +104,13 @@ class Produit extends Modele
             return null;
     }
 
+
+    /**
+     * Fonction qui crée une nouvelle ligne dans un panier pour lui ajouter un élèment
+     *
+     * @param $panierID
+     * @param $produitID
+     */
     public function createNewLignePanier($panierID, $produitID)
     {
         // Il faut la dernière ligne du panier
@@ -110,13 +128,24 @@ class Produit extends Modele
         }
     }
 
+    /**
+     * Fonction qui augmente le nombre de produit d'une ligne d'un panier
+     *
+     * @param $lignePanierID
+     */
     public function increaseQuantityPanier($lignePanierID)
     {
         $sql = "UPDATE `lignepanier` SET `quantité`= `quantité` + 1 WHERE `lignePanierID` = ?";
         $this->executerRequete($sql, array($lignePanierID));
     }
 
-    public function createNewPanier($userID) {
+    /**
+     * Fonction qui crée un nouveau panier
+     *
+     * @param $userID
+     */
+    public function createNewPanier($userID)
+    {
         // Les paramètres inutiles sont à NULL
         $sql = "INSERT INTO `panier` (`panierID`, `userID`, `etatPanier`, `adresseID`, `moyenDePaiementID`, `HeureAchat`) VALUES (NULL, ?, ?, NULL, NULL, NULL)";
         $this->executerRequete($sql, array($userID, 0));
