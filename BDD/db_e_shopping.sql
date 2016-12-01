@@ -231,7 +231,49 @@ INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`,
 (14, 'Vermeil', 'Julien', 'Images/Profil/profil_utilisateur.jpg', 2, 'julien.vermeil@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (15, 'You', 'Qi', 'Images/Profil/profil_utilisateur.jpg', 2, 'qi.you@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (16, 'Yue', 'Cuize', 'Images/Profil/profil_utilisateur.jpg', 2, 'cuize.yue@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab');
+-- --------------------------------------------------------
 
+--
+-- Structure de la table `faq`
+--
+
+CREATE TABLE `faq` (
+  `questionID` int(11) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `commentaires` varchar(255) NOT NULL,
+  `userID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `faq`
+--
+
+INSERT INTO `faq` (`questionID`, `question`, `commentaires`, `userID`) VALUES
+(1, 'Comment acheter sur notre site ?', 'bonjour', 11),
+(2, 'Peut-on devenir admin ?', 'Pas pour le moment', 11);
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `faqreponses`
+--
+
+CREATE TABLE `faqreponses` (
+  `reponseID` int(11) NOT NULL,
+  `reponse` varchar(255) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `questionID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `faq`
+--
+
+INSERT INTO `faqreponses` (`reponseID`, `reponse`, `userID`, `questionID`) VALUES
+(1, "t'as essayé d'appuyer sur acheter ?", 2, 1),
+(2, 'Pas pour le moment', 1, 2),
+(3, 'un jour peut etre', 1, 2);
+
+-- --------------------------------------------------------
 --
 -- Index pour les tables exportées
 --
@@ -292,6 +334,18 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`userID`);
 
 --
+-- Index pour la table `user`
+--
+ALTER TABLE `faq`
+  ADD PRIMARY KEY (`questionID`);
+
+--
+-- Index pour la table `faqreponses`
+--
+ALTER TABLE `faqreponses`
+  ADD PRIMARY KEY (`reponseID`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -336,6 +390,18 @@ ALTER TABLE `souscategorie`
 ALTER TABLE `user`
   MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
+-- AUTO_INCREMENT pour la table `faq`
+--
+ALTER TABLE `faq`
+  MODIFY `questionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `faq`
+--
+ALTER TABLE `faqreponses`
+  MODIFY `reponseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- Contraintes pour les tables exportées
 --
 
@@ -365,6 +431,19 @@ ALTER TABLE `produit`
 --
 ALTER TABLE `souscategorie`
   ADD CONSTRAINT `souscategorie_ibfk_1` FOREIGN KEY (`categorieID`) REFERENCES `categorie` (`categorieID`);
+
+--
+-- Contraintes pour la table `faqreponses`
+--
+ALTER TABLE `faq`
+  ADD CONSTRAINT `faq_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`);
+
+--
+-- Contraintes pour la table `faqreponses`
+--
+ALTER TABLE `faqreponses`
+  ADD CONSTRAINT `faqreponses_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`),
+  ADD CONSTRAINT `faqreponses_ibfk_2` FOREIGN KEY (`questionID`) REFERENCES `faq` (`questionID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
