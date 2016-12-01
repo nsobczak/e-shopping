@@ -19,7 +19,7 @@ class AdministrationProduit extends Modele
 
     //______________________________________________________________________________________
     /**
-     * Fonction qui...
+     * Fonction qui vérifie si un existe ou pas
      *
      * @param $name
      * @return bool
@@ -36,7 +36,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui vérifie si une sous-catégorie existe ou pas
      *
      * @param $name
      * @return bool
@@ -53,7 +53,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui vérifie si une catégorie existe ou pas
      *
      * @param $name
      * @return bool
@@ -70,7 +70,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui récupère les informations d'une catégorie
      *
      * @param $categorie
      * @return mixed
@@ -85,7 +85,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui récupère les information d'une sous-catégorie
      *
      * @param $sousCategorie
      * @return mixed
@@ -100,7 +100,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui récupère les informations des sous-catégories
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui récupère les informations des catégories
      *
      * @return string
      */
@@ -133,7 +133,7 @@ class AdministrationProduit extends Modele
     }
 
     /**
-     * Fonction qui...???
+     * Fonction qui ajoute un produit dans la bdd
      *
      * @param $nom
      * @param $prix
@@ -153,7 +153,7 @@ class AdministrationProduit extends Modele
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui ajoute une nouvelle sous-catégorie à la bdd
      *
      * @param $sousCategorie
      * @param $description
