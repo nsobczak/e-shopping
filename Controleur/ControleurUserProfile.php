@@ -17,6 +17,7 @@ class ControleurUserProfile implements Controleur
      * @var UserProfile
      */
     private $user;
+    private $code_update_password;
 
 
     //______________________________________________________________________________________
@@ -26,6 +27,7 @@ class ControleurUserProfile implements Controleur
     public function __construct()
     {
         $this->user = new UserProfile();
+        $this->code_update_password = 0; // code par défaut : rien n'a été envoyé
     }
 
     /**
@@ -57,6 +59,7 @@ class ControleurUserProfile implements Controleur
      */
     public function handlerUserProfile()
     {
+        $this->changeUserPassword();
         $this->changeProfilePicture(); // vérification si changement de l'image
         $this->getHTML();
     }
@@ -74,6 +77,7 @@ class ControleurUserProfile implements Controleur
             $userID = $_SESSION['userID'];
             $vue->generer(array(
                 'listUserProfile' => $this->user->getUser($userID),
+                'code' => $this->code_update_password,
             ));
 
         } // sinon redirection vers la page de login
@@ -104,6 +108,25 @@ class ControleurUserProfile implements Controleur
      */
     public function changeUserPassword()
     {
-        var_dump("password");
+        if(empty($_SESSION['userID'])) // pas connecté
+            return;
+        if(empty($_POST['old_password']) && empty($_POST['new_password'])) {
+            $this->code_update_password = 0; // par défaut
+        }
+        else if(empty($_POST['old_password']) || empty($_POST['new_password'])) {
+            $this->code_update_password = UserProfile::PASSWORD_UPDATE_FORM_INVALID;
+        }
+        else if(!empty($_POST['old_password']) && !empty($_POST['new_password'])) {
+            $user = $this->user->getUser($_SESSION['userID']);
+            if ($user != null) {
+                if ($user['mot_de_passe'] != sha1(UserLogin::SALT_REGISTER . $_POST['old_password'])) {
+                    $this->code_update_password = UserProfile::PASSWORD_UPDATE_BAD_OLD_PASSWORD;
+                } else {
+                    $this->code_update_password = $this->user->updatePassword(sha1(UserLogin::SALT_REGISTER . $_POST['new_password']), $_SESSION['userID']);
+                }
+            }
+            else
+                $this->code_update_password = UserProfile::PASSWORD_UPDATE_USER_ERROR;
+        }
     }
 }

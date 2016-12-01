@@ -9,7 +9,13 @@ require_once('Modele.php');
  */
 class UserProfile extends Modele
 {
-    /** Renvoie les informations sur un utillisateurs
+    // Constantes
+    const PASSWORD_UPDATE_SUCCESS = 1;
+    const PASSWORD_UPDATE_BAD_OLD_PASSWORD = 2;
+    const PASSWORD_UPDATE_FORM_INVALID = 3;
+    const PASSWORD_UPDATE_USER_ERROR = 4;
+
+    /** Renvoie les informations sur un utillisateur
      *
      * @param int $id L'identifiant de l'utilisateur
      * @return array L'utilisateur
@@ -103,11 +109,13 @@ class UserProfile extends Modele
      *
      * @param $newPassword
      * @param $userID
+     * @return Code ID de l'erreur / succès
      */
     public function updatePassword($newPassword, $userID)
     {
-        $sql = "UPDATE mot_de_passe SET mot_de_passe = ? WHERE $userID = ?";
+        $sql = "UPDATE `user` SET `mot_de_passe` = ? WHERE `userID` = ?;";
         $this->executerRequete($sql, array($newPassword, $userID));
+        return UserProfile::PASSWORD_UPDATE_SUCCESS;
     }
 
 }
