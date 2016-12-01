@@ -34,7 +34,10 @@ class AdministrationProduit extends Modele
             return false;
     }
 
+
     /**
+     * Fonction qui...???
+     *
      * @param $name
      * @return bool
      */
@@ -50,6 +53,8 @@ class AdministrationProduit extends Modele
 
 
     /**
+     * Fonction qui...???
+     *
      * @param $name
      * @return bool
      */
@@ -63,7 +68,10 @@ class AdministrationProduit extends Modele
             return false;
     }
 
+
     /**
+     * Fonction qui...???
+     *
      * @param $categorie
      * @return mixed
      */
@@ -75,6 +83,13 @@ class AdministrationProduit extends Modele
         return $req1['categorieID'];
     }
 
+
+    /**
+     * Fonction qui...???
+     *
+     * @param $sousCategorie
+     * @return mixed
+     */
     public function getSousCategorieID($sousCategorie)
     {
         $sql = "SELECT sousCategorieID FROM souscategorie WHERE nomSousCategorie = ?";
@@ -83,6 +98,12 @@ class AdministrationProduit extends Modele
         return $req1['sousCategorieID'];
     }
 
+
+    /**
+     * Fonction qui...???
+     *
+     * @return string
+     */
     public function getSousCategorie()
     {
         $sql = "SELECT nomSousCategorie, sousCategorieID FROM souscategorie";
@@ -94,6 +115,12 @@ class AdministrationProduit extends Modele
         return $chaine;
     }
 
+
+    /**
+     * Fonction qui...???
+     *
+     * @return string
+     */
     public function getCategorie()
     {
         $sql = "SELECT categorieID, nomCategorie FROM categorie";
@@ -106,7 +133,7 @@ class AdministrationProduit extends Modele
     }
 
     /**
-     * Fonction qui...
+     * Fonction qui...???
      *
      * @param $nom
      * @param $prix
@@ -125,6 +152,14 @@ class AdministrationProduit extends Modele
     }
 
 
+    /**
+     * Fonction qui...???
+     *
+     * @param $sousCategorie
+     * @param $description
+     * @param $categorieID
+     * @return mixed
+     */
     public function insertNewSousCategorie($sousCategorie, $description, $categorieID)
     {
         if ($this->sousCategorieExists($sousCategorie)) {
@@ -136,6 +171,14 @@ class AdministrationProduit extends Modele
 
     }
 
+
+    /**
+     * Fonction qui ajoute une nouvelle catégorie
+     *
+     * @param $categorie
+     * @param $description
+     * @return mixed
+     */
     public function insertNewCategorie($categorie, $description)
     {
         if ($this->categorieExists($categorie)) {
@@ -147,6 +190,17 @@ class AdministrationProduit extends Modele
 
     }
 
+
+    /**
+     * Fonction qui modifie les informations d'un produit
+     *
+     * @param $nom
+     * @param $prix
+     * @param $description
+     * @param $image
+     * @param null $newNom
+     * @return int : le résultat de la fonction
+     */
     public function modifyProduit($nom, $prix, $description, $image, $newNom = null)
     {
 
@@ -177,9 +231,15 @@ class AdministrationProduit extends Modele
             return AdministrationProduit::DOES_NOT_EXIST;
     }
 
+
+    /**
+     * Fonction qui supprime un produit dans la bdd
+     *
+     * @param $nom : le nom du produit à effacer
+     * @return int : le résultat de la fonction
+     */
     public function deleteProduit($nom)
     {
-
         if ($this->produitExists($nom)) {
 
             $sql = "DELETE from produit WHERE nomProduit = ?";

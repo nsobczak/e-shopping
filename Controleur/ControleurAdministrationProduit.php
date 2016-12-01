@@ -14,16 +14,24 @@ class ControleurAdministrationProduit implements Controleur
 {
     //Attributs
     /**
-     * @var
-     */
-
-    /**
      * @var int
      */
     private $produit_code;
+    /**
+     * @var
+     */
     private $sous_categorie;
+    /**
+     * @var
+     */
     private $categorie;
+    /**
+     * @var
+     */
     private $newSousCategorieID;
+    /**
+     * @var
+     */
     private $newCategorieID;
 
     //______________________________________________________________________________________
@@ -38,9 +46,12 @@ class ControleurAdministrationProduit implements Controleur
         $this->produit = new AdministrationProduit();
     }
 
+    //TODO: getters et setters
 
+
+    //______________________________________________________________________________________
     /**
-     * Fonction qui...
+     * Fonction qui...???
      */
     public function addProduit()
     {
@@ -69,6 +80,10 @@ class ControleurAdministrationProduit implements Controleur
         }
     }
 
+
+    /**
+     * Fonction qui...???
+     */
     public function delProduit()
     {
         if (!empty($_POST['nomProduit'])) {
@@ -78,6 +93,10 @@ class ControleurAdministrationProduit implements Controleur
         }
     }
 
+
+    /**
+     * Fonction qui...???
+     */
     public function modProduit()
     {
         if (!empty($_POST['nomProduit']) and (!empty($_POST['newNomProduit']) or !empty($_POST['prix']) or !empty($_POST['description_produit']) or !empty($_POST['cheminimage']))) {
@@ -93,6 +112,10 @@ class ControleurAdministrationProduit implements Controleur
             $this->produit_code = 2;
     }
 
+
+    /**
+     * Fonction qui...???
+     */
     public function getSCategorie()
     {
 
@@ -100,12 +123,17 @@ class ControleurAdministrationProduit implements Controleur
 
     }
 
+
+    /**
+     * Fonction qui...???
+     */
     public function getCateg()
     {
 
         $this->categorie = $this->produit->getCategorie();
 
     }
+
 
     /**
      * Fonction qui...
@@ -130,6 +158,5 @@ class ControleurAdministrationProduit implements Controleur
         $vue->generer(array('produit_code' => $this->produit_code, 'sous_categorie' => $this->sous_categorie, 'categorie' => $this->categorie));
 
     }
-
-
+    
 }
