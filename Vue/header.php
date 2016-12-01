@@ -16,7 +16,6 @@
         </li>
         <li><a href="index.php?action=tunnel">Panier</a></li>
         <li><a href="index.php?action=faq">FAQ</a></li>
-        <li>--</li>
         <li><a href="index.php?action=userProfile">Profil</a></li>
         <?php if(!isset($_SESSION['userID'])) { ?>
             <li><a href="index.php?action=login">Login</a></li>
