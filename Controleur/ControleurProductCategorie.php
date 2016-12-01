@@ -60,13 +60,18 @@ class ControleurProductCategorie implements Controleur
         } else if (isset($_GET['id']) && !isset($_GET["do"])) {   // veut voir un produit en particulier
             // On a un item !
             $vue = new Vue("Produit");
-            $vue->generer(array("add_panier" => false));
+            $vue->generer(array(
+                "add_panier" => false,
+                "produit" => $this->getProduit()->getProduit($_GET['id'])));
         } else if (isset($_GET['do']) && isset($_GET['id'])) { // ajout d'un produit au panier
             if (!isset($_SESSION['userID'])) // il faut être connecté
                 return;
             if ($_GET['do'] == "addPanier") {
                 $vue = new Vue("Produit");
-                $vue->generer(array("add_panier" => $this->addProduitToPanier($_GET['id'])));
+                $vue->generer(array(
+                    "add_panier" => $this->addProduitToPanier($_GET['id']),
+                    "produit" => $this->getProduit()->getProduit($_GET['id']),
+                ));
             }
         } else {
             // Erreur
