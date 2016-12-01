@@ -1,27 +1,87 @@
 <section>
-    <div>    <?php
-        if($add_produit_code == AdministrationProduit::ADD_OK) {
-            echo '<h3>New product added !</h3>';
-        }
-        elseif($add_produit_code == AdministrationProduit::ALREADY_EXIST) {
-            echo "<h3>This product name already exist !</h3>";
-        }
-        ?>
-        <form action="" method="POST">
-            <label for="text">Please enter the detail of the product :</label></br></br>
-            <label for="nomProduit">Name :</label>
-            <input id="nomProduit" placeholder="name" type="text" name="nomProduit"></br></br>
-            <label for="prix">Prix :</label>
-            <input id="prix" placeholder="prix" type="text" name="prix"></br></br>
-            <label for="baking_time">Description :</label>
-            <input id="description" placeholder="description"  type="text" name="description"></br></br>
-            <label for="cheminimage">Image :</label>
-            <input id="cheminimage" placeholder="image.jpeg" type="text" name="cheminimage"></br></br>
-            <input type="reset" value="Reset">&nbsp;
-            <input type="submit" value="Ajouter produit">
-        </form>
-    </div>
     <div>
-        </br>
+        <?php
+        if ($produit_code == AdministrationProduit::ADD_OK) {
+            echo '<h3>Nouveau produit ajouté !</h3>';
+        } elseif ($produit_code == AdministrationProduit::PRODUCT_ALREADY_EXIST) {
+            echo "<h3>Ce produit existe déjà !</h3>";
+        } elseif ($produit_code == AdministrationProduit::DOES_NOT_EXIST) {
+            echo "<h3>Ce nom de produit n'existe pas !</h3>";
+        } elseif ($produit_code == AdministrationProduit::DEL_OK) {
+            echo "<h3>Produit supprimé !</h3>";
+        } elseif ($produit_code == AdministrationProduit::ERROR_FORM) {
+            echo "<h3>Veuillez vérifier votre saisi !</h3>";
+        } elseif ($produit_code == AdministrationProduit::MODIFY_OK) {
+            echo "<h3>Les modifications de ce produit ont été prit en compte !</h3>";
+        }
+
+        ?>
+        <form class="admin_form" action="" method="POST">
+            <table>
+                <tr>
+                    <td><label for="text">Voulez-vous ajouter ou modifier un produit existant ?</label></td>
+                    <td><input type="radio" name="product_choice" value="add" checked>Ajouter</input>
+                        <input type="radio" name="product_choice" value="modify">Modifier</input>
+                        <input type="radio" name="product_choice" value="delete">Supprimer</input></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="text">Entrez les détails en fonction de votre choix :</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="nomProduit">Nom du produit :</label></td>
+                    <td><input id="nomProduit" placeholder="produit" type="text" name="nomProduit"></td>
+                </tr>
+                <tr>
+                    <td><label for="nomProduit">Nouveau produit (si vous voulez le modifier) :</label></td>
+                    <td><input id="nomProduit" placeholder="nouveau nom" type="text" name="newNomProduit"></td>
+                </tr>
+                <tr>
+                    <td><label for="prix">Prix :</label></td>
+                    <td><input id="prix_produit" placeholder="prix" type="text" name="prix"></td>
+                </tr>
+                <tr>
+                    <td><label for="description_produit">Description du produit :</label></td>
+                    <td><textarea id="description_produit" placeholder="description" type="text"
+                                  name="description_produit" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="cheminimage">Image :</label></td>
+                    <td><input id="cheminimage" placeholder="image.jpeg" type="text" name="cheminimage"></td>
+                </tr>
+                <tr>
+                    <td><label for="SousCategorie">Dans quelle sous-catégorie se trouve votre produit ? : </label></td>
+                    <td><select id="sous_categorie" name="idSousCategorie"><?php echo $sous_categorie ?></select></td>
+                </tr>
+                <tr>
+                    <td><label for="newSousCategorie">Sinon, saisir un nouveau nom de sous-catégorie :</label></td>
+                    <td><input id="newSousCategorie" placeholder="sous-catégorie" type="text" name="newSousCategorie">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="descriptionSousCategorie">Et sa description :</label></td>
+                    <td><textarea id="descriptionSousCategorie" placeholder="description" type="text"
+                                  name="descriptionSousCategorie" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="categorie">Dans quelle catégorie se trouve votre sous-catégorie ? :</label></td>
+                    <td><select id="categorie" name="idCategorie"><?php echo $categorie ?></select></td>
+                </tr>
+                <tr>
+                    <td><label for="newCategorie">Sinon, saisir un nouveau nom de catégorie :</label></td>
+                    <td><input id="newCategorie" placeholder="catégorie" type="text" name="newCategorie"></td>
+                </tr>
+                <tr>
+                    <td><label for="descriptionCategorie">Et sa description :</label></td>
+                    <td><textarea id="descriptionCategorie" placeholder="description" type="text"
+                                  name="descriptionCategorie" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="reset" value="Réinitialiser">&nbsp;
+                        <input type="submit" value="Appliquer les modifications"></td>
+                </tr>
+            </table>
+        </form>
     </div>
 </section>

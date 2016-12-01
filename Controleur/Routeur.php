@@ -82,7 +82,7 @@ class Routeur
                 } elseif ($_GET['action'] == 'inscription') {
                     $this->ctrlInscription->registerUser();
                 } elseif ($_GET['action'] == 'adminProduit') {
-                    $this->ctrlAdminProduit->addProduit();
+                    $this->ctrlAdminProduit->getHTML();
                 } elseif ($_GET['action'] == 'adminUser') {
                     $this->ctrlAdminUser->handlerAdministrationUser();
                 } elseif ($_GET['action'] == 'adminPaiementLivraison') {

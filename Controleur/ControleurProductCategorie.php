@@ -58,15 +58,18 @@ class ControleurProductCategorie implements Controleur
 
     /**
      * La fonction qui va s'occuper du panier et toutes les vérifications annexes
-     * 
+     *
      * @param $produitID Id du produit
      */
     public function addProduitToPanier($produitID)
     {
         // Connecté ?
-        if (!isset($_SESSION['userID']))
+        if (!isset($_SESSION['userID'])) {
+            //redirection vers page de login
+            //echo '<input type="hidden" value=index.php?action=login/>';
+            //<a href="index.php?action=login">Login</a>;
             return;
-
+        }
         // Est-ce que l'utilisateur a un panier
         $panier = $this->produit->getPanierForUser($_SESSION['userID']);
         if ($panier == null) {

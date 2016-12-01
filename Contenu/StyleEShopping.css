@@ -403,6 +403,44 @@ body .admin th {
 }
 
 
+/*=================================================
+ *  Page formulaire d'ajout, modification et suppression produit
+ */
+
+.admin_form table
+{
+    font-family:"Roboto", serif;
+    font-weight:bold;
+}
+
+.admin_form table tr {
+    line-height: 2;
+}
+
+.admin_form table label
+{
+    display: block;
+    width: 460px;
+    float: left;
+}
+
+.admin_form #sous_categorie
+{
+    display: block;
+    float: left;
+}
+
+.admin_form #categorie
+{
+    display: block;
+    float: left;
+}
+
+.admin_form #Check
+{
+    width: 25px;
+}
+
 
 
 
