@@ -1,9 +1,26 @@
 <body>
 
+<?php
+if(!empty($code)) {
+    if($code == UserProfile::PASSWORD_UPDATE_SUCCESS) {
+        ?><h3>Mot de passe modifié avec succès</h3><?php
+    }
+    if($code == UserProfile::PASSWORD_UPDATE_BAD_OLD_PASSWORD) {
+        ?><h3>Erreur: Vérifiez votre mot de passe actuel</h3><?php
+    }
+    if($code == UserProfile::PASSWORD_UPDATE_FORM_INVALID) {
+        ?><h3>Erreur: Le formulaire est incomplet</h3><?php
+    }
+    if($code == UserProfile::PASSWORD_UPDATE_USER_ERROR) {
+        ?><h3>Erreur lors du changement du mot de passe. Veuillez reesayer.</h3><?php
+    }
+}
+?>
+
 <table width="95%" style="line-height: 24px;" border="10">
     <tr>    <!-- table row -->
-        <td colspan="2"><img class="display" width=10%
-                             src=<?= $listUserProfile['chemin'] ?> alt="user_picture" title="user_picture"/>
+        <td><img class="display" width=10%
+                 src=<?= $listUserProfile['chemin'] ?> alt="user_picture" title="user_picture"/>
         </td>    <!-- table data -->
         <td>
             <?php
@@ -29,38 +46,40 @@
         </td>
     </tr>
     <tr>
-        <td> user ID :
-        <td/>
-        <td><?= $listUserProfile['userID'] ?>
-        <td/>
+        <td> User ID :</td>
+        <td><?= $listUserProfile['userID'] ?></td>
     </tr>
     <tr>
-        <td> nom :
-        <td/>
-        <td><?= $listUserProfile['nom'] ?>
-        <td/>
+        <td> Nom :</td>
+        <td><?= $listUserProfile['nom'] ?></td>
     </tr>
     <tr>
-        <td> prénom :
-        <td/>
-        <td><?= $listUserProfile['prenom'] ?>
-        <td/>
+        <td> Prénom :</td>
+        <td><?= $listUserProfile['prenom'] ?></td>
     </tr>
     <tr>
-        <td> niveau_accreditation :
-        <td/>
-        <td><?= $listUserProfile['niveau_accreditation'] ?>
-        <td/>
+        <td> Niveau d'accreditation :</td>
+        <td><?= $listUserProfile['niveau_accreditation'] ?></td>
     </tr>
     <tr>
-        <td> mail :
-        <td/>
+        <td> Mail :</td>
         <td><?= $listUserProfile['mail'] ?></td>
     </tr>
     <tr>
-        <td> Change password :
-        <td/>
-        <td>TODO: insert here le bouton pour changer le password</td>
+        <td> Change password :</td>
+        <td><form enctype="multipart/form-data" action="?action=userProfile" method="post">
+                <fieldset>
+                    <legend>Change password</legend>
+                    <p>
+                        <label for="new_password" title="Choose a new password">New password :</label>
+                        <input type="password" name="new_password" id="new_password"/><br>
+                        <label for="old_password" title="Current password">Current password :</label>
+                        <input type="password" name="old_password" id="old_password" /><br>
+                        <input type="submit" name="submit_password" value="Update password"/>
+                    </p>
+                </fieldset>
+            </form>
+        </td>
     </tr>
 
 </table>
