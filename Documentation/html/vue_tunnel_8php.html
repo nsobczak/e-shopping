@@ -134,8 +134,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f">$bdd</a>-&gt;query(<span class="stringliteral">&quot;SELECT *</span></div><div class="line"><span class="stringliteral">                            FROM lignepanier, panier, produit</span></div><div class="line"><span class="stringliteral">                            WHERE panier.userID = &quot;</span> . $_SESSION[<span class="stringliteral">&#39;userID&#39;</span>] . <span class="stringliteral">&quot;</span></div><div class="line"><span class="stringliteral">                            AND panier.panierID = lignepanier.panierID</span></div><div class="line"><span class="stringliteral">                            AND lignepanier.produitID = produit.produitID</span></div><div class="line"><span class="stringliteral">                            AND panier.etatPanier = 0&quot;</span>)</div><div class="ttc" id="vue_produit_8php_html_a94f91e878bce0991e2cd595c5dd79b3f"><div class="ttname"><a href="vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f">$bdd</a></div><div class="ttdeci">$bdd</div><div class="ttdef"><b>Definition:</b> vueProduit.php:2</div></div>
-</div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= $bdd-&gt;query(<span class="stringliteral">&quot;SELECT *</span></div><div class="line"><span class="stringliteral">                            FROM lignepanier, panier, produit</span></div><div class="line"><span class="stringliteral">                            WHERE panier.userID = &quot;</span> . $_SESSION[<span class="stringliteral">&#39;userID&#39;</span>] . <span class="stringliteral">&quot;</span></div><div class="line"><span class="stringliteral">                            AND panier.panierID = lignepanier.panierID</span></div><div class="line"><span class="stringliteral">                            AND lignepanier.produitID = produit.produitID</span></div><div class="line"><span class="stringliteral">                            AND panier.etatPanier = 0&quot;</span>)</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a028c0d237681f3193b4f1656e788a460"></a>
@@ -147,8 +146,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f">$bdd</a>-&gt;query(<span class="stringliteral">&#39;SELECT * </span></div><div class="line"><span class="stringliteral">                                    FROM moyendepaiement </span></div><div class="line"><span class="stringliteral">                                    WHERE nomMoyenDePaiement=&quot;&#39;</span> . $moyenPaiemment . <span class="stringliteral">&#39;&quot;;&#39;</span>)</div><div class="ttc" id="vue_produit_8php_html_a94f91e878bce0991e2cd595c5dd79b3f"><div class="ttname"><a href="vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f">$bdd</a></div><div class="ttdeci">$bdd</div><div class="ttdef"><b>Definition:</b> vueProduit.php:2</div></div>
-</div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">= $bdd-&gt;query(<span class="stringliteral">&#39;SELECT * </span></div><div class="line"><span class="stringliteral">                                    FROM moyendepaiement </span></div><div class="line"><span class="stringliteral">                                    WHERE nomMoyenDePaiement=&quot;&#39;</span> . $moyenPaiemment . <span class="stringliteral">&#39;&quot;;&#39;</span>)</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac2efc18029b858cc6d72c6321ab5a0d3"></a>
@@ -172,8 +170,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    <a class="code" href="vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f">$bdd</a> = <span class="keyword">new</span> PDO(<span class="stringliteral">&#39;mysql:host=localhost; dbname=db_e_shopping; charset=utf8&#39;</span>, <span class="stringliteral">&#39;root&#39;</span>, <span class="stringliteral">&#39;ISEN&#39;</span>)</div><div class="ttc" id="vue_produit_8php_html_a94f91e878bce0991e2cd595c5dd79b3f"><div class="ttname"><a href="vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f">$bdd</a></div><div class="ttdeci">$bdd</div><div class="ttdef"><b>Definition:</b> vueProduit.php:2</div></div>
-</div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    $bdd = <span class="keyword">new</span> PDO(<span class="stringliteral">&#39;mysql:host=localhost; dbname=db_e_shopping; charset=utf8&#39;</span>, <span class="stringliteral">&#39;root&#39;</span>, <span class="stringliteral">&#39;ISEN&#39;</span>)</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

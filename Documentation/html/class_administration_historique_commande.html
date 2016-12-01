@@ -133,8 +133,14 @@ Collaboration diagram for AdministrationHistoriqueCommande:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae60b7a70663aaeafa8df80086b5fc4af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#ae60b7a70663aaeafa8df80086b5fc4af">getPanier</a> ()</td></tr>
-<tr class="separator:ae60b7a70663aaeafa8df80086b5fc4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a61cacbe9b864cf80e6a3a58cdd9df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#a99a61cacbe9b864cf80e6a3a58cdd9df">getAllPanier</a> ()</td></tr>
+<tr class="separator:a99a61cacbe9b864cf80e6a3a58cdd9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea7457ce026ae1e25f7b0a5bbdf20e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#afea7457ce026ae1e25f7b0a5bbdf20e6">getPanier</a> ($panierID)</td></tr>
+<tr class="separator:afea7457ce026ae1e25f7b0a5bbdf20e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975d5bf1677deceea4649fa149ec2c8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#a975d5bf1677deceea4649fa149ec2c8f">getCommande</a> ($panierID)</td></tr>
+<tr class="separator:a975d5bf1677deceea4649fa149ec2c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202bd01d794a3f5458c49b2eb7581a01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#a202bd01d794a3f5458c49b2eb7581a01">getPanierUser</a> ($userName)</td></tr>
+<tr class="separator:a202bd01d794a3f5458c49b2eb7581a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae74f94c3b10a7d50b785ab2b81d386"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#a9ae74f94c3b10a7d50b785ab2b81d386">turnPaid</a> ($panierID)</td></tr>
 <tr class="separator:a9ae74f94c3b10a7d50b785ab2b81d386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e7e7ae434f7feea0e1a79bd5b1ae5fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_administration_historique_commande.html#a8e7e7ae434f7feea0e1a79bd5b1ae5fb">turnNotPaid</a> ($panierID)</td></tr>
@@ -149,20 +155,92 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Created by PhpStorm. User: Timothée Percq &amp; Sylvain Pryfer Date: 04/11/2016 </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae60b7a70663aaeafa8df80086b5fc4af"></a>
+<a class="anchor" id="a99a61cacbe9b864cf80e6a3a58cdd9df"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">getPanier </td>
+          <td class="memname">getAllPanier </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Fonction qui récupète la liste de tous les paniers</p>
+<dl class="section return"><dt>Returns</dt><dd>liste des paniers de la base de données </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a975d5bf1677deceea4649fa149ec2c8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getCommande </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$panierID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 <p>Fonction qui récupère les infos d'un panier</p>
-<dl class="section return"><dt>Returns</dt><dd>PDOStatement </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>ID du panier rechercher </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array le contenu du panier </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afea7457ce026ae1e25f7b0a5bbdf20e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPanier </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$panierID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui cherche un panier</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>ID du panier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>le panier ayant l'ID voulu </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a202bd01d794a3f5458c49b2eb7581a01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPanierUser </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$userName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui récupère la liste des paniers d'un utilisateur</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>nom de l'utilisateur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array, la liste des paniers de l'utilisateur </dd></dl>
 
 </div>
 </div>
@@ -179,13 +257,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Fonction qui change l'état du panier à 0</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">$panierID</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Fonction qui change l'état du panier à 0 (changer un panier en non payé)</p>
+<p>int ID du panier a modifier </p>
 
 </div>
 </div>
@@ -202,13 +275,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Fonction qui change l'état du panier à 1</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">$panierID</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Fonction qui change l'état du panier à 1 (changer un panier en payé)</p>
+<p>int ID du panier a modifier </p>
 
 </div>
 </div>

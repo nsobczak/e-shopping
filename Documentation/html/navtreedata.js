@@ -32,7 +32,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_administration_historique_commande_8php.html",
-"md_Controleur_README.html"
+"interface_controleur.html#a5fc878ede54118176f912b557031ddd6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

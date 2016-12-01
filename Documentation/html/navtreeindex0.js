@@ -32,9 +32,12 @@ var NAVTREEINDEX0 =
 "_vue_8php.html":[9,0,2,4],
 "annotated.html":[8,0],
 "class_administration_historique_commande.html":[8,0,0],
-"class_administration_historique_commande.html#a8e7e7ae434f7feea0e1a79bd5b1ae5fb":[8,0,0,1],
-"class_administration_historique_commande.html#a9ae74f94c3b10a7d50b785ab2b81d386":[8,0,0,2],
-"class_administration_historique_commande.html#ae60b7a70663aaeafa8df80086b5fc4af":[8,0,0,0],
+"class_administration_historique_commande.html#a202bd01d794a3f5458c49b2eb7581a01":[8,0,0,3],
+"class_administration_historique_commande.html#a8e7e7ae434f7feea0e1a79bd5b1ae5fb":[8,0,0,4],
+"class_administration_historique_commande.html#a975d5bf1677deceea4649fa149ec2c8f":[8,0,0,1],
+"class_administration_historique_commande.html#a99a61cacbe9b864cf80e6a3a58cdd9df":[8,0,0,0],
+"class_administration_historique_commande.html#a9ae74f94c3b10a7d50b785ab2b81d386":[8,0,0,5],
+"class_administration_historique_commande.html#afea7457ce026ae1e25f7b0a5bbdf20e6":[8,0,0,2],
 "class_administration_paiement_livraison.html":[8,0,1],
 "class_administration_paiement_livraison.html#a031ebb76eb94ef71318a457e0afe1159":[8,0,1,2],
 "class_administration_paiement_livraison.html#a16351365ed3e8c737d3abea7c42491ce":[8,0,1,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "index.html":[],
 "index_8php.html":[9,0,3],
 "index_8php.html#a8ef5bb257f7002fc267e38109b3dda3c":[9,0,3,0],
-"interface_controleur.html":[8,0,5],
-"interface_controleur.html#a5fc878ede54118176f912b557031ddd6":[8,0,5,0],
-"md_BDD_README.html":[0],
-"md_Contenu_README.html":[1]
+"interface_controleur.html":[8,0,5]
 };

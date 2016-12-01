@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"interface_controleur.html#a5fc878ede54118176f912b557031ddd6":[8,0,5,0],
+"md_BDD_README.html":[0],
+"md_Contenu_README.html":[1],
 "md_Controleur_README.html":[2],
 "md_Images_README.html":[3],
 "md_Modele_README.html":[4],
@@ -23,9 +26,6 @@ var NAVTREEINDEX1 =
 "vue_login_8php.html":[9,0,2,15],
 "vue_login_8php.html#a43e5b5a819fedbd12b8cf5421ba6985e":[9,0,2,15,0],
 "vue_produit_8php.html":[9,0,2,16],
-"vue_produit_8php.html#a2c003f2e2af69d7ffcc28b099f1aede1":[9,0,2,16,2],
-"vue_produit_8php.html#a47da403a83d94793aa1457c6a2ddcf96":[9,0,2,16,1],
-"vue_produit_8php.html#a94f91e878bce0991e2cd595c5dd79b3f":[9,0,2,16,0],
 "vue_produit_list_8php.html":[9,0,2,17],
 "vue_recherche_8php.html":[9,0,2,18],
 "vue_tunnel_8php.html":[9,0,2,19],
