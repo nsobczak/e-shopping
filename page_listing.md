@@ -14,5 +14,5 @@
 |ControleurAdministrationUser|AdministrationUser|vueAdministrationUser|administration user limiter a role admin (validation compte/ gestion autorisation/suppression de compte)|admin|Romain & Vivien|4|
 |ControleurChiffreDAffaire||vueChiffreDAffaire|visu chiffre d'affaire (formulaire de recherche mois/année)|admin|Quentin|4|
 |ControleurAdministrationPaiement|AdministrationPaiementLivraison|vueAdministrationPaiement|administration des moyens de paiement|admin|Baudouin|4|
-|ControleurFaq||vueFaq|faq|tous|?|5|
+|ControleurFaq||vueFaq|faq|tous|Vivien|5|
 |ControleurRecherche|Recherche|vueRecherche|recherche produit|tous|Baudouin & Quentin|5|
