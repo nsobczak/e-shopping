@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Cook.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GeekProduct.com
-   &#160;<span id="projectnumber">1.2</span>
+   &#160;<span id="projectnumber">1.3</span>
    </div>
    <div id="projectbrief">An e-shopping website</div>
   </td>
@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -134,10 +135,20 @@ Collaboration diagram for ControleurAdministrationUser:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a095c5d389db211932136b53f25f39685"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a095c5d389db211932136b53f25f39685">__construct</a> ()</td></tr>
 <tr class="separator:a095c5d389db211932136b53f25f39685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fc878ede54118176f912b557031ddd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a5fc878ede54118176f912b557031ddd6">getHTML</a> ()</td></tr>
-<tr class="separator:a5fc878ede54118176f912b557031ddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81b7186fb97a7c6457edcc68c9aa2ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#ae81b7186fb97a7c6457edcc68c9aa2ef">getUser</a> ()</td></tr>
+<tr class="separator:ae81b7186fb97a7c6457edcc68c9aa2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02b5d97a1af6752f933cbe6948508d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#ae02b5d97a1af6752f933cbe6948508d1">setUser</a> ($newUser)</td></tr>
+<tr class="separator:ae02b5d97a1af6752f933cbe6948508d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5a53cfa024b81acc0a99e16daa652e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a2b5a53cfa024b81acc0a99e16daa652e">handlerAdministrationUser</a> ()</td></tr>
+<tr class="separator:a2b5a53cfa024b81acc0a99e16daa652e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bcf7a3e47781ab27b24f9527d0216ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a9bcf7a3e47781ab27b24f9527d0216ce">displayUser</a> ($userID)</td></tr>
 <tr class="separator:a9bcf7a3e47781ab27b24f9527d0216ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc878ede54118176f912b557031ddd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a5fc878ede54118176f912b557031ddd6">getHTML</a> ()</td></tr>
+<tr class="separator:a5fc878ede54118176f912b557031ddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc7bfa5384d57b7bfd159a47f730466"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a7bc7bfa5384d57b7bfd159a47f730466">deleteUser</a> ()</td></tr>
+<tr class="separator:a7bc7bfa5384d57b7bfd159a47f730466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4165ff72cf18b973a5a6d2f90515f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_administration_user.html#a3a4165ff72cf18b973a5a6d2f90515f4">changeAccre</a> ()</td></tr>
+<tr class="separator:a3a4165ff72cf18b973a5a6d2f90515f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Created by PhpStorm. User: Romain Vanmarcke &amp; Vivien Valencourt Date: 04/11/2016 </p>
@@ -159,6 +170,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3a4165ff72cf18b973a5a6d2f90515f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">changeAccre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui exécute la requête de changement d'accreditation d'un utilisateur, dans la base de</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$userID</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7bc7bfa5384d57b7bfd159a47f730466"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui exécute la requête de suppression d'utilisateur de la base de données </p>
+
+</div>
+</div>
 <a class="anchor" id="a9bcf7a3e47781ab27b24f9527d0216ce"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +221,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Fonction qui...</p>
+<p>Fonction qui affiche un utilisateur</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">$userID</td><td></td></tr>
@@ -201,8 +250,70 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae81b7186fb97a7c6457edcc68c9aa2ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter de $user</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_administration_user.html">AdministrationUser</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b5a53cfa024b81acc0a99e16daa652e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">handlerAdministrationUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui appelle toutes les ahutres fonctions</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$userID</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae02b5d97a1af6752f933cbe6948508d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setUser </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$newUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setter de $user</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$newUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Controleur/ControleurAdministrationUser.php</li>
+<li>Controleur/<a class="el" href="_controleur_administration_user_8php.html">ControleurAdministrationUser.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

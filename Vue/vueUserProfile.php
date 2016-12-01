@@ -1,17 +1,17 @@
 <body>
 
 <?php
-if(!empty($code)) {
-    if($code == UserProfile::PASSWORD_UPDATE_SUCCESS) {
+if (!empty($code)) {
+    if ($code == UserProfile::PASSWORD_UPDATE_SUCCESS) {
         ?><h3>Mot de passe modifié avec succès</h3><?php
     }
-    if($code == UserProfile::PASSWORD_UPDATE_BAD_OLD_PASSWORD) {
+    if ($code == UserProfile::PASSWORD_UPDATE_BAD_OLD_PASSWORD) {
         ?><h3>Erreur: Vérifiez votre mot de passe actuel</h3><?php
     }
-    if($code == UserProfile::PASSWORD_UPDATE_FORM_INVALID) {
+    if ($code == UserProfile::PASSWORD_UPDATE_FORM_INVALID) {
         ?><h3>Erreur: Le formulaire est incomplet</h3><?php
     }
-    if($code == UserProfile::PASSWORD_UPDATE_USER_ERROR) {
+    if ($code == UserProfile::PASSWORD_UPDATE_USER_ERROR) {
         ?><h3>Erreur lors du changement du mot de passe. Veuillez reesayer.</h3><?php
     }
 }
@@ -67,14 +67,15 @@ if(!empty($code)) {
     </tr>
     <tr>
         <td> Change password :</td>
-        <td><form enctype="multipart/form-data" action="?action=userProfile" method="post">
+        <td>
+            <form enctype="multipart/form-data" action="?action=userProfile" method="post">
                 <fieldset>
                     <legend>Change password</legend>
                     <p>
                         <label for="new_password" title="Choose a new password">New password :</label>
                         <input type="password" name="new_password" id="new_password"/><br>
                         <label for="old_password" title="Current password">Current password :</label>
-                        <input type="password" name="old_password" id="old_password" /><br>
+                        <input type="password" name="old_password" id="old_password"/><br>
                         <input type="submit" name="submit_password" value="Update password"/>
                     </p>
                 </fieldset>

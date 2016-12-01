@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Cook.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GeekProduct.com
-   &#160;<span id="projectnumber">1.2</span>
+   &#160;<span id="projectnumber">1.3</span>
    </div>
    <div id="projectbrief">An e-shopping website</div>
   </td>
@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -81,22 +82,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
       <li><a href="#index__"><span>_</span></a></li>
       <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
       <li class="current"><a href="#index_v"><span>v</span></a></li>
     </ul>
@@ -131,18 +138,23 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented struct and union fields with links to the struct/union documentation for each field:</div>
+<div class="textblock">Here is a list of all struct and union fields with links to the structures/unions they belong to:</div>
 
 <h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
 <li>__construct()
 : <a class="el" href="class_controleur_accueil.html#a095c5d389db211932136b53f25f39685">ControleurAccueil</a>
+, <a class="el" href="class_controleur_administration_historique_commande.html#a095c5d389db211932136b53f25f39685">ControleurAdministrationHistoriqueCommande</a>
 , <a class="el" href="class_controleur_administration_paiement_livraison.html#a095c5d389db211932136b53f25f39685">ControleurAdministrationPaiementLivraison</a>
 , <a class="el" href="class_controleur_administration_produit.html#a095c5d389db211932136b53f25f39685">ControleurAdministrationProduit</a>
 , <a class="el" href="class_controleur_administration_user.html#a095c5d389db211932136b53f25f39685">ControleurAdministrationUser</a>
+, <a class="el" href="class_controleur_chiffre_affaire.html#a095c5d389db211932136b53f25f39685">ControleurChiffreAffaire</a>
 , <a class="el" href="class_controleur_erreur.html#a095c5d389db211932136b53f25f39685">ControleurErreur</a>
+, <a class="el" href="class_controleur_f_a_q.html#a095c5d389db211932136b53f25f39685">ControleurFAQ</a>
 , <a class="el" href="class_controleur_inscription.html#a095c5d389db211932136b53f25f39685">ControleurInscription</a>
 , <a class="el" href="class_controleur_login.html#a095c5d389db211932136b53f25f39685">ControleurLogin</a>
-, <a class="el" href="class_controleur_produit01.html#a095c5d389db211932136b53f25f39685">ControleurProduit01</a>
+, <a class="el" href="class_controleur_product_categorie.html#a095c5d389db211932136b53f25f39685">ControleurProductCategorie</a>
+, <a class="el" href="class_controleur_produit_list.html#a095c5d389db211932136b53f25f39685">ControleurProduitList</a>
+, <a class="el" href="class_controleur_recherche.html#a095c5d389db211932136b53f25f39685">ControleurRecherche</a>
 , <a class="el" href="class_controleur_tunnel.html#a095c5d389db211932136b53f25f39685">ControleurTunnel</a>
 , <a class="el" href="class_controleur_user_profile.html#a095c5d389db211932136b53f25f39685">ControleurUserProfile</a>
 , <a class="el" href="class_routeur.html#a095c5d389db211932136b53f25f39685">Routeur</a>
@@ -152,18 +164,58 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>ACTION_OK
+: <a class="el" href="class_administration_paiement_livraison.html#a8c28eeacaedc8bd6276ccd23e6719e72">AdministrationPaiementLivraison</a>
+</li>
+<li>ADD_OK
+: <a class="el" href="class_administration_produit.html#a549a4cb50669f905cabf1933ddc60293">AdministrationProduit</a>
+</li>
 <li>addProduit()
 : <a class="el" href="class_controleur_administration_produit.html#a3980b865cc4b5db7b8ba5e737403cdd1">ControleurAdministrationProduit</a>
+</li>
+<li>addProduitToPanier()
+: <a class="el" href="class_controleur_product_categorie.html#a52f2aed61cc5ab0f81ac1c2c2c7e528a">ControleurProductCategorie</a>
+</li>
+<li>ALREADY_EXIST
+: <a class="el" href="class_register.html#a3913affb378b46e6bdea34f72bd4ccfe">Register</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>BAD_ITEM_EDIT
+: <a class="el" href="class_administration_paiement_livraison.html#a81206f4e53abe45536c5896cbe5873a0">AdministrationPaiementLivraison</a>
+</li>
+<li>BAD_PASSWORD
+: <a class="el" href="class_user_login.html#ab1504336ddd53ed15c390b7bbc0222b8">UserLogin</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>categorieExists()
+: <a class="el" href="class_administration_produit.html#a0853faa7485acb4d539699a406ec981f">AdministrationProduit</a>
+</li>
+<li>changeAccre()
+: <a class="el" href="class_controleur_administration_user.html#a3a4165ff72cf18b973a5a6d2f90515f4">ControleurAdministrationUser</a>
+</li>
 <li>changeProfilePicture()
 : <a class="el" href="class_controleur_user_profile.html#a02dc9e59a9b193ca793452f4e6cbe5df">ControleurUserProfile</a>
 </li>
+<li>changeUserPassword()
+: <a class="el" href="class_controleur_user_profile.html#a803336a033079296e67d4491cdd606cf">ControleurUserProfile</a>
+</li>
+<li>checkEditCommande()
+: <a class="el" href="class_controleur_administration_historique_commande.html#ae9ee2d772a36be901e95e66243466786">ControleurAdministrationHistoriqueCommande</a>
+</li>
 <li>connectUser()
 : <a class="el" href="class_user_login.html#a1534f7aff57af0309726ee4126aa5d1c">UserLogin</a>
+</li>
+<li>createNewLignePanier()
+: <a class="el" href="class_produit.html#a98b1fa217af254f477a1a5e3f3b3a73b">Produit</a>
+</li>
+<li>createNewPanier()
+: <a class="el" href="class_produit.html#ac903e81ec85e4254f20e46f9ddf01d75">Produit</a>
 </li>
 <li>createNewUser()
 : <a class="el" href="class_register.html#a390d5eb557ffad56986a2507aad71dbf">Register</a>
@@ -172,21 +224,58 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DATABASE_ERROR
+: <a class="el" href="class_register.html#af34b223109162f12815ed33db507ac73">Register</a>
+, <a class="el" href="class_user_login.html#af34b223109162f12815ed33db507ac73">UserLogin</a>
+</li>
+<li>DEL_OK
+: <a class="el" href="class_administration_produit.html#a28ad8cc6870458616e23d7a185c75ce0">AdministrationProduit</a>
+</li>
+<li>deleteProduit()
+: <a class="el" href="class_administration_produit.html#a3a9808e4cda383df7de6c05ed8c068be">AdministrationProduit</a>
+</li>
+<li>deleteUser()
+: <a class="el" href="class_administration_user.html#a207ba21749d1c6d5dcee8276f793e937">AdministrationUser</a>
+, <a class="el" href="class_controleur_administration_user.html#a7bc7bfa5384d57b7bfd159a47f730466">ControleurAdministrationUser</a>
+</li>
+<li>delProduit()
+: <a class="el" href="class_controleur_administration_produit.html#ac8056e6d3c24dcbfb844a23b9f9ce316">ControleurAdministrationProduit</a>
+</li>
 <li>displayUser()
 : <a class="el" href="class_controleur_administration_user.html#a9bcf7a3e47781ab27b24f9527d0216ce">ControleurAdministrationUser</a>
 </li>
 <li>displayUserLogin()
 : <a class="el" href="class_controleur_login.html#ade498524cd48d0934b793e473e098b5f">ControleurLogin</a>
 </li>
+<li>DOES_NOT_EXIST
+: <a class="el" href="class_administration_produit.html#ae1a025af762249e8cf83b1ade7f19c7e">AdministrationProduit</a>
+</li>
+<li>DOESNOT_EXIST
+: <a class="el" href="class_user_login.html#a3f69a0c9def9fa58b727b9aea97ed474">UserLogin</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>EDIT_OK
+: <a class="el" href="class_administration_paiement_livraison.html#ae0796a71df9900d7cb61c1039907ecad">AdministrationPaiementLivraison</a>
+</li>
 <li>editMoyenPaiement()
 : <a class="el" href="class_administration_paiement_livraison.html#a6d936def263021076df082157837f3d4">AdministrationPaiementLivraison</a>
 </li>
+<li>ERROR_FORM
+: <a class="el" href="class_administration_produit.html#ae0169c0ae045f1c771a81aa5418661d0">AdministrationProduit</a>
+</li>
 <li>executerRequete()
 : <a class="el" href="class_modele.html#a2fe407712b9a72eecac1615d934df767">Modele</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>FORM_INPUTS_ERROR
+: <a class="el" href="class_register.html#af7c8b6b262d095770faef086c1690152">Register</a>
+, <a class="el" href="class_user_login.html#af7c8b6b262d095770faef086c1690152">UserLogin</a>
 </li>
 </ul>
 
@@ -195,21 +284,63 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>generer()
 : <a class="el" href="class_vue.html#a44de3821a3deb940bb75d7f800d9a223">Vue</a>
 </li>
+<li>getAdminPaiementLivraison()
+: <a class="el" href="class_controleur_administration_paiement_livraison.html#af234d51819a7f0afe2a97cbf85754d23">ControleurAdministrationPaiementLivraison</a>
+</li>
+<li>getAdminPaiementLivraison_code()
+: <a class="el" href="class_controleur_administration_paiement_livraison.html#a07aaf904efe4bca42ff7f06585dda743">ControleurAdministrationPaiementLivraison</a>
+</li>
+<li>getAllProduit()
+: <a class="el" href="class_produit.html#a9cb09339d4aeb93b4d53b4f52340be25">Produit</a>
+</li>
+<li>getAllProduitsByCategorieId()
+: <a class="el" href="class_produit.html#a87692d9118b0daeb660b27c6902fd4fd">Produit</a>
+</li>
+<li>getAllQuestions()
+: <a class="el" href="class_modele_f_a_q.html#afaaed8458192d6e3af5a7e1da784a604">ModeleFAQ</a>
+</li>
+<li>getCateg()
+: <a class="el" href="class_controleur_administration_produit.html#abe8768ccb89d6499e042605b4a1cf6c5">ControleurAdministrationProduit</a>
+</li>
+<li>getCategorie()
+: <a class="el" href="class_administration_produit.html#a9dc349c323f7f81dbe5e4f5cdeb0528b">AdministrationProduit</a>
+</li>
+<li>getCategorieID()
+: <a class="el" href="class_administration_produit.html#a8e3a4c82ad1cc9f2eebdf827a5e31a0c">AdministrationProduit</a>
+</li>
+<li>getCategories()
+: <a class="el" href="class_produit.html#a8729ba486702e7e12a3fff08965e1e7f">Produit</a>
+</li>
+<li>getChiffreAffaire()
+: <a class="el" href="class_chiffre_affaire.html#ae80ec07d9ad4fddec5622ad431d2d1b3">ChiffreAffaire</a>
+, <a class="el" href="class_controleur_chiffre_affaire.html#ae80ec07d9ad4fddec5622ad431d2d1b3">ControleurChiffreAffaire</a>
+</li>
+<li>getHistoriqueCommande()
+: <a class="el" href="class_controleur_administration_historique_commande.html#a6aefe5c09240abfe4ac3642a9fdf3fc0">ControleurAdministrationHistoriqueCommande</a>
+</li>
 <li>getHTML()
 : <a class="el" href="interface_controleur.html#a5fc878ede54118176f912b557031ddd6">Controleur</a>
 , <a class="el" href="class_controleur_accueil.html#a5fc878ede54118176f912b557031ddd6">ControleurAccueil</a>
+, <a class="el" href="class_controleur_administration_historique_commande.html#a5fc878ede54118176f912b557031ddd6">ControleurAdministrationHistoriqueCommande</a>
 , <a class="el" href="class_controleur_administration_paiement_livraison.html#a5fc878ede54118176f912b557031ddd6">ControleurAdministrationPaiementLivraison</a>
 , <a class="el" href="class_controleur_administration_produit.html#a5fc878ede54118176f912b557031ddd6">ControleurAdministrationProduit</a>
 , <a class="el" href="class_controleur_administration_user.html#a5fc878ede54118176f912b557031ddd6">ControleurAdministrationUser</a>
+, <a class="el" href="class_controleur_chiffre_affaire.html#a5fc878ede54118176f912b557031ddd6">ControleurChiffreAffaire</a>
 , <a class="el" href="class_controleur_erreur.html#a5fc878ede54118176f912b557031ddd6">ControleurErreur</a>
+, <a class="el" href="class_controleur_f_a_q.html#a5fc878ede54118176f912b557031ddd6">ControleurFAQ</a>
 , <a class="el" href="class_controleur_inscription.html#a5fc878ede54118176f912b557031ddd6">ControleurInscription</a>
 , <a class="el" href="class_controleur_login.html#a5fc878ede54118176f912b557031ddd6">ControleurLogin</a>
-, <a class="el" href="class_controleur_produit01.html#a5fc878ede54118176f912b557031ddd6">ControleurProduit01</a>
+, <a class="el" href="class_controleur_product_categorie.html#a5fc878ede54118176f912b557031ddd6">ControleurProductCategorie</a>
+, <a class="el" href="class_controleur_produit_list.html#a5fc878ede54118176f912b557031ddd6">ControleurProduitList</a>
+, <a class="el" href="class_controleur_recherche.html#a5fc878ede54118176f912b557031ddd6">ControleurRecherche</a>
 , <a class="el" href="class_controleur_tunnel.html#a5fc878ede54118176f912b557031ddd6">ControleurTunnel</a>
 , <a class="el" href="class_controleur_user_profile.html#a5fc878ede54118176f912b557031ddd6">ControleurUserProfile</a>
 </li>
-<li>getModesLivraison()
-: <a class="el" href="class_administration_paiement_livraison.html#aac44e922beebf554ffdb7d5ae9598af9">AdministrationPaiementLivraison</a>
+<li>getLignePanier()
+: <a class="el" href="class_produit.html#a786590260bdb428efbcd0d4dac068720">Produit</a>
+</li>
+<li>getLogin_code()
+: <a class="el" href="class_controleur_login.html#a9f3da38c4b730e4a0bd6afa4c2aa8c2c">ControleurLogin</a>
 </li>
 <li>getMoyensPaiement()
 : <a class="el" href="class_administration_paiement_livraison.html#a16351365ed3e8c737d3abea7c42491ce">AdministrationPaiementLivraison</a>
@@ -217,15 +348,80 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>getMoyensPaiementById()
 : <a class="el" href="class_administration_paiement_livraison.html#a031ebb76eb94ef71318a457e0afe1159">AdministrationPaiementLivraison</a>
 </li>
+<li>getPanier()
+: <a class="el" href="class_administration_historique_commande.html#ae60b7a70663aaeafa8df80086b5fc4af">AdministrationHistoriqueCommande</a>
+</li>
+<li>getPanierForUser()
+: <a class="el" href="class_produit.html#a9033173ec91c8c98b73899be3bbd368c">Produit</a>
+</li>
+<li>getProduit()
+: <a class="el" href="class_controleur_product_categorie.html#aa39b956895038a1e65f2a0ca81fd3398">ControleurProductCategorie</a>
+, <a class="el" href="class_controleur_produit_list.html#aa39b956895038a1e65f2a0ca81fd3398">ControleurProduitList</a>
+, <a class="el" href="class_produit.html#acd7c3d75bdfa4a96d35b075cb3870e21">Produit</a>
+</li>
+<li>getProduitByName()
+: <a class="el" href="class_recherche.html#abade96109735c7748cdc3964e5e4f38c">Recherche</a>
+</li>
+<li>getQuestion()
+: <a class="el" href="class_controleur_f_a_q.html#aefe923d83ad382956235c7d5d0ed585f">ControleurFAQ</a>
+, <a class="el" href="class_modele_f_a_q.html#ab217d287a1a87ee02c2b6926197aeddc">ModeleFAQ</a>
+</li>
+<li>getQuestions()
+: <a class="el" href="class_modele_f_a_q.html#aff5779a495a2c13346faf1429941e559">ModeleFAQ</a>
+</li>
+<li>getRecherche()
+: <a class="el" href="class_controleur_recherche.html#ae03b9906195bb303e18c226a1e7e8129">ControleurRecherche</a>
+</li>
+<li>getRegister()
+: <a class="el" href="class_controleur_inscription.html#a305da1141ea3140bfb32f71116fa74a0">ControleurInscription</a>
+</li>
+<li>getRegister_code()
+: <a class="el" href="class_controleur_inscription.html#a0307e539948d150bf09fbba5b47168ab">ControleurInscription</a>
+</li>
+<li>getReponses()
+: <a class="el" href="class_modele_f_a_q.html#aa212901fb0b01882948637ca02e9f2af">ModeleFAQ</a>
+</li>
+<li>getResearch()
+: <a class="el" href="class_controleur_f_a_q.html#a2af751da2790f7b0eee84c70d06afc87">ControleurFAQ</a>
+</li>
+<li>getSCategorie()
+: <a class="el" href="class_controleur_administration_produit.html#a2cefd8719c786318fae922dfdc1463c1">ControleurAdministrationProduit</a>
+</li>
+<li>getSearchModule()
+: <a class="el" href="class_controleur_recherche.html#a0ca39abb843fa7780c972446e6cb5664">ControleurRecherche</a>
+</li>
+<li>getSousCategorie()
+: <a class="el" href="class_administration_produit.html#af8103760560b42060044f1e698d4542b">AdministrationProduit</a>
+</li>
+<li>getSousCategorieID()
+: <a class="el" href="class_administration_produit.html#acc19ef6a4f916aa47726a385af9fc200">AdministrationProduit</a>
+</li>
 <li>getUser()
 : <a class="el" href="class_administration_user.html#a9b830dc85b8ad1f3b64f60e37c6b2cf3">AdministrationUser</a>
+, <a class="el" href="class_controleur_administration_user.html#ae81b7186fb97a7c6457edcc68c9aa2ef">ControleurAdministrationUser</a>
+, <a class="el" href="class_controleur_user_profile.html#ae81b7186fb97a7c6457edcc68c9aa2ef">ControleurUserProfile</a>
 , <a class="el" href="class_user_login.html#a5cb9120cb9bb55a14b3c2427d22318f1">UserLogin</a>
 , <a class="el" href="class_user_profile.html#a9b830dc85b8ad1f3b64f60e37c6b2cf3">UserProfile</a>
+</li>
+<li>getUserList()
+: <a class="el" href="class_administration_user.html#aeb20dee182d29e6d339cab9682b4ff04">AdministrationUser</a>
+</li>
+<li>getUserLogin()
+: <a class="el" href="class_controleur_login.html#a5f33da5800fd62089c2c03e12bc6a2c0">ControleurLogin</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>handlerAdministrationUser()
+: <a class="el" href="class_controleur_administration_user.html#a2b5a53cfa024b81acc0a99e16daa652e">ControleurAdministrationUser</a>
+</li>
+<li>handlerFAQ()
+: <a class="el" href="class_controleur_f_a_q.html#a04fb2c5e343872a9573f79585769ebbd">ControleurFAQ</a>
+</li>
+<li>handlerHistoriqueCommande()
+: <a class="el" href="class_controleur_administration_historique_commande.html#a8a73ed3646a6baec1e79856568fe15ac">ControleurAdministrationHistoriqueCommande</a>
+</li>
 <li>handlerPaiementLivraison()
 : <a class="el" href="class_controleur_administration_paiement_livraison.html#aa1e42d60aec4a06c067e93735409b119">ControleurAdministrationPaiementLivraison</a>
 </li>
@@ -236,26 +432,95 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>increaseQuantityPanier()
+: <a class="el" href="class_produit.html#a582bf94a5adf1959c35f262e224bb02e">Produit</a>
+</li>
+<li>insertNewCategorie()
+: <a class="el" href="class_administration_produit.html#a70f642f96346b9f381e18e9c1b1bb57e">AdministrationProduit</a>
+</li>
+<li>insertNewSousCategorie()
+: <a class="el" href="class_administration_produit.html#a5bee1b95dd22d3930ea7f8b1255dc8c9">AdministrationProduit</a>
+</li>
 <li>insertPaiementLivraison()
-: <a class="el" href="class_administration_paiement_livraison.html#a3721931b461e00fdda92f7a8202d2526">AdministrationPaiementLivraison</a>
+: <a class="el" href="class_administration_paiement_livraison.html#a535a40ec6876bda40274309f33c16462">AdministrationPaiementLivraison</a>
 </li>
 <li>insertProduit()
-: <a class="el" href="class_administration_produit.html#a0b43bad3cfd49f1be142bc3a7826b6c9">AdministrationProduit</a>
+: <a class="el" href="class_administration_produit.html#a73f731b649b76ed28e8c99654a211416">AdministrationProduit</a>
+</li>
+<li>insertQuest()
+: <a class="el" href="class_modele_f_a_q.html#a0e0cd03e7e580391622610348d8228fc">ModeleFAQ</a>
+</li>
+<li>insertQuestion()
+: <a class="el" href="class_controleur_f_a_q.html#ae69aaac46d1c255051751164be0d09c8">ControleurFAQ</a>
+</li>
+<li>insertRep()
+: <a class="el" href="class_modele_f_a_q.html#aca675855ce6db74bd381dcecd61ede80">ModeleFAQ</a>
+</li>
+<li>insertReponse()
+: <a class="el" href="class_controleur_f_a_q.html#a7480a034ddac9d410b7077d58024399d">ControleurFAQ</a>
+</li>
+<li>INVALID_MAIL_FORMAT
+: <a class="el" href="class_register.html#a26d12f80ec1c4b70a5b9f8d2979ca60e">Register</a>
+, <a class="el" href="class_user_login.html#a26d12f80ec1c4b70a5b9f8d2979ca60e">UserLogin</a>
+</li>
+<li>INVALID_PARAMETER
+: <a class="el" href="class_administration_paiement_livraison.html#a7f72405eb05b6995ba47b2f87f769718">AdministrationPaiementLivraison</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
-<li>logguer()
-: <a class="el" href="class_controleur_login.html#a95d1b55e22292807dc1ca56904a3f04c">ControleurLogin</a>
-</li>
 <li>logguerUser()
 : <a class="el" href="class_controleur_login.html#ad9a02090159ec864b34f5c588264258f">ControleurLogin</a>
+</li>
+<li>LOGIN_OK
+: <a class="el" href="class_user_login.html#a64e88ed4dc3f1a760a4153e7a903e3a5">UserLogin</a>
+</li>
+<li>logOut()
+: <a class="el" href="class_controleur_login.html#a9dbc3f3370308b59b039afc9a48381b3">ControleurLogin</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MISSING_PARAMETERS
+: <a class="el" href="class_administration_paiement_livraison.html#a27c4c05797beb4290eb8609823b418f6">AdministrationPaiementLivraison</a>
+</li>
+<li>MODIFY_OK
+: <a class="el" href="class_administration_produit.html#ab18d6470e19c87b20cd794c9ad1c07c0">AdministrationProduit</a>
+</li>
+<li>modifyProduit()
+: <a class="el" href="class_administration_produit.html#aac970234726ac9f2da7c3a30b0585a45">AdministrationProduit</a>
+</li>
+<li>modProduit()
+: <a class="el" href="class_controleur_administration_produit.html#aae3e8d281bdc255333eb94d51bf38285">ControleurAdministrationProduit</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NO_RESULT
+: <a class="el" href="class_recherche.html#abfbf185d9e7de47487c3dddb2c04dffd">Recherche</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>PASSWORD_UPDATE_BAD_OLD_PASSWORD
+: <a class="el" href="class_user_profile.html#a0f58a3a65126af0921d0cdb9e2068b25">UserProfile</a>
+</li>
+<li>PASSWORD_UPDATE_FORM_INVALID
+: <a class="el" href="class_user_profile.html#afada477eb06356efc0c5c2ac16a4c0b8">UserProfile</a>
+</li>
+<li>PASSWORD_UPDATE_SUCCESS
+: <a class="el" href="class_user_profile.html#a2c8650fcdb72439345f865d3cdcb4627">UserProfile</a>
+</li>
+<li>PASSWORD_UPDATE_USER_ERROR
+: <a class="el" href="class_user_profile.html#a4b57549e5bd571454b3238cb378e6324">UserProfile</a>
+</li>
+<li>PRODUCT_ALREADY_EXIST
+: <a class="el" href="class_administration_produit.html#a6600ad4d53aa3ea6577f1b90e3c7b77b">AdministrationProduit</a>
+</li>
 <li>produitExists()
 : <a class="el" href="class_administration_produit.html#ab8f7ee49029155ad76b1527a5bdddae8">AdministrationProduit</a>
 </li>
@@ -263,6 +528,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>REGISTER_OK
+: <a class="el" href="class_register.html#a7d6fea855224a6038a55ba7364990883">Register</a>
+</li>
 <li>registerUser()
 : <a class="el" href="class_controleur_inscription.html#a1fdb0f05b888f4aa92b319775e488e70">ControleurInscription</a>
 </li>
@@ -276,9 +544,60 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>selectHTML()
-: <a class="el" href="class_controleur_login.html#a49060347b9cc7405883e5ac11c136794">ControleurLogin</a>
-, <a class="el" href="class_controleur_user_profile.html#a49060347b9cc7405883e5ac11c136794">ControleurUserProfile</a>
+<li>SALT_REGISTER
+: <a class="el" href="class_register.html#a94e3070b350a34c0465c2f2e26af81d6">Register</a>
+, <a class="el" href="class_user_login.html#a94e3070b350a34c0465c2f2e26af81d6">UserLogin</a>
+</li>
+<li>setAdminPaiementLivraison()
+: <a class="el" href="class_controleur_administration_paiement_livraison.html#ae5c1b553ce3d850e09c0dbaa135a5a0c">ControleurAdministrationPaiementLivraison</a>
+</li>
+<li>setAdminPaiementLivraison_code()
+: <a class="el" href="class_controleur_administration_paiement_livraison.html#a0d7d862cf29cfe61e67b4e2f70f537eb">ControleurAdministrationPaiementLivraison</a>
+</li>
+<li>setChiffreAffaire()
+: <a class="el" href="class_controleur_chiffre_affaire.html#a0b377b1a1a130bbbd8e3498d49ea43c1">ControleurChiffreAffaire</a>
+</li>
+<li>setHistoriqueCommande()
+: <a class="el" href="class_controleur_administration_historique_commande.html#a29b9fbf33f6cdd030e162e530520d7fa">ControleurAdministrationHistoriqueCommande</a>
+</li>
+<li>setLogin_code()
+: <a class="el" href="class_controleur_login.html#aee07d68ce443ca0c028994914a915a38">ControleurLogin</a>
+</li>
+<li>setProduit()
+: <a class="el" href="class_controleur_product_categorie.html#ae8ce94e26e623d1c9017139ab9099bff">ControleurProductCategorie</a>
+, <a class="el" href="class_controleur_produit_list.html#ae8ce94e26e623d1c9017139ab9099bff">ControleurProduitList</a>
+</li>
+<li>setQuestion()
+: <a class="el" href="class_controleur_f_a_q.html#af613c739ba7a1688696991c26acc2e84">ControleurFAQ</a>
+</li>
+<li>setRecherche()
+: <a class="el" href="class_controleur_recherche.html#a8dd8e9e39c962752acc12139b2534a67">ControleurRecherche</a>
+</li>
+<li>setRegister()
+: <a class="el" href="class_controleur_inscription.html#a882fda813cdda97cda45fb328869f175">ControleurInscription</a>
+</li>
+<li>setRegister_code()
+: <a class="el" href="class_controleur_inscription.html#ad9f5a3353aaaff81959da9793c963655">ControleurInscription</a>
+</li>
+<li>setUser()
+: <a class="el" href="class_controleur_administration_user.html#ae02b5d97a1af6752f933cbe6948508d1">ControleurAdministrationUser</a>
+, <a class="el" href="class_controleur_user_profile.html#ae02b5d97a1af6752f933cbe6948508d1">ControleurUserProfile</a>
+</li>
+<li>setUserLogin()
+: <a class="el" href="class_controleur_login.html#a9074f1aed3f9af8a973522668e444d70">ControleurLogin</a>
+</li>
+<li>sousCategorieExists()
+: <a class="el" href="class_administration_produit.html#acc20d7c7c0cf7554300504086625f3af">AdministrationProduit</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>turnNotPaid()
+: <a class="el" href="class_administration_historique_commande.html#a8e7e7ae434f7feea0e1a79bd5b1ae5fb">AdministrationHistoriqueCommande</a>
+</li>
+<li>turnPaid()
+: <a class="el" href="class_administration_historique_commande.html#a9ae74f94c3b10a7d50b785ab2b81d386">AdministrationHistoriqueCommande</a>
 </li>
 </ul>
 
@@ -286,6 +605,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
 <li>updateChemin()
 : <a class="el" href="class_user_profile.html#a27c6d74e31a7d791b601c686883616f2">UserProfile</a>
+</li>
+<li>updatePassword()
+: <a class="el" href="class_user_profile.html#a445a6dd390ee94b70f7b63c83ff66df0">UserProfile</a>
+</li>
+<li>updateUserStatus()
+: <a class="el" href="class_administration_user.html#a0a3754dcc8f94cd1230344f66446befb">AdministrationUser</a>
 </li>
 <li>uploadPicture()
 : <a class="el" href="class_user_profile.html#af6db6ec430e7a032bf7e05758efa1f6f">UserProfile</a>

@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Cook.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GeekProduct.com
-   &#160;<span id="projectnumber">1.2</span>
+   &#160;<span id="projectnumber">1.3</span>
    </div>
    <div id="projectbrief">An e-shopping website</div>
   </td>
@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -134,14 +135,18 @@ Collaboration diagram for ControleurUserProfile:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a095c5d389db211932136b53f25f39685"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#a095c5d389db211932136b53f25f39685">__construct</a> ()</td></tr>
 <tr class="separator:a095c5d389db211932136b53f25f39685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81b7186fb97a7c6457edcc68c9aa2ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#ae81b7186fb97a7c6457edcc68c9aa2ef">getUser</a> ()</td></tr>
+<tr class="separator:ae81b7186fb97a7c6457edcc68c9aa2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02b5d97a1af6752f933cbe6948508d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#ae02b5d97a1af6752f933cbe6948508d1">setUser</a> ($newUser)</td></tr>
+<tr class="separator:ae02b5d97a1af6752f933cbe6948508d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af17687ea3275ab6d52df3220f5c5ea8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#af17687ea3275ab6d52df3220f5c5ea8a">handlerUserProfile</a> ()</td></tr>
 <tr class="separator:af17687ea3275ab6d52df3220f5c5ea8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49060347b9cc7405883e5ac11c136794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#a49060347b9cc7405883e5ac11c136794">selectHTML</a> ()</td></tr>
-<tr class="separator:a49060347b9cc7405883e5ac11c136794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc878ede54118176f912b557031ddd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#a5fc878ede54118176f912b557031ddd6">getHTML</a> ()</td></tr>
 <tr class="separator:a5fc878ede54118176f912b557031ddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02dc9e59a9b193ca793452f4e6cbe5df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#a02dc9e59a9b193ca793452f4e6cbe5df">changeProfilePicture</a> ()</td></tr>
 <tr class="separator:a02dc9e59a9b193ca793452f4e6cbe5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803336a033079296e67d4491cdd606cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controleur_user_profile.html#a803336a033079296e67d4491cdd606cf">changeUserPassword</a> ()</td></tr>
+<tr class="separator:a803336a033079296e67d4491cdd606cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Created by PhpStorm. User: Nicolas Sobczak &amp; Vincent Reynaert Date: 02/11/2016 </p>
@@ -179,6 +184,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a803336a033079296e67d4491cdd606cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">changeUserPassword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction qui met à jour le mot de passe d'un utilisateur </p>
+
+</div>
+</div>
 <a class="anchor" id="a5fc878ede54118176f912b557031ddd6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -194,6 +215,23 @@ Public Member Functions</h2></td></tr>
 <p>Fonction qui affiche la page d'accueil </p>
 
 <p>Implements <a class="el" href="interface_controleur.html#a5fc878ede54118176f912b557031ddd6">Controleur</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae81b7186fb97a7c6457edcc68c9aa2ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter du user</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_user_profile.html">UserProfile</a> </dd></dl>
 
 </div>
 </div>
@@ -213,25 +251,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a49060347b9cc7405883e5ac11c136794"></a>
+<a class="anchor" id="ae02b5d97a1af6752f933cbe6948508d1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">selectHTML </td>
+          <td class="memname">setUser </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$newUser</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Selectionne la page a afficher</p>
-<dl class="section return"><dt>Returns</dt><dd>int L'id de l'utilisateur s'il est connecte, -1 sinon </dd></dl>
+<p>Setter du user</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$newUser</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Controleur/ControleurUserProfile.php</li>
+<li>Controleur/<a class="el" href="_controleur_user_profile_8php.html">ControleurUserProfile.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="Cook.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GeekProduct.com
-   &#160;<span id="projectnumber">1.2</span>
+   &#160;<span id="projectnumber">1.3</span>
    </div>
    <div id="projectbrief">An e-shopping website</div>
   </td>
@@ -51,6 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -108,7 +109,8 @@ $(document).ready(function(){initNavTree('class_user_profile.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">UserProfile Class Reference</div>  </div>
 </div><!--header-->
@@ -134,10 +136,23 @@ Collaboration diagram for UserProfile:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b830dc85b8ad1f3b64f60e37c6b2cf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#a9b830dc85b8ad1f3b64f60e37c6b2cf3">getUser</a> ($userID)</td></tr>
 <tr class="separator:a9b830dc85b8ad1f3b64f60e37c6b2cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6db6ec430e7a032bf7e05758efa1f6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#af6db6ec430e7a032bf7e05758efa1f6f">uploadPicture</a> ($fichier, $userID)</td></tr>
-<tr class="separator:af6db6ec430e7a032bf7e05758efa1f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27c6d74e31a7d791b601c686883616f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#a27c6d74e31a7d791b601c686883616f2">updateChemin</a> ($newPath, $userID)</td></tr>
 <tr class="separator:a27c6d74e31a7d791b601c686883616f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6db6ec430e7a032bf7e05758efa1f6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#af6db6ec430e7a032bf7e05758efa1f6f">uploadPicture</a> ($fichier, $userID)</td></tr>
+<tr class="separator:af6db6ec430e7a032bf7e05758efa1f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445a6dd390ee94b70f7b63c83ff66df0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#a445a6dd390ee94b70f7b63c83ff66df0">updatePassword</a> ($newPassword, $userID)</td></tr>
+<tr class="separator:a445a6dd390ee94b70f7b63c83ff66df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a2c8650fcdb72439345f865d3cdcb4627"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#a2c8650fcdb72439345f865d3cdcb4627">PASSWORD_UPDATE_SUCCESS</a> = 1</td></tr>
+<tr class="separator:a2c8650fcdb72439345f865d3cdcb4627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f58a3a65126af0921d0cdb9e2068b25"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#a0f58a3a65126af0921d0cdb9e2068b25">PASSWORD_UPDATE_BAD_OLD_PASSWORD</a> = 2</td></tr>
+<tr class="separator:a0f58a3a65126af0921d0cdb9e2068b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afada477eb06356efc0c5c2ac16a4c0b8"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#afada477eb06356efc0c5c2ac16a4c0b8">PASSWORD_UPDATE_FORM_INVALID</a> = 3</td></tr>
+<tr class="separator:afada477eb06356efc0c5c2ac16a4c0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b57549e5bd571454b3238cb378e6324"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_profile.html#a4b57549e5bd571454b3238cb378e6324">PASSWORD_UPDATE_USER_ERROR</a> = 4</td></tr>
+<tr class="separator:a4b57549e5bd571454b3238cb378e6324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -161,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Renvoie les informations sur un utillisateurs</p>
+<p>Renvoie les informations sur un utillisateur</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">int</td><td class="paramname">$id</td><td>L'identifiant de l'utilisateur </td></tr>
@@ -212,6 +227,41 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a445a6dd390ee94b70f7b63c83ff66df0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">updatePassword </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$userID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fonction updatePassword = fonction qui met à jour le mot de passe de l'utilisateur</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">$newPassword</td><td></td></tr>
+    <tr><td class="paramname">$userID</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Code ID de l'erreur / succès </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af6db6ec430e7a032bf7e05758efa1f6f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -246,8 +296,57 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Field Documentation</h2>
+<a class="anchor" id="a0f58a3a65126af0921d0cdb9e2068b25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PASSWORD_UPDATE_BAD_OLD_PASSWORD = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afada477eb06356efc0c5c2ac16a4c0b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PASSWORD_UPDATE_FORM_INVALID = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2c8650fcdb72439345f865d3cdcb4627"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PASSWORD_UPDATE_SUCCESS = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b57549e5bd571454b3238cb378e6324"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PASSWORD_UPDATE_USER_ERROR = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Modele/UserProfile.php</li>
+<li>Modele/<a class="el" href="_user_profile_8php.html">UserProfile.php</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

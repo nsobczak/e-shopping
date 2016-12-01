@@ -1,9 +1,14 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_modele.html" title="Modele" alt="" coords="5,132,69,159"/>
-<area shape="rect" id="node2" href="$class_administration_paiement_livraison.html" title="AdministrationPaiementLivraison" alt="" coords="117,5,329,32"/>
-<area shape="rect" id="node3" href="$class_administration_produit.html" title="AdministrationProduit" alt="" coords="150,56,297,83"/>
-<area shape="rect" id="node4" href="$class_administration_user.html" title="AdministrationUser" alt="" coords="157,107,290,133"/>
-<area shape="rect" id="node5" href="$class_register.html" title="Register" alt="" coords="188,157,259,184"/>
-<area shape="rect" id="node6" href="$class_user_login.html" title="UserLogin" alt="" coords="183,208,264,235"/>
-<area shape="rect" id="node7" href="$class_user_profile.html" title="UserProfile" alt="" coords="180,259,267,285"/>
+<area shape="rect" id="node1" href="$class_modele.html" title="Modele" alt="" coords="5,274,69,301"/>
+<area shape="rect" id="node2" href="$class_administration_historique_commande.html" title="AdministrationHistorique\lCommande" alt="" coords="141,5,305,47"/>
+<area shape="rect" id="node3" href="$class_administration_paiement_livraison.html" title="AdministrationPaiementLivraison" alt="" coords="117,71,329,98"/>
+<area shape="rect" id="node4" href="$class_administration_produit.html" title="AdministrationProduit" alt="" coords="150,122,297,149"/>
+<area shape="rect" id="node5" href="$class_administration_user.html" title="AdministrationUser" alt="" coords="157,173,290,199"/>
+<area shape="rect" id="node6" href="$class_chiffre_affaire.html" title="ChiffreAffaire" alt="" coords="174,223,273,250"/>
+<area shape="rect" id="node7" href="$class_modele_f_a_q.html" title="ModeleFAQ" alt="" coords="178,274,269,301"/>
+<area shape="rect" id="node8" href="$class_produit.html" title="Produit" alt="" coords="192,325,255,351"/>
+<area shape="rect" id="node9" href="$class_recherche.html" title="Recherche" alt="" coords="181,375,266,402"/>
+<area shape="rect" id="node10" href="$class_register.html" title="Register" alt="" coords="188,426,259,453"/>
+<area shape="rect" id="node11" href="$class_user_login.html" title="UserLogin" alt="" coords="183,477,264,503"/>
+<area shape="rect" id="node12" href="$class_user_profile.html" title="UserProfile" alt="" coords="180,527,267,554"/>
 </map>

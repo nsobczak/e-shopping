@@ -9,6 +9,6 @@ var class_user_login =
     [ "DOESNOT_EXIST", "class_user_login.html#a3f69a0c9def9fa58b727b9aea97ed474", null ],
     [ "FORM_INPUTS_ERROR", "class_user_login.html#af7c8b6b262d095770faef086c1690152", null ],
     [ "INVALID_MAIL_FORMAT", "class_user_login.html#a26d12f80ec1c4b70a5b9f8d2979ca60e", null ],
-    [ "REGISTER_OK", "class_user_login.html#a7d6fea855224a6038a55ba7364990883", null ],
+    [ "LOGIN_OK", "class_user_login.html#a64e88ed4dc3f1a760a4153e7a903e3a5", null ],
     [ "SALT_REGISTER", "class_user_login.html#a94e3070b350a34c0465c2f2e26af81d6", null ]
 ];

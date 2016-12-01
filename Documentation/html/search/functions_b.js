@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['selecthtml',['selectHTML',['../class_controleur_login.html#a49060347b9cc7405883e5ac11c136794',1,'ControleurLogin\selectHTML()'],['../class_controleur_user_profile.html#a49060347b9cc7405883e5ac11c136794',1,'ControleurUserProfile\selectHTML()']]]
+  ['registeruser',['registerUser',['../class_controleur_inscription.html#a1fdb0f05b888f4aa92b319775e488e70',1,'ControleurInscription']]],
+  ['removepaiementlivraison',['removePaiementLivraison',['../class_administration_paiement_livraison.html#a52a108a0d8a821796e1a7124da59e016',1,'AdministrationPaiementLivraison']]],
+  ['routerrequete',['routerRequete',['../class_routeur.html#a01c7b8c7f62b6344eeab83b5e9489740',1,'Routeur']]]
 ];
