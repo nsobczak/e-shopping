@@ -118,7 +118,6 @@ class Produit extends Modele
         $last_line = $this->executerRequete($sql_lastline, array($panierID));
         if ($last_line->rowCount() == 1) {
             $last_ligne = $last_line->fetch();
-            echo var_dump($last_ligne);
             $insert_line = "INSERT INTO `lignepanier` (`lignePanierID`, `panierID`, `numeroLignePanier`, `produitID`, `quantité`) VALUES (NULL, ?, ?, ?, ?)";
             $ligne = $this->executerRequete($insert_line, array($panierID, $last_ligne['numeroLignePanier'] + 1, $produitID, 1)); // on rajoute l'item au panier
         } else {

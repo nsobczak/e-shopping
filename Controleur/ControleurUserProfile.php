@@ -39,7 +39,7 @@ class ControleurUserProfile implements Controleur
     {
         return $this->user;
     }
-    
+
     /**
      * Setter du user
      *
@@ -96,7 +96,6 @@ class ControleurUserProfile implements Controleur
     {
         // Faut pouvoir upload une image puis changer son chemin
         if (!empty($_POST['submit'])) {
-            var_dump("uploadPicture");
             $this->user->uploadPicture($_POST['submit'], $_SESSION['userID']);
         }
 

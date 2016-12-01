@@ -22,6 +22,7 @@ require_once('Controleur/ControleurTunnel.php');
 require_once('Controleur/ControleurLogin.php');
 require_once('Controleur/ControleurRecherche.php');
 require_once('Controleur/ControleurChiffreAffaire.php');
+require_once('Controleur/ControleurFAQ.php');
 
 //________________________________________________________________________________________
 // Class
@@ -38,6 +39,7 @@ class Routeur
     private $ctrlTunnel;
     private $ctrlRecherche;
     private $ctrlChiffreAffaire;
+    private $ctrlFAQ;
 
 
     //______________________________________________________________________________________
@@ -59,6 +61,7 @@ class Routeur
         $this->ctrlLogin = new ControleurLogin();
         $this->ctrlRecherche = new ControleurRecherche();
         $this->ctrlChiffreAffaire = new ControleurChiffreAffaire();
+        $this->ctrlFAQ = new ControleurFAQ();
     }
 
 
@@ -99,9 +102,9 @@ class Routeur
                     $this->ctrlChiffreAffaire->getHTML();
                 } elseif ($_GET['action']=='adminHistoriqueCommande') {
                     $this->ctrlAdminHistoriqueCommande->handlerHistoriqueCommande();
+                } elseif ($_GET['action']=='faq') {
+                    $this->ctrlFAQ->handlerFAQ();
                 }
-
-
 
                 else {
                     throw new Exception("Action non valide");
