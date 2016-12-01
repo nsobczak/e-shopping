@@ -35,7 +35,45 @@ class ControleurLogin implements Controleur
         $this->userLogin = new UserLogin();
     }
 
-    //TODO: getters et setters
+    /**
+     * Getter de login_code
+     *
+     * @return int login_code
+     */
+    public function getLogin_code()
+    {
+        return $this->login_code;
+    }
+
+    /**
+     * Getter de userLogin
+     *
+     * @return UserLogin
+     */
+    public function getUserLogin()
+    {
+        return $this->userLogin;
+    }
+
+    /**
+     * Setter de login_code
+     *
+     * @param $newLogin_code
+     */
+    public function setLogin_code($newLogin_code)
+    {
+        $this->login_code = $newLogin_code;
+    }
+
+    /**
+     * Setter de userLogin
+     *
+     * @param $newUserLogin
+     */
+    public function setUserLogin($newUserLogin)
+    {
+        $this->userLogin = $newUserLogin;
+    }
 
 
     //______________________________________________________________________________________

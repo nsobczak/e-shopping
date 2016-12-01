@@ -28,8 +28,25 @@ class ControleurChiffreAffaire implements Controleur
         $this->ChiffreAffaire = new ChiffreAffaire();
     }
 
-    //TODO: getters et setters
+    /**
+     * Getter de $ChiffreAffaire
+     *
+     * @return ChiffreAffaire
+     */
+    public function getChiffreAffaire()
+    {
+        return $this->ChiffreAffaire;
+    }
 
+    /**
+     * Setter de $ChiffreAffaire
+     *
+     * @param $newChiffreAffaire
+     */
+    public function setChiffreAffaire($newChiffreAffaire)
+    {
+        $this->ChiffreAffaire = $newChiffreAffaire;
+    }
 
     //______________________________________________________________________________________
     /**

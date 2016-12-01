@@ -25,24 +25,22 @@ class ControleurRecherche implements Controleur
         $this->recherche = new Recherche();
     }
 
-
     /**
      * Getter de $recherche
      *
      * @return Recherche
      */
-    public function getUser()
+    public function getRecherche()
     {
         return $this->recherche;
     }
-
 
     /**
      * Setter de $recherche
      *
      * @param $newRecherche
      */
-    public function setUser($newRecherche)
+    public function setRecherche($newRecherche)
     {
         $this->user = $newRecherche;
     }
@@ -74,11 +72,9 @@ class ControleurRecherche implements Controleur
                 } else { // plusieurs produits
                     $vue->generer(array("produitsSearch" => $produitsList));
                 }
-            }
-            else
+            } else
                 $vue->generer(array("error" => Recherche::NO_RESULT));
-        }
-        else
+        } else
             $vue->generer(array("produitsSearch" => ""));
     }
 }

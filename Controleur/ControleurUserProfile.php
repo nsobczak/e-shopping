@@ -28,7 +28,6 @@ class ControleurUserProfile implements Controleur
         $this->user = new UserProfile();
     }
 
-
     /**
      * Getter du user
      *
@@ -38,8 +37,7 @@ class ControleurUserProfile implements Controleur
     {
         return $this->user;
     }
-
-
+    
     /**
      * Setter du user
      *

@@ -27,7 +27,25 @@ class ControleurProductCategorie implements Controleur
         $this->produit = new Produit();
     }
 
-    //TODO: getters et setters
+    /**
+     * Getter du produit
+     *
+     * @return Produit
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * Getter du produit
+     *
+     * @param $newProduct
+     */
+    public function setProduit($newProduct)
+    {
+        $this->produit = $newProduct;
+    }
 
 
     //______________________________________________________________________________________
@@ -66,8 +84,7 @@ class ControleurProductCategorie implements Controleur
         // Connecté ?
         if (!isset($_SESSION['userID'])) {
             //redirection vers page de login
-            //echo '<input type="hidden" value=index.php?action=login/>';
-            //<a href="index.php?action=login">Login</a>;
+            echo "Veuillez vous connecter";
             return;
         }
         // Est-ce que l'utilisateur a un panier

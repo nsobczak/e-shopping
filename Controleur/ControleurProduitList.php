@@ -24,7 +24,25 @@ class ControleurProduitList implements Controleur
         $this->produit = new Produit();
     }
 
-    //TODO: getters et setters
+    /**
+     * Getter du produit
+     *
+     * @return Produit
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * Setter du produit
+     *
+     * @param $newProduct
+     */
+    public function setProduit($newProduct)
+    {
+        $this->produit = $newProduct;
+    }
 
 
     //______________________________________________________________________________________

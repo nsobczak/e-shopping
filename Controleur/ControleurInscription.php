@@ -11,7 +11,7 @@ class ControleurInscription implements Controleur
 {
     //Attributs
     /**
-     * @var int
+     * @var int $register_code
      */
     private $register_code;
     /**
@@ -30,7 +30,45 @@ class ControleurInscription implements Controleur
         $this->register = new Register();
     }
 
-    //TODO: getters et setters
+    /**
+     * Getter de $register_code
+     *
+     * @return int $register_code
+     */
+    public function getRegister_code()
+    {
+        return $this->register_code;
+    }
+
+    /**
+     * Getter de $register
+     *
+     * @return Register
+     */
+    public function getRegister()
+    {
+        return $this->register;
+    }
+
+    /**
+     * Setter de $register_code
+     *
+     * @param $newRegister_code
+     */
+    public function setRegister_code($newRegister_code)
+    {
+        $this->login_code = $newRegister_code;
+    }
+
+    /**
+     * Setter de $register
+     *
+     * @param $newRegister
+     */
+    public function setRegister($newRegister)
+    {
+        $this->login_code = $newRegister;
+    }
 
 
     //______________________________________________________________________________________
