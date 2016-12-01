@@ -14,14 +14,14 @@ require_once 'Modele/AdministrationHistoriqueCommande.php';
 class ControleurAdministrationHistoriqueCommande implements Controleur
 {
     /**
-     * @var UserProfile
+     * @var historiqueCommande
      */
     private $historiqueCommande;
 
 
     //______________________________________________________________________________________
     /**
-     * ControleurUserProfile constructor.
+     * ControleurAdminisatrationHistoriqueCommande constructor.
      */
     public function __construct()
     {
@@ -56,12 +56,14 @@ class ControleurAdministrationHistoriqueCommande implements Controleur
     public function handlerHistoriqueCommande()
     {
         $this->checkEditCommande();
+
         $this->getHTML();
+
     }
 
 
     /**
-     * Fonction qui... ??
+     * Procedure regardant si il y a une modification à faire sur les paniers.
      */
     public function checkEditCommande()
     {
@@ -73,8 +75,6 @@ class ControleurAdministrationHistoriqueCommande implements Controleur
                     $this->historiqueCommande->turnNotPaid($_GET['panierID']);
                 }
             }
-
-
         }
     }
 
@@ -85,7 +85,39 @@ class ControleurAdministrationHistoriqueCommande implements Controleur
     public function getHTML()
     {
         $vue = new Vue("AdministrationHistoriqueCommande");
-        $panier = $this->historiqueCommande->getPanier();
-        $vue->generer(array('listPanier' => $panier));
+        if (!empty($_POST['Name'])) {
+            $allPanier = $this->historiqueCommande->getPanierUser($_POST['Name']);
+
+        } else {
+            if (!empty($_POST['PanierID'])) {
+                $allPanier = $this->historiqueCommande->getPanier($_POST['PanierID']);
+            } else {
+                $allPanier = $this->historiqueCommande->getAllPanier();
+            }
+        }
+
+        $lstCommande = [];
+
+        foreach ($allPanier as $element) {
+            $lstCommande[$element['panierID']] = $this->historiqueCommande->getCommande($element['panierID']);
+
+        }
+        if (!empty($_POST['Name'])) {
+            $allPanier = $this->historiqueCommande->getPanierUser($_POST['Name']);
+
+        } else {
+            if (!empty($_POST['PanierID'])) {
+
+                $allPanier = $this->historiqueCommande->getPanier($_POST['PanierID']);
+            } else {
+                $allPanier = $this->historiqueCommande->getAllPanier();
+            }
+        }
+
+
+        $vue->generer(array('listPanier' => $allPanier, 'lstCommande' => $lstCommande));
+
+
     }
+
 }
