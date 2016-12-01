@@ -31,7 +31,45 @@ class ControleurAdministrationPaiementLivraison implements Controleur
         $this->adminPaiementLivraison_code = 0; // default
     }
 
-    //TODO: getters et setters
+    /**
+     * Getter de $adminPaiementLivraison
+     *
+     * @return AdministrationPaiementLivraison
+     */
+    public function getAdminPaiementLivraison()
+    {
+        return $this->adminPaiementLivraison;
+    }
+
+    /**
+     * Getter de $adminPaiementLivraison_code
+     *
+     * @return int adminPaiementLivraison_code
+     */
+    public function getAdminPaiementLivraison_code()
+    {
+        return $this->adminPaiementLivraison_code;
+    }
+
+    /**
+     * Setter de $adminPaiementLivraison
+     *
+     * @param $newAdminPaiementLivraison
+     */
+    public function setAdminPaiementLivraison($newAdminPaiementLivraison)
+    {
+        $this->adminPaiementLivraison = $newAdminPaiementLivraison;
+    }
+
+    /**
+     * Setter de $adminPaiementLivraison_code
+     *
+     * @param $newAdminPaiementLivraison_code
+     */
+    public function setAdminPaiementLivraison_code($newAdminPaiementLivraison_code)
+    {
+        $this->adminPaiementLivraison_code = $newAdminPaiementLivraison_code;
+    }
 
     //______________________________________________________________________________________
     /**
@@ -47,8 +85,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
             $this->removePaiementLivraison();  // vérification s'il veut supprimer un paiement
 
             $this->getHTML();
-        }
-        else {
+        } else {
             header('Location: index.php?action=login');
             die();
         }

@@ -29,8 +29,26 @@ class ControleurAdministrationUser implements Controleur
         $this->user = new AdministrationUser();
     }
 
+    /**
+     * Getter de $user
+     *
+     * @return AdministrationUser
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 
-    //TODO: getters et setters de $user
+    /**
+     * Setter de $user
+     *
+     * @param $newUser
+     */
+    public function setUser($newUser)
+    {
+        $this->user = $newUser;
+    }
+
 
     //______________________________________________________________________________________
     /**
@@ -44,8 +62,7 @@ class ControleurAdministrationUser implements Controleur
             $this->deleteUser();    // fonction appelée pour supprimer un utilisateur
             $this->changeAccre();   // fonction appelée pour changer le niveau d'accréditation d'un utilisateur
             $this->getHTML();       // fonction appelée pour générer le code HTML de la page
-        }
-        else {
+        } else {
             header('Location: index.php?action=login');
             die();
         }
@@ -86,10 +103,9 @@ class ControleurAdministrationUser implements Controleur
     {
         if (isset($_GET['do']) && (isset($_GET['userID']))) {
             if ($_GET['do'] == "deleteUser") {
-                if($_SESSION['userID'] != $_GET['userID']) {
+                if ($_SESSION['userID'] != $_GET['userID']) {
                     $this->user->deleteUser($_GET["userID"]);
-                }
-                else {
+                } else {
                     throw new Exception("Impossible de supprimer le compte sur lequel vous êtes connecté actuellement");
                 }
             }

@@ -28,6 +28,26 @@ class ControleurAdministrationHistoriqueCommande implements Controleur
         $this->historiqueCommande = new AdministrationHistoriqueCommande();
     }
 
+    /**
+     * Getter de $historiqueCommande
+     *
+     * @return AdministrationHistoriqueCommande|UserProfile
+     */
+    public function getHistoriqueCommande()
+    {
+        return $this->historiqueCommande;
+    }
+
+    /**
+     * Setter de $historiqueCommande
+     *
+     * @param $newHistoriqueCommande
+     */
+    public function setHistoriqueCommande($newHistoriqueCommande)
+    {
+        $this->historiqueCommande = $newHistoriqueCommande;
+    }
+
 
     //______________________________________________________________________________________
     /**
