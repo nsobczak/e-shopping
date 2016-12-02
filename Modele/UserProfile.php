@@ -15,6 +15,8 @@ class UserProfile extends Modele
     const PASSWORD_UPDATE_FORM_INVALID = 3;
     const PASSWORD_UPDATE_USER_ERROR = 4;
 
+
+    //______________________________________________________________________________________
     /** Renvoie les informations sur un utillisateur
      *
      * @param int $id L'identifiant de l'utilisateur

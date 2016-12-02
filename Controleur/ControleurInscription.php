@@ -73,7 +73,7 @@ class ControleurInscription implements Controleur
 
     //______________________________________________________________________________________
     /**
-     *  Fonction qui...
+     *  Fonction qui ajoute un utilisateur à la bdd
      */
     public function registerUser()
     {

@@ -8,6 +8,8 @@ class Recherche extends Modele
     const NO_RESULT = 1;
 
     /**
+     * Fonction qui récupère la liste des produits correspondant à la recherche
+     *
      * @param $name
      * @return array
      */

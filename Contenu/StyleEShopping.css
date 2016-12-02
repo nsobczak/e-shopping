@@ -382,10 +382,6 @@ body .admin th {
     border: 1px solid black;
 }
 
-/*=================================================
- *  Page panier, tunnel de commande
- */
-
 /*===================
  * Historique commande
  */
@@ -490,8 +486,6 @@ body .admin th {
 .admin_form #Check {
     width: 25px;
 }
-
-
 
 
 

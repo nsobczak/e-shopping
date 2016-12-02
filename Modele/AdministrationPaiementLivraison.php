@@ -16,7 +16,7 @@ class AdministrationPaiementLivraison extends Modele
 
     //______________________________________________________________________________________
     /**
-     * Fonction qui...
+     * Fonction qui ajoute un moyen de paiement à la bdd
      *
      * @param $nom
      * @param $description
@@ -31,7 +31,7 @@ class AdministrationPaiementLivraison extends Modele
 
 
     /**
-     * Fonction qui...
+     * Fonction qui supprime un moyen de paiement de la bdd
      *
      * @param $paiementID
      * @return int
@@ -45,7 +45,7 @@ class AdministrationPaiementLivraison extends Modele
 
 
     /**
-     * Fonction qui...
+     * Fonction qui modifie un moyen de paiement de la bdd
      *
      * @param $nom
      * @param $description

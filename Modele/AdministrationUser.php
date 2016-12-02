@@ -61,7 +61,6 @@ class AdministrationUser extends Modele
      */
     public function deleteUser($userID)
     {
-        // TODO
         $sql = "DELETE FROM user WHERE userID = ?";
         $this->executerRequete($sql, array($userID));
     }

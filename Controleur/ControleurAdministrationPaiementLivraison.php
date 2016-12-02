@@ -93,7 +93,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
 
 
     /**
-     *
+     * Fonction qui ajoute un moyen de paiement
      */
     private function addPaiementLivraison()
     {
@@ -108,7 +108,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
 
 
     /**
-     *
+     * Fonction qui édite un moyen de paiement
      */
     private function checkEditPaiement()
     {
@@ -132,7 +132,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
 
 
     /**
-     *
+     * Fonction qui supprime un moyen de paiement
      */
     private function removePaiementLivraison()
     {
@@ -144,7 +144,7 @@ class ControleurAdministrationPaiementLivraison implements Controleur
 
 
     /**
-     *
+     * Fonction qui affiche la vue
      */
     public function getHTML()
     {

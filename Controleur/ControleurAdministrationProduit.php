@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * User:
+ * User: Julien Vermeil & Pierre Trouche
  * Date: 05/11/2016
  */
 
@@ -14,23 +14,23 @@ class ControleurAdministrationProduit implements Controleur
 {
     //Attributs
     /**
-     * @var int
+     * @var int $produit_code
      */
     private $produit_code;
     /**
-     * @var
+     * @var $sous_categorie
      */
     private $sous_categorie;
     /**
-     * @var
+     * @var $categorie
      */
     private $categorie;
     /**
-     * @var
+     * @var $newSousCategorieID
      */
     private $newSousCategorieID;
     /**
-     * @var
+     * @var $newCategorieID
      */
     private $newCategorieID;
 
@@ -51,7 +51,7 @@ class ControleurAdministrationProduit implements Controleur
 
     //______________________________________________________________________________________
     /**
-     * Fonction qui...???
+     * Fonction qui ajoute un produit
      */
     public function addProduit()
     {
@@ -82,7 +82,7 @@ class ControleurAdministrationProduit implements Controleur
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui supprime un produit
      */
     public function delProduit()
     {
@@ -95,7 +95,7 @@ class ControleurAdministrationProduit implements Controleur
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui modifie un produit
      */
     public function modProduit()
     {
@@ -114,29 +114,26 @@ class ControleurAdministrationProduit implements Controleur
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui récupère une sous-catégorie d'un produit et initialise $this->sous_categorie avec
      */
     public function getSCategorie()
     {
-
         $this->sous_categorie = $this->produit->getSousCategorie();
-
     }
 
 
     /**
-     * Fonction qui...???
+     * Fonction qui récupère une catégorie d'un produit et initialise $this->categorie avec
      */
     public function getCateg()
     {
-
         $this->categorie = $this->produit->getCategorie();
 
     }
 
 
     /**
-     * Fonction qui...
+     * Fonction qui affiche la vue
      */
     public function getHTML()
     {
@@ -158,5 +155,5 @@ class ControleurAdministrationProduit implements Controleur
         $vue->generer(array('produit_code' => $this->produit_code, 'sous_categorie' => $this->sous_categorie, 'categorie' => $this->categorie));
 
     }
-    
+
 }

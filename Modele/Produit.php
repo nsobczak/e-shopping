@@ -1,6 +1,8 @@
 <?php
-//create by : Guillaume vandierdonck & Qi You
-
+/**
+ * User: Guillaume vandierdonck & Qi You
+ * Date: 11/2016
+ */
 
 require_once('Modele.php');
 

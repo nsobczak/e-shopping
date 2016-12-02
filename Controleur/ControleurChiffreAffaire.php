@@ -48,6 +48,7 @@ class ControleurChiffreAffaire implements Controleur
         $this->ChiffreAffaire = $newChiffreAffaire;
     }
 
+
     //______________________________________________________________________________________
     /**
      *  Fonction qui affiche la vue
@@ -56,7 +57,6 @@ class ControleurChiffreAffaire implements Controleur
     {
         $vue = new Vue("ChiffreAffaire");
         $vue->generer(array("CAFinal" => $this->ChiffreAffaire->getChiffreAffaire()));
-
 
     }
 

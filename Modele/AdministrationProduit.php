@@ -4,7 +4,7 @@ require_once('Modele.php');
 
 /**
  * Created by PhpStorm.
- * User:
+ * User: Julien Vermeil & Pierre Trouche
  * Date: 05/11/2016
  */
 class AdministrationProduit extends Modele

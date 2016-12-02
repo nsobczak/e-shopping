@@ -48,7 +48,7 @@ class ControleurRecherche implements Controleur
 
     //______________________________________________________________________________________
     /**
-     *
+     * Fonction qui... ???
      */
     public function getSearchModule()
     {

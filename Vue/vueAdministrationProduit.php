@@ -31,7 +31,9 @@
                     <td>
                         <ul>
                             <li>Pour ajouter un produit, il faut entrer toutes les informations.</li>
-                            <li>Pour modifier un produit, il faut entrer le nom du produit et renseigner le champ à modifier.</li>
+                            <li>Pour modifier un produit, il faut entrer le nom du produit et renseigner le champ à
+                                modifier.
+                            </li>
                             <li>Pour supprimer un produit, il faut entrer le nom du produit.</li>
                         </ul>
                         Il faut ensuite cliquer sur le bouton "Appliquer les modifications".

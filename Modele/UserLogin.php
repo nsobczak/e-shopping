@@ -22,7 +22,7 @@ class UserLogin extends Modele
 
     //______________________________________________________________________________________
     /**
-     * Fonction qui...
+     * Fonction qui verifie que le user s'est bien enregistré avant d'essayer de le logguer
      *
      * @param $mail
      * @param $password
@@ -30,8 +30,6 @@ class UserLogin extends Modele
      */
     public function connectUser($mail, $password)
     {
-        var_dump("je vais verifier que le user s'est bien enregistre avant dessayer de se logguer");
-
         if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
             return UserLogin::INVALID_MAIL_FORMAT;
         }

@@ -5,7 +5,6 @@
  * User: Nicolas Sobczak & Vincent Reynaert
  * Date: 02/11/2016
  */
-//TODO : initialiser dans $_SESSION les parametres de users
 //________________________________________________________________________________________
 // Require once
 require_once 'Controleur/Controleur.php';
@@ -91,7 +90,7 @@ class ControleurLogin implements Controleur
 
 
     /**
-     * Fonction qui...
+     * Fonction qui logue un utilisateur
      */
     public function logguerUser()
     {
@@ -116,7 +115,7 @@ class ControleurLogin implements Controleur
 
 
     /**
-     * Affiche la page
+     * Affiche la vue
      */
     public function getHTML()
     {

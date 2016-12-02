@@ -130,15 +130,13 @@ class ControleurUserProfile implements Controleur
      */
     public function changeUserPassword()
     {
-        if(empty($_SESSION['userID'])) // pas connecté
+        if (empty($_SESSION['userID'])) // pas connecté
             return;
-        if(empty($_POST['old_password']) && empty($_POST['new_password'])) {
+        if (empty($_POST['old_password']) && empty($_POST['new_password'])) {
             $this->code_update_password = 0; // par défaut
-        }
-        else if(empty($_POST['old_password']) || empty($_POST['new_password'])) {
+        } else if (empty($_POST['old_password']) || empty($_POST['new_password'])) {
             $this->code_update_password = UserProfile::PASSWORD_UPDATE_FORM_INVALID;
-        }
-        else if(!empty($_POST['old_password']) && !empty($_POST['new_password'])) {
+        } else if (!empty($_POST['old_password']) && !empty($_POST['new_password'])) {
             $user = $this->user->getUser($_SESSION['userID']);
             if ($user != null) {
                 if ($user['mot_de_passe'] != sha1(UserLogin::SALT_REGISTER . $_POST['old_password'])) {
@@ -146,8 +144,7 @@ class ControleurUserProfile implements Controleur
                 } else {
                     $this->code_update_password = $this->user->updatePassword(sha1(UserLogin::SALT_REGISTER . $_POST['new_password']), $_SESSION['userID']);
                 }
-            }
-            else
+            } else
                 $this->code_update_password = UserProfile::PASSWORD_UPDATE_USER_ERROR;
         }
     }
