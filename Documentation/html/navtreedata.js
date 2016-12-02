@@ -15,15 +15,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ],
-      [ "Globals", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Functions", "functions_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -31,8 +23,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_administration_historique_commande_8php.html",
-"interface_controleur.html#a5fc878ede54118176f912b557031ddd6"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

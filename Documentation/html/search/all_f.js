@@ -1,20 +1,10 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_b_d_d_2_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_2emd',['README.md',['../_contenu_2_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_2emd',['README.md',['../_modele_2_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_2emd',['README.md',['../_vue_2_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_2emd',['README.md',['../_controleur_2_r_e_a_d_m_e_8md.html',1,'']]],
-  ['readme_2emd',['README.md',['../_images_2_r_e_a_d_m_e_8md.html',1,'']]],
-  ['recherche',['Recherche',['../class_recherche.html',1,'']]],
-  ['recherche_2ephp',['Recherche.php',['../_recherche_8php.html',1,'']]],
-  ['register',['Register',['../class_register.html',1,'']]],
-  ['register_2ephp',['Register.php',['../_register_8php.html',1,'']]],
-  ['register_5fok',['REGISTER_OK',['../class_register.html#a7d6fea855224a6038a55ba7364990883',1,'Register']]],
-  ['registeruser',['registerUser',['../class_controleur_inscription.html#a1fdb0f05b888f4aa92b319775e488e70',1,'ControleurInscription']]],
-  ['removepaiementlivraison',['removePaiementLivraison',['../class_administration_paiement_livraison.html#a52a108a0d8a821796e1a7124da59e016',1,'AdministrationPaiementLivraison']]],
-  ['routerrequete',['routerRequete',['../class_routeur.html#a01c7b8c7f62b6344eeab83b5e9489740',1,'Routeur']]],
-  ['routeur',['Routeur',['../class_routeur.html',1,'']]],
-  ['routeur_2ephp',['Routeur.php',['../_routeur_8php.html',1,'']]]
+  ['updatechemin',['updateChemin',['../class_user_profile.html#a27c6d74e31a7d791b601c686883616f2',1,'UserProfile']]],
+  ['updatepassword',['updatePassword',['../class_user_profile.html#a445a6dd390ee94b70f7b63c83ff66df0',1,'UserProfile']]],
+  ['updateuserstatus',['updateUserStatus',['../class_administration_user.html#a0a3754dcc8f94cd1230344f66446befb',1,'AdministrationUser']]],
+  ['uploadpicture',['uploadPicture',['../class_user_profile.html#af6db6ec430e7a032bf7e05758efa1f6f',1,'UserProfile']]],
+  ['userexist',['userExist',['../class_register.html#a31d9501c9afa0cf622801e7f07fa2713',1,'Register\userExist()'],['../class_user_login.html#a31d9501c9afa0cf622801e7f07fa2713',1,'UserLogin\userExist()']]],
+  ['userlogin',['UserLogin',['../class_user_login.html',1,'']]],
+  ['userprofile',['UserProfile',['../class_user_profile.html',1,'']]]
 ];
