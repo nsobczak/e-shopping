@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vue',['Vue',['../md_Vue_README.html',1,'']]]
+  ['readme',['README',['../md_README.html',1,'']]]
 ];

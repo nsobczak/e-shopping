@@ -1,9 +1,18 @@
-﻿# e-shopping
+﻿# README
 Site de e-commerce basé sur l'architecture MVC.
 
-Pour accéder aux pages admin il faut être loguer en tant qu'utilisateur de niveau 1. Les mots de passe sont coucou.
+## Explications globales
 
-Pour accéder à la bdd, il faut modifier l'objet PDO dans le modèle et dans la vueTunnel. La page vueTunnel n'a pas été intégré au modèle MVC par Francis et Kevin.
+Pour la base de données, il faut créer la base de données "db_e_shopping", puis lancer le fichier BDD/db_e_shopping.sql
+
+Pour accéder à la bdd, il peut être nécessaire de modifier l'objet PDO (mot de passe, port) dans Modele/Modele.php et dans Vue/vueTunnel.php (La page Vue/vueTunnel.php n'a pas été intégrée à l'architectue MVC par Francis et Kevin).
+
+Pour accéder aux pages admin il faut être logué en tant qu'utilisateur de niveau 1 (vincent.reynaert@isen-lille.fr ou nicolas.sobczak@isen.yncrea.fr). Tous les mots de passe sont "coucou".
+
+Dans le fichier page_listing.md, il y a un tableau détaillant les parties assignées à chacun. Chaque binôme a du faire une page, l'intégrer à l'architecture MVC, ajouter sa partie dans le css. Les noms des développeurs sont inscrits en haut de chaque page php mais pas dans le css. Ils ont développé la partie du css correspondant à leurs pages. Certains élèves ont voulu développer des pages en plus. Chacun a donc eu a faire du html, css, php, lecture de base de données et souvent de l'écriture aussi.
+
+Une documentation a été créée dans le dossier "Documentation". Pour la visualiser, il faut lancer le fichier Documentation/html/index.html dans un navigateur.
+
 
 ## Explication de l'architecture MVC
 
@@ -36,5 +45,4 @@ Le contrôleur est chargé de la synchronisation du modèle et de la vue. Il re�
 Dans le cas d'une base de données des emplois du temps. Une action de l'utilisateur peut être l'entrée (saisie) d'un nouveau cours. Le contrôleur ajoute ce cours au modèle et demande sa prise en compte par la vue. Une action de l'utilisateur peut aussi être de sélectionner une nouvelle personne pour visualiser tous ses cours. Ceci me modifie pas la base des cours mais nécessite simplement que la vue s'adapte et offre à l'utilisateur une vision des cours de cette personne.
 
 Le contrôleur est souvent scindé en plusieurs parties dont chacune reçoit les événements d'une partie des composants. En effet si un même objet reçoit les événements de tous les composants, il lui faut déterminer quelle est l'origine de chaque événement. Ce tri des événements peut s'avérer fastidieuse et peut conduire à un code pas très élégant (un énorme switch). C'est pour éviter ce problème que le contrôleur est réparti en plusieurs objets.
-
 

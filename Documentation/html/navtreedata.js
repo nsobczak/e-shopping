@@ -4,10 +4,11 @@ var NAVTREE =
     [ "BDD", "md_BDD_README.html", null ],
     [ "Contenu", "md_Contenu_README.html", null ],
     [ "Controleur", "md_Controleur_README.html", null ],
+    [ "Documentation", "md_Documentation_README.html", null ],
     [ "Images", "md_Images_README.html", null ],
     [ "Modele", "md_Modele_README.html", null ],
     [ "page listing", "md_page_listing.html", null ],
-    [ "e-shopping", "md_README.html", null ],
+    [ "README", "md_README.html", null ],
     [ "Vue", "md_Vue_README.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

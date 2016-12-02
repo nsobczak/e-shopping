@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>GeekProduct.com: e-shopping</title>
+<title>GeekProduct.com: README</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,9 +33,9 @@
   <td id="projectlogo"><img alt="Logo" src="Cook.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GeekProduct.com
-   &#160;<span id="projectnumber">An e-shopping website</span>
+   &#160;<span id="projectnumber">1.4</span>
    </div>
-   <div id="projectbrief">1.4</div>
+   <div id="projectbrief">An e-shopping website</div>
   </td>
  </tr>
  </tbody>
@@ -100,10 +100,17 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">e-shopping </div>  </div>
+<div class="title">README </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Site de e-commerce basé sur l'architecture MVC.</p>
+<h2>Explications globales</h2>
+<p>Pour la base de données, il faut créer la base de données "db_e_shopping", puis lancer le fichier BDD/db_e_shopping.sql</p>
+<p>Pour accéder à la bdd, il peut être nécessaire de modifier l'objet PDO (mot de passe, port) dans Modele/Modele.php et dans Vue/vueTunnel.php (La page Vue/vueTunnel.php n'a pas été intégrée à l'architectue MVC par Francis et Kevin).</p>
+<p>Pour accéder aux pages admin il faut être logué en tant qu'utilisateur de niveau 1 (<a href="#" onclick="location.href='mai'+'lto:'+'vin'+'ce'+'nt.'+'re'+'yna'+'er'+'t@i'+'se'+'n-l'+'il'+'le.'+'fr'; return false;">vince<span style="display: none;">.nosp@m.</span>nt.r<span style="display: none;">.nosp@m.</span>eynae<span style="display: none;">.nosp@m.</span>rt@i<span style="display: none;">.nosp@m.</span>sen-l<span style="display: none;">.nosp@m.</span>ille<span style="display: none;">.nosp@m.</span>.fr</a> ou <a href="#" onclick="location.href='mai'+'lto:'+'nic'+'ol'+'as.'+'so'+'bcz'+'ak'+'@is'+'en'+'.yn'+'cr'+'ea.'+'fr'; return false;">nicol<span style="display: none;">.nosp@m.</span>as.s<span style="display: none;">.nosp@m.</span>obcza<span style="display: none;">.nosp@m.</span>k@is<span style="display: none;">.nosp@m.</span>en.yn<span style="display: none;">.nosp@m.</span>crea<span style="display: none;">.nosp@m.</span>.fr</a>). Tous les mots de passe sont "coucou".</p>
+<p>Dans le fichier page_listing.md, il y a un tableau détaillant les parties assignées à chacun. Chaque binôme a du faire une page, l'intégrer à l'architecture MVC, ajouter sa partie dans le css. Les noms des développeurs sont inscrits en haut de chaque page php mais pas dans le css. Ils ont développé la partie du css correspondant à leurs pages. Certains élèves ont voulu développer des pages en plus. Chacun a donc eu a faire du html, css, php, lecture de base de données et souvent de l'écriture aussi.</p>
+<p>Une documentation a été créée dans le dossier "Documentation". Pour la visualiser, il faut lancer le fichier Documentation/html/index.html dans un navigateur.</p>
+<h2>Explication de l'architecture MVC</h2>
 <p>Dans l'architecture MVC, les rôles sont les suivants:</p><ul>
 <li>modèle : données (accès et mise à jour)</li>
 <li>vue : interface utilisateur (entrées et sorties)</li>
@@ -112,7 +119,6 @@ $(document).ready(function(){initNavTree('md_README.html','');});
 <div class="image">
 <img src="Images/MVC.png"  alt="**Schema to always keep in mind**"/>
 </div>
-<h2>Explication de l'architecture MVC</h2>
 <p>Source : <a href="https://www.irif.fr/~carton/Enseignement/InterfacesGraphiques/MasterInfo/Cours/Swing/mvc.html">https://www.irif.fr/~carton/Enseignement/InterfacesGraphiques/MasterInfo/Cours/Swing/mvc.html</a></p>
 <h3>Rôle du modèle</h3>
 <p>Le modèle contient les données manipulées par le programme. Il assure la gestion de ces données et garantit leur intégrité. Dans le cas typique d'une base de données, c'est le modèle qui la contient.</p>
