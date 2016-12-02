@@ -90,6 +90,7 @@ class ControleurProductCategorie implements Controleur
         if (!isset($_SESSION['userID'])) {
             //redirection vers page de login
             echo "Veuillez vous connecter";
+            header('Location: index.php?action=login');
             return;
         }
         // Est-ce que l'utilisateur a un panier

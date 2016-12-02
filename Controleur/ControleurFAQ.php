@@ -103,7 +103,7 @@ class ControleurFAQ implements Controleur
                 $id = $_SESSION['userID'];
                 $this->question->insertQuest($_POST['question'], $_POST['commentaires'], $id);
             } else {
-                header("location: http://localhost/e-shopping/index.php?action=login");
+                header('Location: index.php?action=login');
             }
         }
     }
@@ -118,7 +118,7 @@ class ControleurFAQ implements Controleur
                 $id = $_SESSION['userID'];
                 $this->question->insertRep($_POST['reponse'], $id, $_GET['question']);
             } else {
-                header("location: http://localhost/e-shopping/index.php?action=login");
+                header('Location: index.php?action=login');
             }
         }
     }

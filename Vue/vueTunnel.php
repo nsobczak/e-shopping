@@ -5,7 +5,7 @@
 */
 
 if (empty($_SESSION['userID'])) {
-    echo "Vous n'êtes pas connecté";
+    header('Location: index.php?action=login');
 } else {
     $bdd = new PDO('mysql:host=localhost; dbname=db_e_shopping; charset=utf8', 'root', 'ISEN');
     $paiemment = $bdd->query("SELECT * FROM moyendepaiement");
