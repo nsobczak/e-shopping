@@ -63,7 +63,7 @@ CREATE TABLE `categorie` (
 
 INSERT INTO `categorie` (`categorieID`, `nomCategorie`, `descriptionCategorie`) VALUES
 (1, 'Vêtements', 'Tout ce qui sert à couvrir le corps humain pour le protéger ; pièce de l\'habillement. Littéraire. Ce qui habille, recouvre quelque chose ; parure, manteau.'),
-(2, 'Décorations', 'Action de décorer, manière dont quelque chose est décoré ; ensemble de ce qui sert à décorer : La décoration d\'une salle pour une fête. Chacun des éléments qui décore quelque chose, un lieu ; ornements (surtout pluriel).'),
+(2, 'Accessoires', 'Des élèments indispensables pour ton bon geek'),
 (3, 'Vaisselle', 'Ensemble des pièces et accessoires destinés au service de la table'),
 (4, 'Jeu vidéo', 'Un jeu vidéo est une activité de loisir basée sur des périphériques informatiques (écran LCD, manette/joystick, hauts parleurs, ...) permettant d\'interagir dans un environnement virtuel conformément à un ensemble de règles prédéfinies');
 
@@ -167,7 +167,24 @@ INSERT INTO `produit` (`produitID`, `nomProduit`, `prix`, `description`, `chemin
 (7, 'Bravely Default - Nintendo 3DS', 41, 'La lueur du cristal s\'évanouit progressivement. Sa lumière faiblissante laisse présager un grand malheur. Il faut agir…
 Dans Bravely Default, la quête à travers Luxendarc pour réveiller les cristaux est un RPG unique et innovant, en exclusivité sur les consoles de la famille Nintendo 3DS. ', 'Images/Produit/7.jpg', 4),
 (8, 'Souris Pro Gamer', 110, 'Logitech G900 Chaos Spectrum Souris Pro Gamer sans-fil ambidextre Noir', 'Images/Produit/8.jpg', 5),
-(9, 'Volant de course', 110, 'Volant de course pour PC, PS3 et PS4, en cuir et métal - noir', 'Images/Produit/9.jpg', 5);
+(9, 'Volant de course', 110, 'Volant de course pour PC, PS3 et PS4, en cuir et métal - noir', 'Images/Produit/9.jpg', 5),
+(10, 'T-Shirt - Geek en Charge', 19, 'Les t-shirts Geek s\'adresse aux accros à Internet, jeux video, mangas et geekerie en tout genre! Une idée cadeau pour vos amis geeks et qui n\'a pas d\'amis geek de nos jours..? Pour chaque geekerie il y a le tee shirt Geek qui convient.', 'Images/Produit/10.jpg', 1),
+(11, 'T-Shirt - Geek Level Up', 19, 'Les t-shirts Geek s\'adresse aux accros à Internet, jeux video, mangas et geekerie en tout genre! Une idée cadeau pour vos amis geeks et qui n\'a pas d\'amis geek de nos jours..? Pour chaque geekerie il y a le tee shirt Geek qui convient.', 'Images/Produit/11.jpg', 1),
+(12, 'T-Shirt Mec STAR WARS - Yoda Cool Stereo', 20, '- T-Shirt Star Wars Pour Homme - Motif à l\'Avant de DJ Yoda Avec des Lunettes Brillantes et un Casque Autour du Cou - Les Éléments Bleus Sont Sérigraphiés Avec une Matière Brillante - Modèle 100% Officiel de la Licence Star Wars', 'Images/Produit/12.jpg', 1),
+(13, 'Porte tablette retro', 99, 'iCADE Arcade Cabinet', 'Images/Produit/13.jpg', 7),
+(14, 'Chaussures zelda', 52, 'Vivre sa passion c\'est bien. La porter c\'est encore mieux.', 'Images/Produit/14.jpg', 2),
+(15, 'Baskettes tetris', 49, 'Nous les Geek on a les armoires remplies de fringues complètement Geek. Ce qu’il nous manque bien souvent par contre, ce sont des chaussures ou des basquettes Geek.', 'Images/Produit/15.jpg', 2),
+(16, 'Baskettes Angry Birds', 109, 'Chaussures-Collector', 'Images/Produit/16.jpg', 2),
+(17, 'Baskettes Angry Birds', 109, 'Chaussures-Collector', 'Images/Produit/17.jpg', 2),
+(18, 'Tasse "gamer fuel"', 12, 'Un geek a besoin de recharger ses batteries', 'Images/Produit/18.jpg', 6),
+(19, 'Bébé Groot Dansant', 35, 'Comme nous, vous avez aimé The Guardiens Of The Galaxy (alias les Gardiens de la Galaxie) ? Vous allez adorer le bébé groot dansant ! Oui le Baby Groot Dancing, reprend l’une des dernières scène du film où on retrouve Groot, un extraterrestre végétal à mi-chemin entre la racine et l’arbre, qui, alors qu’il avait brûlé, repousse en dansant sur I Want You Back des Jackson Five dans un pot de fleur. Le bébé groot dansant sur ton bureau !', 'Images/Produit/19.png', 3),
+(20, 'Poubelle Domestique R2-D2', 105, 'On ne peut pas dire que la vie est belle pour l’ex-robot R2D2 qui depuis sa retraite, ne cesse d’endosser des sous rôles. J’entends sur le registre du marketing, évidemment. Aujourd’hui il joue les poubelles hi-tech pour Geek. Un accessoire indispensable pour maintenir de l’ordre dans sa chambre.', 'Images/Produit/20.jpg', 3),
+(21, 'Tasse game boy', 52, 'Mug game boy', 'Images/Produit/21.jpg', 6),
+(22, 'Boite à gateaux sonore tardis docteur who', 29, 'On ne s\'arrête pas de baver d\'envie devant cette boîte à cookies sonore Doctor Who en forme de Tardis... Conçue en plastique alimentaire pour une meilleure hygiène et équipée d\'un couvercle amovible, elle sait comment s\'y prendre pour garder nos gâteaux à l\'abri. Mais ce qui nous fait véritablement craquer, ce sont ses effets sonores et lumineux qui émettent des sons du Tardis et font s\'illuminer la lanterne lorsque l’on referme le couvercle ou lorsque l’on appuie dessus !', 'Images/Produit/22.jpg', 7),
+(23, 'Haut-Parleurs Panda', 24, 'On aime son petit look animal vraiment adorable et son côté pratique pour écouter de la musique façon insolite : oreille gauche (noire), vous pourrez régler le son de votre playlist, oreille droite, c’est les tonalités de la chanson que vous réglez, histoire de vous faire un joli son. Alimenté par un port USB, comme maintenant tous les gadgets geek et high-tech, ce petit panda haut-parleur pourrait bien devenir votre meilleur ami.', 'Images/Produit/23.png', 3),
+(24, 'Sac à Dos BB-8', 55, 'Arrêtez tout, on a LE cadeau de Noël : le sac à dos Buddies BB-8 ! Oui le petit droïde vedette de Star Wars 7 débarque en mode sac pour transporter tout votre petit matos geek sur le dos. Un sac à dos Star Wars très réussi où vous pourrez ranger votre anti-stress étoile noire ou votre portefeuille R2-D2.', 'Images/Produit/24.png', 7),
+(25, 'Lampe Torche Sabre Laser', 29, 'Tout le monde devrait avoir son sabre laser de Jedi dans cette jungle qu’est devenu le monde ! Et bien cette réplique de sabre laser Star Wars vous aidera dans votre combat quotidien contre le mal, en tout cas contre le côté obscur de la Force puisque c’est une lampe torche !', 'Images/Produit/25.png', 3),
+(26, 'Peluche Faucon Millenium', 9, 'Le Faucon Millenium, le célèbre vaisseau Star Wars de Han Solo atterrit dans le berceau de bébé ! Une bien jolie peluche reprenant donc le design du Faucon Millenium, pour rappel le vaisseau le plus rapide de la galaxie. Rien que ça. Et puis inutile de la gagner en jouant aux cartes contre Lando Calrissian pour obtenir le Faucon Millenium peluche : il suffit de l’ajouter à votre panier ! Une peluche Star Wars qui fera rêver les petits et plaisir aux papas !', 'Images/Produit/26.png', 3);
 
 -- --------------------------------------------------------
 
@@ -189,10 +206,11 @@ CREATE TABLE `souscategorie` (
 INSERT INTO `souscategorie` (`sousCategorieID`, `nomSousCategorie`, `descriptionSousCategorie`, `categorieID`) VALUES
 (1, 't-shirt', 'Maillot en coton à ras de cou et à manches courtes que l\'on porte directement sur la peau.', 1),
 (2, 'chaussures', 'Les chaussures constituent un élément d\'habillement dont le rôle est de protéger les pieds. Le terme chaussure dérive du verbe chausser, issu du latin calceare « mettre des souliers ». La plus vieille chaussure du monde a 5 500 ans et a été découverte dans une grotte en Arménie. La forme des chaussures peut varier à l\'infini, notamment en fonction de la mode et du statut social. La matière la plus couramment utilisée pour fabriquer les chaussures est le cuir. L\'artisan spécialiste de la réparation des chaussures est le cordonnier, métier qui a fortement décliné dans les pays occidentaux.', 1),
-(3, 'Lampes', 'Source de rayonnement construite en vue de produire de la lumière visible ou des rayonnements infrarouges ou ultraviolets. Appareil d\'éclairage constitué par l\'ampoule et l\'appareillage ; luminaire. Partie du luminaire qui produit la lumière : Griller une lampe. Dispositif produisant une flamme : Lampe à alcool.', 2),
+(3, 'Décorations', 'Action de décorer, manière dont quelque chose est décoré ; ensemble de ce qui sert à décorer : La décoration d\'une salle pour une fête. Chacun des éléments qui décore quelque chose, un lieu ; ornements (surtout pluriel).', 2),
 (4, 'Jeux', 'Jeux vidéos', 4),
 (5, 'Accessoies', 'Manettes, batteries, multiprises, connectique, tout ce qu\'il faut pour faire fonctionner consoles et ordinateurs', 4),
-(6, 'Tasses', 'Tasses, mugs, bols et autre récipients', 3);
+(6, 'Tasses', 'Tasses, mugs, bols et autre récipients', 3),
+(7, 'Accessoires', 'Des élèments ayant une utilité', 2);
 
 -- --------------------------------------------------------
 
