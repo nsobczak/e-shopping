@@ -170,12 +170,12 @@ Dans Bravely Default, la quête à travers Luxendarc pour réveiller les cristau
 (9, 'Volant de course', 110, 'Volant de course pour PC, PS3 et PS4, en cuir et métal - noir', 'Images/Produit/9.jpg', 5),
 (10, 'T-Shirt - Geek en Charge', 19, 'Les t-shirts Geek s\'adresse aux accros à Internet, jeux video, mangas et geekerie en tout genre! Une idée cadeau pour vos amis geeks et qui n\'a pas d\'amis geek de nos jours..? Pour chaque geekerie il y a le tee shirt Geek qui convient.', 'Images/Produit/10.jpg', 1),
 (11, 'T-Shirt - Geek Level Up', 19, 'Les t-shirts Geek s\'adresse aux accros à Internet, jeux video, mangas et geekerie en tout genre! Une idée cadeau pour vos amis geeks et qui n\'a pas d\'amis geek de nos jours..? Pour chaque geekerie il y a le tee shirt Geek qui convient.', 'Images/Produit/11.jpg', 1),
-(12, 'T-Shirt Mec STAR WARS - Yoda Cool Stereo', 20, '- T-Shirt Star Wars Pour Homme - Motif à l\'Avant de DJ Yoda Avec des Lunettes Brillantes et un Casque Autour du Cou - Les Éléments Bleus Sont Sérigraphiés Avec une Matière Brillante - Modèle 100% Officiel de la Licence Star Wars', 'Images/Produit/12.jpg', 1),
+(12, 'T-Shirt Homme STAR WARS - Yoda Cool Stereo', 20, '- T-Shirt Star Wars Pour Homme - Motif à l\'Avant de DJ Yoda Avec des Lunettes Brillantes et un Casque Autour du Cou - Les Éléments Bleus Sont Sérigraphiés Avec une Matière Brillante - Modèle 100% Officiel de la Licence Star Wars', 'Images/Produit/12.jpg', 1),
 (13, 'Porte tablette retro', 99, 'iCADE Arcade Cabinet', 'Images/Produit/13.jpg', 7),
 (14, 'Chaussures zelda', 52, 'Vivre sa passion c\'est bien. La porter c\'est encore mieux.', 'Images/Produit/14.jpg', 2),
 (15, 'Baskettes tetris', 49, 'Nous les Geek on a les armoires remplies de fringues complètement Geek. Ce qu’il nous manque bien souvent par contre, ce sont des chaussures ou des basquettes Geek.', 'Images/Produit/15.jpg', 2),
 (16, 'Baskettes Angry Birds', 109, 'Chaussures-Collector', 'Images/Produit/16.jpg', 2),
-(17, 'Baskettes Angry Birds', 109, 'Chaussures-Collector', 'Images/Produit/17.jpg', 2),
+(17, 'Baskettes Star wars', 109, 'Chaussures-Collector', 'Images/Produit/17.jpg', 2),
 (18, 'Tasse "gamer fuel"', 12, 'Un geek a besoin de recharger ses batteries', 'Images/Produit/18.jpg', 6),
 (19, 'Bébé Groot Dansant', 35, 'Comme nous, vous avez aimé The Guardiens Of The Galaxy (alias les Gardiens de la Galaxie) ? Vous allez adorer le bébé groot dansant ! Oui le Baby Groot Dancing, reprend l’une des dernières scène du film où on retrouve Groot, un extraterrestre végétal à mi-chemin entre la racine et l’arbre, qui, alors qu’il avait brûlé, repousse en dansant sur I Want You Back des Jackson Five dans un pot de fleur. Le bébé groot dansant sur ton bureau !', 'Images/Produit/19.png', 3),
 (20, 'Poubelle Domestique R2-D2', 105, 'On ne peut pas dire que la vie est belle pour l’ex-robot R2D2 qui depuis sa retraite, ne cesse d’endosser des sous rôles. J’entends sur le registre du marketing, évidemment. Aujourd’hui il joue les poubelles hi-tech pour Geek. Un accessoire indispensable pour maintenir de l’ordre dans sa chambre.', 'Images/Produit/20.jpg', 3),
@@ -248,7 +248,8 @@ INSERT INTO `user` (`userID`, `nom`, `prenom`, `chemin`, `niveau_accreditation`,
 (13, 'Vanmarcke', 'Romain', 'Images/Profil/profil_utilisateur.jpg', 2, 'romain.vanmarcke@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (14, 'Vermeil', 'Julien', 'Images/Profil/profil_utilisateur.jpg', 2, 'julien.vermeil@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
 (15, 'You', 'Qi', 'Images/Profil/profil_utilisateur.jpg', 2, 'qi.you@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
-(16, 'Yue', 'Cuize', 'Images/Profil/profil_utilisateur.jpg', 2, 'cuize.yue@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab');
+(16, 'Yue', 'Cuize', 'Images/Profil/profil_utilisateur.jpg', 2, 'cuize.yue@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab'),
+(17, 'Trouche', 'Pierre', 'Images/Profil/profil_utilisateur.jpg', 2, 'trouchyLeMalade@isen.yncrea.fr', 'ad0557319768587a736ee716b5bc48945c39aaab');
 -- --------------------------------------------------------
 
 --
@@ -267,8 +268,11 @@ CREATE TABLE `faq` (
 --
 
 INSERT INTO `faq` (`questionID`, `question`, `commentaires`, `userID`) VALUES
-(1, 'Comment acheter sur notre site ?', 'bonjour', 11),
-(2, 'Peut-on devenir admin ?', 'Pas pour le moment', 11);
+(1, 'Comment acheter sur notre site ?', 'Bonjour comment acheter sur votre site ?', 11),
+(2, 'Peut-on devenir admin ?', 'Bonjour, j\'aime beaucoup votre site. Il est magnifique ! C\'est pourquoi, j\'aimerais beaucoup m\'impliquer davantage. Peut-on devenir admin ?', 13),
+(3, 'Comment effectuer une recherche de produit ?', 'Bonjour, je ne comprends pas comment effectuer une recherche de produit. Pouvez-vous m\'aider ?', 4),
+(4, 'Où se trouve la FAQ ?', 'Bonjour, je suis un peu perdu. Où se trouve la FAQ ? J\'ai besoin d\'aide ! HELP !!!', 5);
+
 -- --------------------------------------------------------
 
 --
@@ -287,9 +291,14 @@ CREATE TABLE `faqreponses` (
 --
 
 INSERT INTO `faqreponses` (`reponseID`, `reponse`, `userID`, `questionID`) VALUES
-(1, "t'as essayé d'appuyer sur acheter ?", 2, 1),
-(2, 'Pas pour le moment', 1, 2),
-(3, 'un jour peut etre', 1, 2);
+(1, 'Bonjour, as-tu essayé d\'appuyer sur le bouton acheter qui est situé en haut à droite d\'une page produit ? Il ressemble à un caddie ;)', 2, 1),
+(2, 'Pas pour le moment.', 1, 2),
+(3, 'Un jour peut-être ;)', 2, 2),
+(4, 'Bonjour, pour effectuer une recherche de produit, il faut aller sur la page recherche et renseigner le champ.', 1, 3),
+(5, 'Bonjour, pour compléter ce qui a été dit, il est possible d\'entrer des mots clés pour obtenir une liste de produits correspondants.', 2, 3),
+(6, 'Bonjour, la FAQ est la page où vous lisez actuellement ce texte ^^ Bienvenue sur la FAQ', 1, 4),
+(7, 'Merciii ! Vous êtes un dieu !!', 5, 4),
+(8, 'Monsieur Chu, la FAQ contient plusieurs pages de questions ayant reçue des réponses. Je vous conseille de les lire attentivement.', 2, 4);
 
 -- --------------------------------------------------------
 --

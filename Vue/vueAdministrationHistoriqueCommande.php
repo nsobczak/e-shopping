@@ -18,7 +18,7 @@
         ID de la commande : <input type="text" name="PanierID"></input>
         <br>
 
-        <button type="submit"> Coucou</button>
+        <button type="submit"> Rechercher</button>
     </form>
     <div class="encadrement">
 
