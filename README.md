@@ -1,14 +1,18 @@
 ﻿# e-shopping
 Site de e-commerce basé sur l'architecture MVC.
 
+Pour accéder aux pages admin il faut être loguer en tant qu'utilisateur de niveau 1. Les mots de passe sont coucou.
+
+Pour accéder à la bdd, il faut modifier l'objet PDO dans le modèle et dans la vueTunnel. La page vueTunnel n'a pas été intégré au modèle MVC par Francis et Kevin.
+
+## Explication de l'architecture MVC
+
 Dans l'architecture MVC, les rôles sont les suivants:
 - modèle : données (accès et mise à jour)
 - vue : interface utilisateur (entrées et sorties)
 - contrôleur : gestion des événements et synchronisation
 
 ![**Schema to always keep in mind**](Images/MVC.png)
-
-## Explication de l'architecture MVC
 
 Source : <https://www.irif.fr/~carton/Enseignement/InterfacesGraphiques/MasterInfo/Cours/Swing/mvc.html>
 
