@@ -17,6 +17,9 @@ class ControleurUserProfile implements Controleur
      * @var UserProfile
      */
     private $user;
+    /**
+     * @var int
+     */
     private $code_update_password;
 
 
@@ -41,6 +44,16 @@ class ControleurUserProfile implements Controleur
     }
 
     /**
+     * Getter du code_update_password
+     *
+     * @return int code_update_password
+     */
+    public function getCode_update_password()
+    {
+        return $this->code_update_password;
+    }
+
+    /**
      * Setter du user
      *
      * @param $newUser
@@ -48,6 +61,16 @@ class ControleurUserProfile implements Controleur
     public function setUser($newUser)
     {
         $this->user = $newUser;
+    }
+
+    /**
+     * Setter du code_update_password
+     *
+     * @param $newCode_update_password
+     */
+    public function setCode_update_password($newCode_update_password)
+    {
+        $this->code_update_password = $newCode_update_password;
     }
 
 
