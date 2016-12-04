@@ -7,7 +7,7 @@ Pour la base de données, il faut créer la base de données "db_e_shopping", pu
 
 Pour accéder à la bdd, il peut être nécessaire de modifier l'objet PDO (mot de passe, port) dans Modele/Modele.php et dans Vue/vueTunnel.php (La page Vue/vueTunnel.php n'a pas été intégrée à l'architectue MVC par Francis et Kevin).
 
-Pour accéder aux pages admin il faut être logué en tant qu'utilisateur de niveau 1 (vincent.reynaert@isen-lille.fr ou nicolas.sobczak@isen.yncrea.fr). Tous les mots de passe sont "coucou".
+Pour accéder aux pages admin il faut être logué en tant qu'utilisateur de niveau 1 (Vincent Reynaert ou Nicolas Sobczak). Tous les mots de passe sont "coucou".
 
 Dans le fichier page_listing.md, il y a un tableau détaillant les parties assignées à chacun. Chaque binôme a du faire une page, l'intégrer à l'architecture MVC, ajouter sa partie dans le css. Les noms des développeurs sont inscrits en haut de chaque page php mais pas dans le css. Ils ont développé la partie du css correspondant à leurs pages. Certains élèves ont voulu développer des pages en plus. Chacun a donc eu a faire du html, css, php, lecture de base de données et souvent de l'écriture aussi.
 
